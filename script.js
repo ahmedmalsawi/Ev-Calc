@@ -16,7 +16,6 @@ let totalTaxed = document.getElementById("totalTaxed");
 
 function taxing() {
 	getPrice();
-
 	tax.value = Math.round(totalNoTax.value * 0.15 * 100) / 100;
 	totalTaxed.value = Math.round(totalNoTax.value * 1.15 * 100) / 100;
 }
@@ -27,8 +26,8 @@ function getPrice() {
 	var arr = document.querySelectorAll(".dev-price");
 	var total = 0;
 	for (var i = 0; i < arr.length; i++) {
-		if (parseFloat(arr[i].value)) {
-			total += parseFloat(arr[i].value);
+    if (parseFloat(arr[i].value)) {
+      total += parseFloat(arr[i].value);
 		}
 		total = Math.round(total * 100) / 100;
 		document.getElementById("totalDevNoTax").value = total;
@@ -36,7 +35,27 @@ function getPrice() {
 		totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
 	}
 	updateTotals();
+	getMeters();
 }
+
+function getMeters() { 
+  let descUpCount = document.getElementById("descUpCount");
+  let descDownCount = document.getElementById("descDownCount");
+  let meterTotal = document.getElementById("meterTotal");
+  let upCount = document.getElementById("upCount");
+  let downCount = document.getElementById("downCount");
+  meterTotal.value =
+	Math.round(
+	  ((parseFloat(upCount.value)*0.34) + (parseFloat(downCount.value))*0.66)
+	* 100) / 100;
+  
+  discountedMeterTotal.value =
+		Math.round(
+			(parseFloat(descUpCount.value) + parseFloat(descDownCount.value)) * 100
+		) / 100;
+  
+
+};
 
 function start() {
 	let customerName = document.getElementById("customerName").value;
@@ -238,15 +257,6 @@ function start() {
 }
 
 function show() {
-	// let devs = document.querySelectorAll("devicesData");
-	// let nonDevs = document.querySelectorAll("section");
-	// devs.classList.toggle("hide");
-	// nonDevs.classList.toggle("hide");
-
-	// devs.toggleClass("hide");
-	// nonDevs.toggleClass("hide");
-	// var conrtactType = document.getElementById("conrtactType").value;
-	// var contractDataOption = document.querySelectorAll(".devicesDataOption");
 
 	var devs = document.querySelectorAll(".devicesData");
 	devs.forEach(function (devs) {
@@ -263,25 +273,13 @@ function show() {
 			nonDevs.classList.remove("hide");
 		} else {
 			nonDevs.classList.add("hide");
-			// conrtactType = 'أجهزة';
 		}
 	});
 
-	// 	if (contractDataOption.classList.contains("hide")) {
-	//     // contractDataOption.classList.remove("hide");
-	// 	} else {
-	// 		contractDataOption.classList.add("hide");
-	// 	}
-	// });
 	taxing();
 	updateTotals();
 }
 
-
-
-// var pdfMake = require("pdfmake/build/pdfmake.js");
-// var pdfFonts = require("pdfmake/build/vfs_fonts.js");
-// pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 
 
