@@ -10,19 +10,20 @@
 })(jQuery);
 
 let devTotal = 0;
+let totalNoTax = document.getElementById("totalNoTax");
+let tax = document.getElementById("tax");
+let totalTaxed = document.getElementById("totalTaxed");
+
 function taxing() {
 	getPrice();
-	let totalNoTax = document.getElementById("totalNoTax");
-	let tax = document.getElementById("tax");
-	let totalTaxed = document.getElementById("totalTaxed");
 
 	tax.value = Math.round(totalNoTax.value * 0.15 * 100) / 100;
 	totalTaxed.value = Math.round(totalNoTax.value * 1.15 * 100) / 100;
 }
 
 function getPrice() {
-	let tax = document.getElementById("tax");
-	let totalTaxed = document.getElementById("totalTaxed");
+	// let tax = document.getElementById("tax");
+	// let totalTaxed = document.getElementById("totalTaxed");
 	var arr = document.querySelectorAll(".dev-price");
 	var total = 0;
 	for (var i = 0; i < arr.length; i++) {
@@ -271,6 +272,8 @@ function show() {
 	// 		contractDataOption.classList.add("hide");
 	// 	}
 	// });
+	taxing();
+	updateTotals();
 }
 
 
@@ -355,17 +358,32 @@ let totalVal = Math.round( count * price * 100) / 100;
 }
 
  function updateTotals() {
-		let totalCount = 0;
-		let grandTotal = 0;
-		for (let i = 1; i <= 10; i++) {
-			let count = document.getElementById(`count${i}`).value;
-			totalCount += parseInt(count);
+		// let totalCount = 0;
+		// let grandTotal = 0;
+		// for (let i = 1; i <= 10; i++) {
+			// let count = document.getElementById(`count${i}`).value;
+			// totalCount += parseInt(count);
 
-			let total = document.getElementById(`total${i}`).innerHTML;
-			grandTotal += parseInt(total);
-		}
-		document.getElementById("totalCount").innerHTML = totalCount;
-		document.getElementById("grandTotal").innerHTML = grandTotal;
+			// let total = document.getElementById(`addTotal${i}`);
+			// grandTotal += parseInt(total.value);
+      // }
+      // document.getElementById("totalCount").innerHTML = totalCount;
+			let tax = document.getElementById("tax");
+			let totalTaxed = document.getElementById("totalTaxed");
+			var arr = document.querySelectorAll(".addGT");
+			var total = 0;
+			for (var i = 0; i < arr.length; i++) {
+        if (parseFloat(arr[i].value)) {
+					total += parseFloat(arr[i].value);
+				}
+				total = Math.round(total * 100) / 100;
+				// document.getElementById("totalDevNoTax").value = total;
+        totalNoTax.value = total;
+				tax.value = Math.round(total * 0.15 * 100) / 100;
+				totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
+			}
+			
+  //  taxing();
  }
 
 
