@@ -35,6 +35,7 @@ function getPrice() {
 		tax.value = Math.round(total * 0.15 * 100) / 100;
 		totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
 	}
+	updateTotals();
 }
 
 function start() {

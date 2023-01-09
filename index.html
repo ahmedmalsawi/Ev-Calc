@@ -646,11 +646,11 @@
     <!-- // Devices  = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < <  -->
     <div
       class="container-lg devicesData hide border-spacing-2 border border-danger border-start-0 rounded-end bg-dark bg-opacity-25 mt-2 mb-2">
-              <div class="container text-center fw-bold collapsible">
+              <div class="container text-center fw-bold ">
         <button disabled class="btn btn-grey border-0 text-danger" id="addGTT00">Total</button>الأجهزة</div>
       <div class="container devRow01 row m-2 ">
         <div class="devType01 col-md col-sm col form-floating placeholder:text-center">
-          <select class="form-select" id="devType01" aria-label="Floating label select example"" onchange=" getPrice();"
+          <select class="form-select" id="devType01" aria-label="Floating label select example" onchange=" getPrice();"
             onkeyup="getPrice();">
             <option selected disabled>يرجي اختيار الجهاز</option>
             <option value="" disabled class="text-bg-dark text-danger text-center">أفران</option>
@@ -687,7 +687,7 @@
           <label for="devCode01"> كود جهاز رقم 1</label>
         </div>
         <div class="devPrice01 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price" id="devPrice01" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price addGT00" id="devPrice01" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice01"> سعر جهاز رقم 1</label>
         </div>
@@ -731,7 +731,7 @@
           <label for="devCode02"> كود جهاز رقم 2</label>
         </div>
         <div class="devPrice02 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control  dev-price" id="devPrice02" value="" placeholder="Ex: "
+          <input type="number" class="form-control  dev-price addGT00" id="devPrice02" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice02"> سعر جهاز رقم 2</label>
         </div>
@@ -775,7 +775,7 @@
           <label for="devCode03"> كود جهاز رقم 3</label>
         </div>
         <div class="devPrice03 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control  dev-price" id="devPrice03" value="" placeholder="Ex: "
+          <input type="number" class="form-control  dev-price addGT00" id="devPrice03" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice03"> سعر جهاز رقم 3</label>
         </div>
@@ -819,7 +819,7 @@
           <label for="devCode04"> كود جهاز رقم 4</label>
         </div>
         <div class="devPrice04 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price" id="devPrice04" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price addGT00" id="devPrice04" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice04"> سعر جهاز رقم 4</label>
         </div>
@@ -863,7 +863,7 @@
           <label for="devCode05"> كود جهاز رقم 5</label>
         </div>
         <div class="devPrice05 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price" id="devPrice05" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price addGT00" id="devPrice05" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice05"> سعر جهاز رقم 5</label>
         </div>
@@ -907,7 +907,7 @@
           <label for="devCode06"> كود جهاز رقم 6</label>
         </div>
         <div class="devPrice06 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price" id="devPrice06" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price  addGT00" id="devPrice06" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice06"> سعر جهاز رقم 6</label>
         </div>
@@ -951,7 +951,7 @@
           <label for="devCode07"> كود جهاز رقم 7</label>
         </div>
         <div class="devPrice07 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price" id="devPrice07" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price  addGT00" id="devPrice07" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice07"> سعر جهاز رقم 7</label>
         </div>
@@ -995,7 +995,7 @@
           <label for="devCode08"> كود جهاز رقم 8</label>
         </div>
         <div class="devPrice08 col-md col-sm col form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price" id="devPrice08" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price  addGT00" id="devPrice08" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice81"> سعر جهاز رقم 8</label>
         </div>
@@ -1004,7 +1004,7 @@
     <!-- // Submit   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
     <div class="row ">
       <div
-        class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none"
+        class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none hide"
         onclick="printPdf();">طباعة</div>
       <!-- <div class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none"
           onclick="start();">طباعة</div> -->
