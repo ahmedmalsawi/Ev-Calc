@@ -208,10 +208,11 @@
       <!-- // الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن ذات الارتفاع الاعلى من القياسي وكبائن الدور الثاني 	 < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg cabinetsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 ">
-        <div class="container text-center fw-bold">الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن ذات الارتفاع
-          الاعلى من القياسي وكبائن الدور الثاني</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT01">Total</button>
+        الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن الاعلى من القياسي و الدور الثاني</div>
         <!-- // Row 1 -->
-        <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName1 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName1" aria-label="Floating label select example" onkeyup="calc('1');"
               onchange="calc('1');">
@@ -240,13 +241,13 @@
             <label for="addCount1">العدد</label>
           </div>
           <div class="addTotal1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal1" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT01" id="addTotal1" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal1">الاجمالي</label>
           </div>
         </div>
         <!-- //Row 2 -->
-        <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 ">
+        <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName2 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName2" aria-label="Floating label select example" onkeyup="calc('2');"
               onchange="calc('2');">
@@ -275,13 +276,13 @@
             <label for="addCount2">العدد</label>
           </div>
           <div class="addTotal2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal2" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT01" id="addTotal2" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal2">الاجمالي</label>
           </div>
         </div>
         <!-- //Row3 -->
-        <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 ">
+        <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName3 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName3" aria-label="Floating label select example" onkeyup="calc('3');"
               onchange="calc('3');">
@@ -310,13 +311,13 @@
             <label for="addCount3">العدد</label>
           </div>
           <div class="addTotal3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal3" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT01" id="addTotal3" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal3">الاجمالي</label>
           </div>
         </div>
         <!-- //Row4 -->
-        <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName4 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName4" aria-label="Floating label select example" onkeyup="calc('4');"
               onchange="calc('4');">
@@ -345,13 +346,13 @@
             <label for="addCount4">العدد</label>
           </div>
           <div class="addTotal4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal4" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT01" id="addTotal4" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal4">الاجمالي</label>
           </div>
         </div>
         <!-- //Row5 -->
-        <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName5 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName5" aria-label="Floating label select example" onkeyup="calc('5');"
               onchange="calc('5');">
@@ -380,7 +381,7 @@
             <label for="addCount5">العدد</label>
           </div>
           <div class="addTotal5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal5" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT01" id="addTotal5" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal5">الاجمالي</label>
           </div>
@@ -389,9 +390,10 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">تفاصيل الدرف والاضافات عليها والكورنيش والبراويز</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT02">Total</button>الدرف والاضافات عليها والكورنيش والبراويز</div>
         <!-- // Row 6 -->
-        <div class="addRow06 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow06 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName6 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName6" aria-label="Floating label select example" onkeyup="calc('6');"
               onchange="calc('6');">
@@ -418,13 +420,13 @@
             <label for="addCount6">العدد</label>
           </div>
           <div class="addTotal6 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal6" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT02" id="addTotal6" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal6">الاجمالي</label>
           </div>
         </div>
         <!-- // Row 7 -->
-        <div class="addRow07 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow07 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName7 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName7" aria-label="Floating label select example" onkeyup="calc('7');"
               onchange="calc('7');">
@@ -451,13 +453,13 @@
             <label for="addCount7">العدد</label>
           </div>
           <div class="addTotal7 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal7" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT02" id="addTotal7" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal7">الاجمالي</label>
           </div>
         </div>
         <!-- // Row 8 -->
-        <div class="addRow08 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow08 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName8 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName8" aria-label="Floating label select example" onkeyup="calc('8');"
               onchange="calc('8');">
@@ -484,13 +486,13 @@
             <label for="addCount8">العدد</label>
           </div>
           <div class="addTotal8 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal8" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT02" id="addTotal8" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal8">الاجمالي</label>
           </div>
         </div>
         <!-- // Row 9 -->
-        <div class="addRow09 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow09 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName9 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName9" aria-label="Floating label select example" onkeyup="calc('9');"
               onchange="calc('9');">
@@ -517,13 +519,13 @@
             <label for="addCount9">العدد</label>
           </div>
           <div class="addTotal9 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal9" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT02" id="addTotal9" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal9">الاجمالي</label>
           </div>
         </div>
         <!-- // Row 10 -->
-        <div class="addRow10 container cabinets row m-sm-0 p-sm-0 m-2">
+        <div class="addRow10 container cabinets row m-sm-0 p-sm-0 m-2 content">
           <div class="addName10 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="addName10" aria-label="Floating label select example" onkeyup="calc('10');"
               onchange="calc('10');">
@@ -550,7 +552,7 @@
             <label for="addCount10">العدد</label>
           </div>
           <div class="addTotal10 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT" id="addTotal10" value="" placeholder="Ex: 20"
+            <input type="number" disabled class="form-control addGT addGT02" id="addTotal10" value="" placeholder="Ex: 20"
               autocomplete>
             <label for="addTotal10">الاجمالي</label>
           </div>
@@ -561,7 +563,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">المفصلات والرافعات والمسكات الغير مجانية</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT03">Total</button>المفصلات والرافعات والمسكات الغير مجانية</div>
 
 
 
@@ -569,7 +572,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">الادراج والعياشات</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT04">Total</button>الادراج والعياشات</div>
 
 
 
@@ -577,7 +581,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">المجالي وتوابعها</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT05">Total</button>المجالي وتوابعها</div>
 
 
 
@@ -585,7 +590,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">الاضافات المتعلقة بالرخام</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT06">Total</button>الاضافات المتعلقة بالرخام</div>
 
 
 
@@ -593,7 +599,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">التكسيات (بالمتر المربع )</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT07">Total</button>التكسيات (بالمتر المربع )</div>
 
 
 
@@ -601,7 +608,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">الكبائن المفتوحة والارفف المعلقة وزيادة الارفف الكلادينج و الاشكال الكلاسيك</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT08">Total</button>الكبائن المفتوحة والارفف المعلقة وزيادة الارفف الكلادينج و الاشكال الكلاسيك</div>
 
 
 
@@ -609,7 +617,8 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">اضافات محددة</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT09">Total</button>اضافات محددة</div>
 
 
 
@@ -617,13 +626,13 @@
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-        <div class="container text-center fw-bold">الاكسسوارات</div>
+                <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT10">Total</button>الاكسسوارات</div>
 
 
 
       </div>
 
-    </div>
     <!-- // Factory Extra   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
     <div
       class="section container-lg factoryExtraData  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
@@ -637,7 +646,8 @@
     <!-- // Devices  = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < <  -->
     <div
       class="container-lg devicesData hide border-spacing-2 border border-danger border-start-0 rounded-end bg-dark bg-opacity-25 mt-2 mb-2">
-      <div class="container text-center fw-bold">الأجهزة</div>
+              <div class="container text-center fw-bold collapsible">
+        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT00">Total</button>الأجهزة</div>
       <div class="container devRow01 row m-2 ">
         <div class="devType01 col-md col-sm col form-floating placeholder:text-center">
           <select class="form-select" id="devType01" aria-label="Floating label select example"" onchange=" getPrice();"

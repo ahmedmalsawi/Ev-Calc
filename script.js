@@ -357,17 +357,25 @@ let totalVal = Math.round( count * price * 100) / 100;
   updateTotals();
 }
 
- function updateTotals() {
-		// let totalCount = 0;
-		// let grandTotal = 0;
-		// for (let i = 1; i <= 10; i++) {
-			// let count = document.getElementById(`count${i}`).value;
-			// totalCount += parseInt(count);
+function updateTotalsGT(index){
+  var arr = document.querySelectorAll(`.addGT${index}`);
+  var gTotal = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (parseFloat(arr[i].value)) {
+      gTotal += parseFloat(arr[i].value);
+    }
+				gTotal = Math.round(gTotal * 100) / 100;
+				// document.getElementById("totalDevNoTax").value = total;
+        document.getElementById(`addGTT${index}`).innerHTML = gTotal;
+        // gTTVal = parseFloat(gTotal);
+				// tax.value = Math.round(total * 0.15 * 100) / 100;
+				// totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
+			}
+    }
 
-			// let total = document.getElementById(`addTotal${i}`);
-			// grandTotal += parseInt(total.value);
-      // }
-      // document.getElementById("totalCount").innerHTML = totalCount;
+
+
+ function updateTotals() {
 			let tax = document.getElementById("tax");
 			let totalTaxed = document.getElementById("totalTaxed");
 			var arr = document.querySelectorAll(".addGT");
@@ -382,8 +390,16 @@ let totalVal = Math.round( count * price * 100) / 100;
 				tax.value = Math.round(total * 0.15 * 100) / 100;
 				totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
 			}
-			
-  //  taxing();
+			updateTotalsGT('00');
+			updateTotalsGT('01');
+			updateTotalsGT('02');
+			updateTotalsGT('03');
+			updateTotalsGT('04');
+			updateTotalsGT('05');
+			updateTotalsGT('06');
+			updateTotalsGT('07');
+			updateTotalsGT('08');
+			updateTotalsGT('09');
  }
 
 
@@ -511,3 +527,33 @@ function calc2(){
 
 
 }
+//collapsing
+ var coll = document.getElementsByClassName("collapsible");
+ var i;
+
+ for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var content = this.parentElement.getElementsByClassName("content");
+			for (i = 0; i < content.length; i++) {
+				if (content[i].style.display === "flex") {
+					content[i].style.display = "none";
+				} else {
+					content[i].style.display = "flex";
+				}
+			}
+		});
+ }
+
+	
+	// for (i = 0; i < coll.length; i++) {
+	// 	coll[i].addEventListener("click", function () {
+	// 		this.classList.toggle("active");
+	// 		var content = this.nextElementSibling;
+	// 		if (content.style.display === "block") {
+	// 			content.style.display = "none";
+	// 		} else {
+	// 			content.style.display = "block";
+	// 		}
+	// 	});
+	// }
