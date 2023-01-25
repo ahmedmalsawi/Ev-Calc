@@ -130,6 +130,10 @@ function updateTotalsGT(index){
  function updateTotals() {
 			let tax = document.getElementById("tax");
 			let totalTaxed = document.getElementById("totalTaxed");
+			let height = document.getElementById("height");
+			let heightCount = document.getElementById("heightCount");
+			let heightTotalPrice = document.getElementById("heightTotalPrice");
+			let discount = document.getElementById("discount");
 			var arr = document.querySelectorAll(".addGT");
 			var total = 0;
 			for (var i = 0; i < arr.length; i++) {
@@ -137,18 +141,31 @@ function updateTotalsGT(index){
 					total += parseFloat(arr[i].value);
 				}
 				total = Math.round(total * 100) / 100;
-        totalNoTax.value = total;
+        		totalNoTax.value = total;
 				tax.value = Math.round(total * 0.15 * 100) / 100;
 				totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
 			}
-
-			let totalCost = 0;
-			if(!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value)){
-  				totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value);
-				}	
-			totalNoTax.value = totalCost;
-			tax.value = Math.round(totalCost * 0.15 * 100) / 100;
-			totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
+	 
+	 heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) *
+		 (parseFloat(meterPrice.value) * 0.22)* 100) / 100);
+		//  totalTaxed.value = parseFloat(totalTaxed.value) + parseFloat(heightTotalPrice.value);
+	//  if (!isNaN(discount.value)){
+	// 	 discount.value = 0;
+	//  }
+		let totalCost = 0;
+	 if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
+		 if (!isNaN(discount.value)) {
+			 
+			 totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+			 totalCost = totalCost - parseFloat(discount.value);
+			} else {
+			 totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+			 
+			}
+		}
+		totalNoTax.value = totalCost;
+		tax.value = Math.round(totalCost * 0.15 * 100) / 100;
+		totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
 			updateTotalsGT('00');
 			updateTotalsGT('01');
 			updateTotalsGT('02');
