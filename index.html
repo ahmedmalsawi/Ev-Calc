@@ -28,8 +28,8 @@
 
   <body>
 
-    <div class="container-lg">
-      <div class="container header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto bg-body">
+    <div class="container-lg " >
+      <div class="container  header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto bg-body">
         <h3 class="fs-8 text-red-600">فنون حواء للمطابخ</h3>
         <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p>
         <div class="row ">
@@ -48,63 +48,7 @@
         </div>
       </div>
     </div>
-    <!-- <table id="myTable">
-      <tr>
-        <th>Name</th>
-        <th>Count</th>
-        <th>Price</th>
-        <th>Total</th>
-      </tr>
-      <tr>
-        <td>Item 1</td>
-        <td><input type="number" id="count1" oninput="calculateTotal(1)"></td>
-        <td><input type="number" id="price1" oninput="calculateTotal(1)"></td>
-        <td><span id="total1"></span></td>
-      </tr>
-      <tr>
-        <td>Item 2</td>
-        <td><input type="number" id="count2" oninput="calculateTotal(2)"></td>
-        <td><input type="number" id="price2" oninput="calculateTotal(2)"></td>
-        <td><span id="total2"></span></td>
-      </tr>
-      ...
-      <tr>
-        <td>Total</td>
-        <td><span id="totalCount"></span></td>
-        <td></td>
-        <td><span id="grandTotal"></span></td>
-      </tr>
-    </table> -->
-
-    <!-- <script>
-      function calculateTotal(index)
-      {
-        let count = document.getElementById(`count${index}`).value;
-        let price = document.getElementById(`price${index}`).value;
-        let total = count * price;
-        document.getElementById(`total${index}`).innerHTML = total;
-
-        updateTotals();
-      }
-
-      function updateTotals()
-      {
-        let totalCount = 0;
-        let grandTotal = 0;
-        for (let i = 1; i <= 10; i++)
-        {
-          let count = document.getElementById(`count${i}`).value;
-          totalCount += parseInt(count);
-
-          let total = document.getElementById(`total${i}`).innerHTML;
-          grandTotal += parseInt(total);
-        }
-        document.getElementById('totalCount').innerHTML = totalCount;
-        document.getElementById('grandTotal').innerHTML = grandTotal;
-      }
-    </script> -->
-
-
+   
     <div class=" container mb-2 p-2 border-spacing-2 border border-danger  rounded bg-blue bg-dark bg-opacity-10"
       id="fullSite">
       <!-- // General Data   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
@@ -113,30 +57,30 @@
         <!-- <div class=" container-lg mainData col border-black border-spacing-2 border border-success border-start-0 rounded-end bg-success bg-opacity-10"> -->
         <!-- //Row 1   -->
         <div class="container text-center fw-bold">البيانات الأساسية</div>
-        <div class="container row1 row m-2 ">
-          <div class="customerName col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating ">
+        <div class="container row1 row m-2 exclude">
+          <div class="customerName exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating col-print-6">
             <input type="text" class="form-control" id="customerName" value=""
               placeholder="Ex: محمود ابراهيم عبد الباقي" autocomplete required>
             <label for="customerName">اسم العميل</label>
           </div>
-          <div class="customerPhone col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="customerPhone exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="customerPhone" class="form-control" id="customerPhone" value="" placeholder="Ex: " autocomplete
               required>
             <label for="customerPhone">رقم الجوال</label>
           </div>
-          <div class="mainContractNo col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="mainContractNo exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="text" class="form-control " id="mainContractNo" value="" placeholder="Ex: ">
             <label for="mainContractNo">رقم العقد</label>
           </div>
         </div>
         <!-- // Row 2   -->
-        <div class="container row2 row m-2">
-          <div class="salesman col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+        <div class="container exclude  row2 row m-2">
+          <div class="salesman exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: عصام سلامة" autocomplete
               required>
             <label for="salesman">المصمم</label>
           </div>
-          <div class="showroom col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="showroom exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="showroom" aria-label="Floating label select example">
               <option selected>يرجي اختيار المعرض</option>
               <option value="" disabled class="text-bg-dark text-danger text-center">المنطقة الوسطي
@@ -163,11 +107,11 @@
             </select>
             <label for="showroom">المعرض</label>
           </div>
-          <div class="kitchenType col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="kitchenType" aria-label="Floating label select example">
+          <div class="kitchenType exclude col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+            <select class="form-select" id="kitchenType" aria-label="Floating label select example"  onkeyup="getPrice();" onchange="getPrice();">
               <option selected></option>
               <option value="" disabled class="text-bg-dark text-danger text-center">الومنيوم</option>
-              <option value=1460>1460 - مطبخ المنيوم كالسيوم</option>
+              <option value=1460 selected>1460 - مطبخ المنيوم كالسيوم</option>
               <option value=1590>1590 - مطبخ المنيوم خشب 3مم</option>
               <option value=1800>1800 - مطبخ المنيوم اكرليك</option>
               <option value=1850>1850 - مطبخ المنيوم صاج خشبي</option>
@@ -185,79 +129,79 @@
         
         <!-- // Row 3   -->
         <div class="container row3 row m-2">
-          <div class="downCount col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="downCount" value="" placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
+          <div class="downCount exclude  col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control float-right" id="downCount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
             <label for="downCount">السفلي</label>
           </div>
-          <div class="upCount col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="upCount" value="" placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
+          <div class="upCount exclude  col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control float-right" id="upCount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
             <label for="upCount">العلوي</label>
           </div>
-          <div class="meterTotal col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterTotal" value="" placeholder="Ex: 20"
-            autocomplete>
-            <label for="meterTotal">إجمالى الأمتار</label>
+          <div class="island  exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control float-right" id="island" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
+            <label for="island">الجزيرة</label>
           </div>
-          <div class="meterPrice col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterPrice" value="" placeholder="Ex: 20"
-            autocomplete>
-            <label for="meterPrice">سعر المتر</label>
-          </div>
-          <div class="descDownCount col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="number" class="form-control float-right" id="descDownCount" value="" placeholder="Ex:"  onkeyup="getPrice();" onchange="getPrice();">
+          <div class="descDownCount  exclude col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+            <input type="number" class="form-control float-right" id="descDownCount" value=0 placeholder="Ex:"  onkeyup="getPrice();" onchange="getPrice();">
             <label for="descDownCount">خصم سفلي</label>
           </div>
-          <div class="descUpCount col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="number" class="form-control float-right" id="descUpCount" value="" placeholder="Ex:" onkeyup="getPrice();" onchange="getPrice();">
+          <div class="descUpCount  exclude col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+            <input type="number" class="form-control float-right" id="descUpCount" value=0 placeholder="Ex:" onkeyup="getPrice();" onchange="getPrice();">
             <label for="descUpCount">خصم علوي</label>
+          </div>
+          <div class="meterTotal exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" disabled class="form-control" id="meterTotal" value=0 placeholder="Ex: 20"
+            >
+            <label for="meterTotal">إجمالى الأمتار</label>
           </div>
         </div>
         <!-- // Row 4   -->
-        <div class="container row4 row m-2">
-          <div class="island col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="island" value="" placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="island">الجزيرة</label>
-          </div>
-          <div class="height col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="height" value="" placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="height">الارتفاع</label>
-          </div>
-          <!-- <div class="meterTotal col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterTotal" value="" placeholder="Ex: 20"
-            autocomplete>
-            <label for="meterTotal">إجمالى الأمتار</label>
-          </div>
-          <div class="meterPrice col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterPrice" value="" placeholder="Ex: 20"
-            autocomplete>
+        <div class="container  exclude row4 row m-2">
+          <div class="meterPrice exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" disabled class="form-control" id="meterPrice" value=1460 placeholder="Ex: 20" >
             <label for="meterPrice">سعر المتر</label>
           </div>
-          <div class="descDownCount col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="number" class="form-control float-right" id="descDownCount" value="" placeholder="Ex:"  onkeyup="getPrice();" onchange="getPrice();">
-            <label for="descDownCount">خصم سفلي</label>
+          <div class="meterTotalPrice exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" disabled class="form-control" id="meterTotalPrice" value=0 placeholder="Ex: 20"
+            >
+            <label for="meterTotalPrice">إجمالى سعر الأمتار</label>
           </div>
-          <div class="descUpCount col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="number" class="form-control float-right" id="descUpCount" value="" placeholder="Ex:" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="descUpCount">خصم علوي</label>
-          </div> -->
+          <div class="height exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control float-right" id="height" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
+            <label for="height">الارتفاع بالمتر</label>
+          </div>
+          <div class="heightCount exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control float-right" id="heightCount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
+            <label for="heightCount">عدد أمتار الارتفاع</label>
+          </div>
+          <div class="meterTotalPrice exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" disabled class="form-control" id="meterTotalPrice" value=0 placeholder="Ex: 20"
+            >
+            <label for="meterTotalPrice">إجمالى سعر الارتفاع</label>
+          </div>
+          <div class="discount exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control" id="discount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();"
+            >
+            <label for="discount">خصم</label>
+          </div>
         </div>
         <!-- //Row 5   -->
         <div class="container row5 row m-2">
-          <div class="totalNoTax section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="totalNoTax  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();"
               placeholder="Ex: ">
             <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
           </div>
-          <div class="totalDevNoTax devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="totalDevNoTax  exclude devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="taxing();"
               placeholder="Ex: " disabled>
             <label for="totalDevNoTax">قيمة الأجهزة (قبل الضريبة) </label>
           </div>
-          <div class="tax col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="tax col-md  exclude col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="number" class="form-control " id="tax" value="" placeholder="Ex: 90" disabled>
             <label for="tax">الضريبة</label>
           </div>
-          <div class="totalTaxed col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+          <div class="totalTaxed  exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="text" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
             <label for="totalTaxed"> القيمة شاملة الضريبة </label>
           </div>
@@ -265,7 +209,7 @@
       </div>
       <!-- // الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن ذات الارتفاع الاعلى من القياسي وكبائن الدور الثاني 	 < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
-        class="hide section container-lg cabinetsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 ">
+        class="section container-lg cabinetsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 ">
                 <div class="container text-center fw-bold collapsible">
         <button disabled class="btn btn-grey border-0 text-danger" id="addGTT01">Total</button>
         الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن الاعلى من القياسي و الدور الثاني</div>
@@ -447,7 +391,7 @@
       </div>
       <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
-        class="hide section container-lg doorsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+        class="section container-lg doorsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
                 <div class="container text-center fw-bold collapsible">
         <button disabled class="btn btn-grey border-0 text-danger" id="addGTT02">Total</button>الدرف والاضافات عليها والكورنيش والبراويز</div>
         <!-- // Row 6 -->
@@ -625,9 +569,9 @@
         <button disabled class="btn btn-grey border-0 text-danger" id="addGTT03">Total</button>المفصلات والرافعات والمسكات الغير مجانية</div>
 <!-- // Row 1 -->
 <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName1 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName1" aria-label="Floating label select example" onkeyup="calc('1');"
-      onchange="calc('1');">
+  <div class="addName11 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName11" aria-label="Floating label select example" onkeyup="calc('11');"
+      onchange="calc('11');">
       <option selected value=0>لا يوجد</option>
       <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
       <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
@@ -641,28 +585,28 @@
       <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
       <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
     </select>
-    <label for="addName1">بيان رقم 1</label>
+    <label for="addName11">بيان رقم 1</label>
   </div>
-  <div class="addCode1 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode1" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode1">الكود</label>
+  <div class="addCode11 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode11" value="" placeholder="Ex: " autocomplete>
+    <label for="addCode11">الكود</label>
   </div>
-  <div class="addCount1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount1" value="" placeholder="Ex: 20" onkeyup="calc('1');"
-      onchange="calc('1');">
-    <label for="addCount1">العدد</label>
+  <div class="addCount11 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount11" value="" placeholder="Ex: 20" onkeyup="calc('11');"
+      onchange="calc('11');">
+    <label for="addCount11">العدد</label>
   </div>
-  <div class="addTotal1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT01" id="addTotal1" value="" placeholder="Ex: 20"
+  <div class="addTotal11 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT03" id="addTotal11" value="" placeholder="Ex: 20"
       autocomplete>
-    <label for="addTotal1">الاجمالي</label>
+    <label for="addTotal11">الاجمالي</label>
   </div>
 </div>
 <!-- //Row 2 -->
 <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName2 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName2" aria-label="Floating label select example" onkeyup="calc('2');"
-      onchange="calc('2');">
+  <div class="addName12 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName12" aria-label="Floating label select example" onkeyup="calc('12');"
+      onchange="calc('12');">
       <option selected value=0>لا يوجد</option>
       <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
       <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
@@ -676,28 +620,28 @@
       <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
       <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
     </select>
-    <label for="addName2">بيان رقم 2</label>
+    <label for="addName12">بيان رقم 2</label>
   </div>
-  <div class="addCode2 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode2" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode2">الكود</label>
+  <div class="addCode12 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode12" value="" placeholder="Ex: " autocomplete>
+    <label for="addCode12">الكود</label>
   </div>
-  <div class="addCount2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount2" value="" placeholder="Ex: 20" onkeyup="calc('2');"
-      onchange="calc('2');">
-    <label for="addCount2">العدد</label>
+  <div class="addCount12 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount12" value="" placeholder="Ex: 20" onkeyup="calc('12');"
+      onchange="calc('12');">
+    <label for="addCount12">العدد</label>
   </div>
-  <div class="addTotal2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT01" id="addTotal2" value="" placeholder="Ex: 20"
+  <div class="addTotal12 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT03" id="addTotal12" value="" placeholder="Ex: 20"
       autocomplete>
-    <label for="addTotal2">الاجمالي</label>
+    <label for="addTotal12">الاجمالي</label>
   </div>
 </div>
 <!-- //Row3 -->
 <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName3 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName3" aria-label="Floating label select example" onkeyup="calc('3');"
-      onchange="calc('3');">
+  <div class="addName13 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName13" aria-label="Floating label select example" onkeyup="calc('13');"
+      onchange="calc('13');">
       <option selected value=0>لا يوجد</option>
       <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
       <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
@@ -711,28 +655,28 @@
       <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
       <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
     </select>
-    <label for="addName3">بيان رقم 3</label>
+    <label for="addName13">بيان رقم 3</label>
   </div>
-  <div class="addCode3 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode3" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode3">الكود</label>
+  <div class="addCode13 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode13" value="" placeholder="Ex: " autocomplete>
+    <label for="addCode13">الكود</label>
   </div>
-  <div class="addCount3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount3" value="" placeholder="Ex: 20" onkeyup="calc('3');"
-      onchange="calc('3');">
-    <label for="addCount3">العدد</label>
+  <div class="addCount13 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount13" value="" placeholder="Ex: 20" onkeyup="calc('13');"
+      onchange="calc('13');">
+    <label for="addCount13">العدد</label>
   </div>
-  <div class="addTotal3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT01" id="addTotal3" value="" placeholder="Ex: 20"
+  <div class="addTotal13 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT03" id="addTotal13" value="" placeholder="Ex: 20"
       autocomplete>
-    <label for="addTotal3">الاجمالي</label>
+    <label for="addTotal13">الاجمالي</label>
   </div>
 </div>
 <!-- //Row4 -->
 <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName4 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName4" aria-label="Floating label select example" onkeyup="calc('4');"
-      onchange="calc('4');">
+  <div class="addName14 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName14" aria-label="Floating label select example" onkeyup="calc('14');"
+      onchange="calc('14');">
       <option selected value=0>لا يوجد</option>
       <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
       <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
@@ -746,28 +690,28 @@
       <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
       <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
     </select>
-    <label for="addName4">بيان رقم 4</label>
+    <label for="addName14">بيان رقم 4</label>
   </div>
-  <div class="addCode4 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode4" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode4">الكود</label>
+  <div class="addCode14 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode14" value="" placeholder="Ex: " autocomplete>
+    <label for="addCode14">الكود</label>
   </div>
-  <div class="addCount4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount4" value="" placeholder="Ex: 20" onkeyup="calc('4');"
-      onchange="calc('4');">
-    <label for="addCount4">العدد</label>
+  <div class="addCount14 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount14" value="" placeholder="Ex: 20" onkeyup="calc('14');"
+      onchange="calc('14');">
+    <label for="addCount14">العدد</label>
   </div>
-  <div class="addTotal4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT01" id="addTotal4" value="" placeholder="Ex: 20"
+  <div class="addTotal14 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT03" id="addTotal14" value="" placeholder="Ex: 20"
       autocomplete>
-    <label for="addTotal4">الاجمالي</label>
+    <label for="addTotal14">الاجمالي</label>
   </div>
 </div>
 <!-- //Row5 -->
 <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName5 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName5" aria-label="Floating label select example" onkeyup="calc('5');"
-      onchange="calc('5');">
+  <div class="addName15 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName15" aria-label="Floating label select example" onkeyup="calc('15');"
+      onchange="calc('15');">
       <option selected value=0>لا يوجد</option>
       <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
       <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
@@ -781,21 +725,21 @@
       <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
       <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
     </select>
-    <label for="addName5">بيان رقم 5</label>
+    <label for="addName15">بيان رقم 5</label>
   </div>
-  <div class="addCode5 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode5" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode5">الكود</label>
+  <div class="addCode15 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode15" value="" placeholder="Ex: " autocomplete>
+    <label for="addCode15">الكود</label>
   </div>
-  <div class="addCount5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount5" value="" placeholder="Ex: 20" onkeyup="calc('5');"
-      onchange="calc('5');">
-    <label for="addCount5">العدد</label>
+  <div class="addCount15 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount15" value="" placeholder="Ex: 20" onkeyup="calc('15');"
+      onchange="calc('15');">
+    <label for="addCount15">العدد</label>
   </div>
-  <div class="addTotal5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT01" id="addTotal5" value="" placeholder="Ex: 20"
+  <div class="addTotal15 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT03" id="addTotal15" value="" placeholder="Ex: 20"
       autocomplete>
-    <label for="addTotal5">الاجمالي</label>
+    <label for="addTotal15">الاجمالي</label>
   </div>
 </div>
 
@@ -1235,6 +1179,8 @@
     </div>
     <!-- // Submit   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
     <div class="row ">
+      <div id="editButton" class="editButton p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger hide"
+      >فتح التعديل</div>
       <div
         class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none hide"
         onclick="printPdf();">طباعة</div>
