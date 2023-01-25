@@ -168,23 +168,23 @@ function updateTotalsGT(index){
  }
 
 
- var coll = document.getElementsByClassName("collapsible");
- var i;
- //collapsing
- for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function () {
-			this.classList.toggle("active");
-			var content = this.parentElement.getElementsByClassName("content");
-			// content[i].style.display = "flex";
-			for (i = 0; i < content.length; i++) {
-				if (content[i].style.display === "flex") {
-					content[i].style.display = "none";
-				} else {
-					content[i].style.display = "flex";
-				}
-			}
-		});
- }
+ //  //collapsing
+//  var coll = document.getElementsByClassName("collapsible");
+//  var i;
+//  for (i = 0; i < coll.length; i++) {
+// 		coll[i].addEventListener("click", function () {
+// 			this.classList.toggle("active");
+// 			var content = this.parentElement.getElementsByClassName("content");
+// 			// content[i].style.display = "flex";
+// 			for (i = 0; i < content.length; i++) {
+// 				if (content[i].style.display === "flex") {
+// 					content[i].style.display = "none";
+// 				} else {
+// 					content[i].style.display = "flex";
+// 				}
+// 			}
+// 		});
+//  }
 
 
 // function printPdf()
@@ -259,9 +259,9 @@ window.addEventListener("beforeprint", function() {
   hideEmptyInputs();
 });
 
-window.addEventListener("afterprint", function() {
-  document.body.innerHTML = originalState;
-});
+// window.addEventListener("afterprint", function() {
+//   document.body.innerHTML = originalState;
+// });
 
 
 function hideEmptyInputs() {
@@ -275,10 +275,9 @@ function hideEmptyInputs() {
 	});
   }
   
-let editButton = document.getElementById("editButton");
-editButton.addEventListener("click", changeDisplay);
-function changeDisplay() {
-	let element = document.querySelector(".content");
-	element.style.display = "flex";
-  }
-  
+// let editButton = document.getElementById("editButton");
+// editButton.addEventListener("click", changeDisplay);
+// function changeDisplay() {
+// 	let element = document.querySelector(".content");
+// 	element.style.display = "flex";
+//   }

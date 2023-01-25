@@ -117,9 +117,9 @@ color:#BD2939;
   .table>:not(caption)>*>* {
     padding: 0;
   }
-  .content {
+  /* .content {
     display: flex;
-  }
+  } */
 }
 
 .form-floating>label {
@@ -160,7 +160,7 @@ color: #BD2939!important;
 background-color: #2c698d!important;
 }
 
-  .collapsible {
+  /* .collapsible {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -174,8 +174,8 @@ background-color: #2c698d!important;
   
   .collapsible.active::before {
     content: "\25BC";
-  }
+  } */
 
-  .content {
+  /* .content {
     display: none;
-  }
+  } */
