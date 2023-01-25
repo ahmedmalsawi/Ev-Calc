@@ -29,22 +29,27 @@
   <body>
 
     <div class="container-lg " >
-      <div class="container  header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto bg-body">
-        <h3 class="fs-8 text-red-600">فنون حواء للمطابخ</h3>
-        <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p>
+      <div class="container  header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto bg-body mb-0 pb-0">
+        <h3 class="fs-8 text-red-600 ">فنون حواء للمطابخ</h3>
+        <!-- <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p> -->
         <div class="row ">
           <div
-            class="titleButton devicesData  text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger ">
+            class="titleButton devicesData  text-danger btn-success align-center text-center border-0 hover:text-bg-dark pb-2 pt-0 mt-0">
             حاسبة المطابخ</div>
-          <div
-            class="titleButton d-print-none fs-6 pb-2 dev-button devicesData  text-success btn-succsess align-center text-center border-0 hover:text-bg-danger "
-            onclick="show();">(للأجهزة اضغط هنا)</div>
-          <div
-            class="titleButton section  text-danger btn-succsess align-center hide text-center border-0 hover:text-bg-danger ">
+          <!-- <div
+            class="titleButton d-print-none fs-6 pb-2 dev-button devicesData  text-success btn-success align-center text-center border-0 hover:text-bg-danger "
+            onclick="show();">(للأجهزة اضغط هنا)</div> -->
+          <div 
+            class="titleButton section text-danger btn-success align-center hide text-center border-0 hover:text-bg-danger pb-2 pt-0 mt-0">
             حاسبة الأجهزة</div>
-          <div
-            class="titleButton d-print-none fs-6 section pb-2 text-success hide btn-succsess align-center text-center border-0 hover:text-bg-danger "
+          <!-- <div
+            class="titleButton d-print-none fs-6 section pb-2 text-success hide btn-success align-center text-center border-0 hover:text-bg-danger "
             onclick="show();">(للمطابخ اضغط هنا)</div>
+        </div> -->
+        <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
+          <div class=" titleButton btn btn-success d-print-none fs-6 pb-2 dev-button devicesData  text-white btn-yellow bg-dark align-center text-center border-0 hover:text-bg-danger" onclick="show();">مطابخ</div>
+          <div class=" section     btn btn-success d-print-none fs-6 section pb-2 text-white hide btn-success align-center bg-dark text-center border-0 hover:text-bg-danger" onclick="show();">أجهزة</div>
+          <div disabled class="btn btn-secondary">خزائن</div>
         </div>
       </div>
     </div>
@@ -53,13 +58,13 @@
       id="fullSite">
       <!-- // General Data   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
       <div
-        class=" container-lg mainData mb-2 border-spacing-2 border border-start-0 rounded-end bg-danger bg-gradient bg-opacity-25 border-dark">
+        class=" container-lg mainData mb-2 border-spacing-2 border border-start-0 rounded-end bg-body bg-gradient bg-opacity-75 border-dark">
         <!-- <div class=" container-lg mainData col border-black border-spacing-2 border border-success border-start-0 rounded-end bg-success bg-opacity-10"> -->
         <!-- //Row 1   -->
         <div class="container text-center fw-bold">البيانات الأساسية</div>
         <div class="container row1 row m-2 exclude">
           <div class="customerName exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating col-print-6">
-            <input type="text" class="form-control" id="customerName" value=""
+            <input type="text" class="form-control text-primary" id="customerName" value=""
               placeholder="Ex: محمود ابراهيم عبد الباقي" autocomplete required>
             <label for="customerName">اسم العميل</label>
           </div>
@@ -567,23 +572,28 @@
         class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
                 <div class="container text-center fw-bold ">
         <button disabled class="btn btn-grey border-0 text-danger" id="addGTT03">Total</button>المفصلات والرافعات والمسكات الغير مجانية</div>
-<!-- // Row 1 -->
+<!-- // Row 11 -->
 <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
   <div class="addName11 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
     <select class="form-select" id="addName11" aria-label="Floating label select example" onkeyup="calc('11');"
       onchange="calc('11');">
       <option selected value=0>لا يوجد</option>
-      <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
-      <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-      <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-      <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب زاوية</option>
-      <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-      <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-      <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
-      <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
+      <option value="" disabled class="text-bg-dark text-danger text-center"> المفصلات و الرافعات</option>
+      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
+      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
+      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
+      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+      <option value="" disabled class="text-bg-dark text-danger text-center">المسكات</option>
+      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
     </select>
     <label for="addName11">بيان رقم 1</label>
   </div>
@@ -602,23 +612,28 @@
     <label for="addTotal11">الاجمالي</label>
   </div>
 </div>
-<!-- //Row 2 -->
+<!-- //Row 12 -->
 <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
   <div class="addName12 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
     <select class="form-select" id="addName12" aria-label="Floating label select example" onkeyup="calc('12');"
       onchange="calc('12');">
       <option selected value=0>لا يوجد</option>
-      <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
-      <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-      <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-      <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب زاوية</option>
-      <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-      <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-      <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
-      <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
+      <option value="" disabled class="text-bg-dark text-danger text-center"> المفصلات و الرافعات</option>
+      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
+      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
+      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
+      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+      <option value="" disabled class="text-bg-dark text-danger text-center">المسكات</option>
+      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
     </select>
     <label for="addName12">بيان رقم 2</label>
   </div>
@@ -637,23 +652,28 @@
     <label for="addTotal12">الاجمالي</label>
   </div>
 </div>
-<!-- //Row3 -->
+<!-- //Row 13 -->
 <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
   <div class="addName13 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
     <select class="form-select" id="addName13" aria-label="Floating label select example" onkeyup="calc('13');"
       onchange="calc('13');">
       <option selected value=0>لا يوجد</option>
-      <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
-      <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-      <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-      <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب زاوية</option>
-      <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-      <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-      <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
-      <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
+      <option value="" disabled class="text-bg-dark text-danger text-center"> المفصلات و الرافعات</option>
+      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
+      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
+      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
+      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+      <option value="" disabled class="text-bg-dark text-danger text-center">المسكات</option>
+      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
     </select>
     <label for="addName13">بيان رقم 3</label>
   </div>
@@ -672,23 +692,28 @@
     <label for="addTotal13">الاجمالي</label>
   </div>
 </div>
-<!-- //Row4 -->
+<!-- //Row14 -->
 <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
   <div class="addName14 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
     <select class="form-select" id="addName14" aria-label="Floating label select example" onkeyup="calc('14');"
       onchange="calc('14');">
       <option selected value=0>لا يوجد</option>
-      <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
-      <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-      <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-      <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب زاوية</option>
-      <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-      <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-      <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
-      <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
+      <option value="" disabled class="text-bg-dark text-danger text-center"> المفصلات و الرافعات</option>
+      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
+      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
+      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
+      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+      <option value="" disabled class="text-bg-dark text-danger text-center">المسكات</option>
+      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
     </select>
     <label for="addName14">بيان رقم 4</label>
   </div>
@@ -707,23 +732,28 @@
     <label for="addTotal14">الاجمالي</label>
   </div>
 </div>
-<!-- //Row5 -->
+<!-- //Row 15 -->
 <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
   <div class="addName15 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
     <select class="form-select" id="addName15" aria-label="Floating label select example" onkeyup="calc('15');"
       onchange="calc('15');">
       <option selected value=0>لا يوجد</option>
-      <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب طويل</option>
-      <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-      <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-      <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">دولاب زاوية</option>
-      <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-      <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-      <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-      <option value="" disabled class="text-bg-dark text-danger text-center">كبائن علوية</option>
-      <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
+      <option value="" disabled class="text-bg-dark text-danger text-center"> المفصلات و الرافعات</option>
+      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
+      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
+      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
+      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+      <option value="" disabled class="text-bg-dark text-danger text-center">المسكات</option>
+      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
     </select>
     <label for="addName15">بيان رقم 5</label>
   </div>
