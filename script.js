@@ -155,15 +155,20 @@ function updateTotalsGT(index){
 		let totalCost = 0;
 	 if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
 		 if (!isNaN(discount.value)) {
-			 
 			 totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
 			 totalCost = totalCost - parseFloat(discount.value);
 			} else {
 			 totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
 			 
 			}
-		}
+	 }
+	 if (!isNaN(totalDevNoTax.value)) {
+		totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+		totalCost = totalCost - parseFloat(discount.value);
+	   } else {
+		totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
 		totalNoTax.value = totalCost;
+	   }
 		tax.value = Math.round(totalCost * 0.15 * 100) / 100;
 		totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
 			updateTotalsGT('00');
