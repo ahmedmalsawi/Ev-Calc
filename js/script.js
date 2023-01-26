@@ -148,8 +148,7 @@ function updateTotalsGT(index){
 			totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
 		}
 		
-		heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) *
-		(parseFloat(meterPrice.value) * 0.22)* 100) / 100);
+		heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) * 	(parseFloat(meterPrice.value) * 0.22)* 100) / 100);
 			// let totalCost = 0;
 			if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
 				if (!isNaN(discount.value)) {
@@ -158,14 +157,18 @@ function updateTotalsGT(index){
 				} else {
 					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
 				}
-			}
-			if (!isNaN(totalDevNoTax.value)) {
-				totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-				totalCost = totalCost - parseFloat(discount.value);
-			} else {
-				totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-				totalNoTax.value = totalCost;
-			}
+	 }
+	 
+			// if (!isNaN(totalDevNoTax.value)) {
+			// 	totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+			// 	totalCost = totalCost - parseFloat(discount.value);
+			// } else {
+			// 	totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+			// 	totalNoTax.value = totalCost;
+			// }
+			devsTax.value = Math.round(totalDevNoTax.value * 0.15 * 100) / 100;
+	 		totalDevTaxed.value = Math.round(totalDevNoTax.value * 1.15 * 100) / 100;
+	 
 			tax.value = Math.round(totalCost * 0.15 * 100) / 100;
 			totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
 			updateTotalsGT('00');
