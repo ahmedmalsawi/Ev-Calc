@@ -150,18 +150,13 @@ function updateTotalsGT(index){
 		
 		heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) *
 		(parseFloat(meterPrice.value) * 0.22)* 100) / 100);
-		//  totalTaxed.value = parseFloat(totalTaxed.value) + parseFloat(heightTotalPrice.value);
-		//  if (!isNaN(discount.value)){
-			// 	 discount.value = 0;
-			//  }
-			let totalCost = 0;
+			// let totalCost = 0;
 			if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
 				if (!isNaN(discount.value)) {
 					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
 					totalCost = totalCost - parseFloat(discount.value);
 				} else {
 					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-					
 				}
 			}
 			if (!isNaN(totalDevNoTax.value)) {
@@ -283,11 +278,6 @@ window.addEventListener("beforeprint", function() {
   hideEmptyInputs();
 });
 
-// window.addEventListener("afterprint", function() {
-//   document.body.innerHTML = originalState;
-// });
-
-
 function hideEmptyInputs() {
 	let inputs = document.querySelectorAll("input");
 	inputs.forEach(function(input) {
@@ -298,18 +288,9 @@ function hideEmptyInputs() {
 	  }
 	});
   }
-  
-// let editButton = document.getElementById("editButton");
-// editButton.addEventListener("click", changeDisplay);
-// function changeDisplay() {
-// 	let element = document.querySelector(".content");
-// 	element.style.display = "flex";
-//   }
-
 
 // Get all rows
 const rows = document.querySelectorAll(".row");
-
 // Function to calculate tax and total
 function devTaxing(e) {
   // Get the current row
