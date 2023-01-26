@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <link rel="apple-touch-icon" sizes="120x120" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <link rel="apple-touch-icon" sizes="76x76" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <link rel="apple-touch-icon" sizes="152x152" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"   integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="   crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-      rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-      integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"   rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Ev-Calculate</title>
   </head>
@@ -88,7 +83,7 @@
           <div class="showroom exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="showroom" aria-label="Floating label select example">
               <option selected>يرجي اختيار المعرض</option>
-              <option value="" disabled class="text-bg-dark text-danger text-center">المنطقة الوسطي
+              <option value="" disabled class="text-bg-dark text-warning text-center">المنطقة الوسطي
               </option>
               <option value="0- المصنع">0- المصنع</option>
               <option value="1- التخصصي">1- التخصصي</option>
@@ -96,16 +91,16 @@
               <option value="5- السيف جاليري">5- السيف جاليري</option>
               <option value="6- الدوادمي">6- الدوادمي</option>
               <option value="9- المجمعة">9- المجمعة</option>
-              <option value="" disabled class="text-bg-dark text-danger text-center"> منطقة القصيم
+              <option value="" disabled class="text-bg-dark text-warning text-center"> منطقة القصيم
               </option>
               <option value="3- بريدة">3- بريدة</option>
               <option value="7- الرس">7- الرس</option>
-              <option value="" disabled class="text-bg-dark text-danger text-center">المنطقة الشرقية
+              <option value="" disabled class="text-bg-dark text-warning text-center">المنطقة الشرقية
               </option>
               <option value="4- الخبر">4- الخبر</option>
               <option value="8- الأحساء">8- الأحساء</option>
               <option value="10- الدمام">10- الدمام</option>
-              <option value="" disabled class="text-bg-dark text-danger text-center">المنطقة الغربية
+              <option value="" disabled class="text-bg-dark text-warning text-center">المنطقة الغربية
               </option>
               <option value="11- المدينة">11- المدينة</option>
               <option value="12- جدة">12- جدة</option>
@@ -115,7 +110,7 @@
           <div class="kitchenType exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <select class="form-select" id="kitchenType" aria-label="Floating label select example"  onkeyup="getPrice();" onchange="getPrice();">
               <option selected></option>
-              <option value="" disabled class="text-bg-dark text-danger text-center">الومنيوم</option>
+              <option value="" disabled class="text-bg-dark text-warning text-center">الومنيوم</option>
               <option value=1460 selected>1460 - مطبخ المنيوم كالسيوم</option>
               <option value=1590>1590 - مطبخ المنيوم خشب 3مم</option>
               <option value=1800>1800 - مطبخ المنيوم اكرليك</option>
@@ -124,7 +119,7 @@
               <option value=2200>2200 - مطبخ المنيوم درفة خشب </option>
               <option value=2400>2400 - مطبخ المنيوم درف mdf دهان </option>
               <option value=1900>1900 - مطبخ المنيوم شرائح خشابي </option>
-              <option value="" disabled class="text-bg-dark text-danger text-center">خشب</option>
+              <option value="" disabled class="text-bg-dark text-warning text-center">خشب</option>
               <option value=>مطبخ خشب درفة خشب دهان </option>
               <option value=2400>2400 - مطبخ خشب درفة خشب </option>
             </select>
@@ -1231,25 +1226,17 @@
     </div>
     </div>
 
-    <script src="multiselect-01/js/jquery.min.js"></script>
-    <script src="multiselect-01/js/popper.js"></script>
-    <script src="multiselect-01/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"></script>
-    <script src="multiselect-01/js/bootstrap-multiselect.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"  crossorigin="anonymous"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"
-      integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"   integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"  integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
   </body>
 
 </html>
