@@ -185,16 +185,16 @@
             <label for="discount">خصم</label>
           </div>
         </div>
-        <!-- //Row 5   -->
+        <!-- //Row 5  Devices totals -->
         <div class="container row5 row m-2">
           <div class="totalDevNoTax  exclude devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="taxing();"
             placeholder="Ex: " disabled>
             <label for="totalDevNoTax">قيمة الأجهزة (قبل الضريبة) </label>
           </div>
-          <div class="devTax col-md  exclude devicesData hide col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control " id="devTax" value="" placeholder="Ex: 90" disabled>
-            <label for="devTax">الضريبة</label>
+          <div class="devsTax col-md  exclude devicesData hide col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+            <input type="number" class="form-control " id="devsTax" value="" placeholder="Ex: 90" disabled>
+            <label for="devsTax">الضريبة</label>
           </div>
           <div class="totalDevTaxed  exclude  devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
             <input type="text" class="form-control " id="totalDevTaxed" value="" placeholder="Ex: " disabled>
@@ -202,19 +202,19 @@
           </div>
         </div>
         
-        <!-- //Row 5  Devices totals -->
+        <!-- //Row 5   -->
         <div class="container row5 row m-2">
           <div class="totalNoTax  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();"
+            <input type="number" disabled class="form-control " id="totalNoTax" value=0 onkeyup="taxing();"
               placeholder="Ex: ">
             <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
           </div>
           <div class="tax col-md  exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control " id="tax" value="" placeholder="Ex: 90" disabled>
+            <input type="number" class="form-control " id="tax" value=0 placeholder="Ex: 90" disabled>
             <label for="tax">الضريبة</label>
           </div>
           <div class="totalTaxed  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="text" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
+            <input type="text" class="form-control " id="totalTaxed" value=0 placeholder="Ex: " disabled>
             <label for="totalTaxed"> القيمة شاملة الضريبة </label>
           </div>
         </div>
@@ -900,16 +900,16 @@
           <label for="devCode01">الكود</label>
         </div>
         <div class="devPrice01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devPrice01" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice01" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice01">السعر</label>
         </div>
         <div class="devTax01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax01" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax01" value="" placeholder="Ex: " disabled>
           <label for="devTax01"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal01" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal01" value="" placeholder="Ex: " disabled>
           <label for="devTotal01"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -952,16 +952,16 @@
           <label for="devCode02">الكود</label>
         </div>
         <div class="devPrice02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control  dev-price addGT00" id="devPrice02" value="" placeholder="Ex: "
+          <input type="number" class="form-control  dev-price devPrice addGT00" id="devPrice02" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice02">السعر</label>
         </div>
         <div class="devTax02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax02" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax02" value="" placeholder="Ex: " disabled>
           <label for="devTax02"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal02" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal02" value="" placeholder="Ex: " disabled>
           <label for="devTotal02"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -1004,16 +1004,16 @@
           <label for="devCode03">الكود</label>
         </div>
         <div class="devPrice03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control  dev-price addGT00" id="devPrice03" value="" placeholder="Ex: "
+          <input type="number" class="form-control  dev-price devPrice addGT00" id="devPrice03" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice03">السعر</label>
         </div>
         <div class="devTax03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax03" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax03" value="" placeholder="Ex: " disabled>
           <label for="devTax03"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal03" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal03" value="" placeholder="Ex: " disabled>
           <label for="devTotal03"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -1056,16 +1056,16 @@
           <label for="devCode04">الكود</label>
         </div>
         <div class="devPrice04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devPrice04" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice04" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice04">السعر</label>
         </div>
         <div class="devTax04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax04" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax04" value="" placeholder="Ex: " disabled>
           <label for="devTax04"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal04" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal04" value="" placeholder="Ex: " disabled>
           <label for="devTotal04"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -1108,16 +1108,16 @@
           <label for="devCode05">الكود</label>
         </div>
         <div class="devPrice05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devPrice05" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice05" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice05">السعر</label>
         </div>
         <div class="devTax05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax05" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax05" value="" placeholder="Ex: " disabled>
           <label for="devTax05"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal05" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal05" value="" placeholder="Ex: " disabled>
           <label for="devTotal05"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -1160,16 +1160,16 @@
           <label for="devCode06">الكود</label>
         </div>
         <div class="devPrice06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price  addGT00" id="devPrice06" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice06" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice06">السعر</label>
         </div>
         <div class="devTax06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax06" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax06" value="" placeholder="Ex: " disabled>
           <label for="devTax06"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal06" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal06" value="" placeholder="Ex: " disabled>
           <label for="devTotal06"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -1212,16 +1212,16 @@
           <label for="devCode07">الكود</label>
         </div>
         <div class="devPrice07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price  addGT00" id="devPrice07" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice07" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice07">السعر</label>
         </div>
         <div class="devTax07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax07" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax07" value="" placeholder="Ex: " disabled>
           <label for="devTax07"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal07" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal07" value="" placeholder="Ex: " disabled>
           <label for="devTotal07"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
@@ -1264,16 +1264,16 @@
           <label for="devCode08">الكود</label>
         </div>
         <div class="devPrice08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price  addGT00" id="devPrice08" value="" placeholder="Ex: "
+          <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice08" value="" placeholder="Ex: "
             onchange="getPrice();" onkeyup="getPrice();">
           <label for="devPrice08">السعر</label>
         </div>
         <div class="devTax08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTax08" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTax " id="devTax08" value="" placeholder="Ex: " disabled>
           <label for="devTax08"> الضريبة</label>
         </div>
         <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price addGT00" id="devTotal08" value="" placeholder="Ex: " disabled>
+          <input type="number" class="form-control devTotal " id="devTotal08" value="" placeholder="Ex: " disabled>
           <label for="devTotal08"> الاجمالي شامل الضريبة</label>
         </div>
       </div>
