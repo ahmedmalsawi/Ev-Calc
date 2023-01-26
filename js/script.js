@@ -1,7 +1,7 @@
 /** @format */
 (function ($) {
 	"use strict";
-
+	
 	$(document).ready(function () {
 		$(".multiple-checkboxes").multiselect({
 			includeSelectAllOption: true,
@@ -13,13 +13,15 @@ let devTotal = 0;
 let totalNoTax = document.getElementById("totalNoTax");
 let tax = document.getElementById("tax");
 let totalTaxed = document.getElementById("totalTaxed");
+let totalDevTaxed = document.getElementById("totalDevTaxed");
+let devsTax = document.getElementById("devsTax");
+
 
 function taxing() {
 	getPrice();
 	tax.value = Math.round(totalNoTax.value * 0.15 * 100) / 100;
 	totalTaxed.value = Math.round(totalNoTax.value * 1.15 * 100) / 100;
 }
-
 let meterPrice = document.getElementById("meterPrice");
 let kitchenType = document.getElementById("kitchenType");
 let totalDevNoTax = document.getElementById("totalDevNoTax");
@@ -128,49 +130,49 @@ function updateTotalsGT(index){
     }
 
  function updateTotals() {
-			let tax = document.getElementById("tax");
-			let totalTaxed = document.getElementById("totalTaxed");
-			let height = document.getElementById("height");
-			let heightCount = document.getElementById("heightCount");
-			let heightTotalPrice = document.getElementById("heightTotalPrice");
-			let discount = document.getElementById("discount");
-			var arr = document.querySelectorAll(".addGT");
-			var total = 0;
-			for (var i = 0; i < arr.length; i++) {
-        if (parseFloat(arr[i].value)) {
-					total += parseFloat(arr[i].value);
-				}
-				total = Math.round(total * 100) / 100;
-        		totalNoTax.value = total;
-				tax.value = Math.round(total * 0.15 * 100) / 100;
-				totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
+	 let tax = document.getElementById("tax");
+	 let totalTaxed = document.getElementById("totalTaxed");
+	 let height = document.getElementById("height");
+	 let heightCount = document.getElementById("heightCount");
+	 let heightTotalPrice = document.getElementById("heightTotalPrice");
+	 let discount = document.getElementById("discount");
+	 var arr = document.querySelectorAll(".addGT");
+	 var total = 0;
+	 for (var i = 0; i < arr.length; i++) {
+		 if (parseFloat(arr[i].value)) {
+			 total += parseFloat(arr[i].value);
 			}
-	 
-	 heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) *
-		 (parseFloat(meterPrice.value) * 0.22)* 100) / 100);
+			total = Math.round(total * 100) / 100;
+			totalNoTax.value = total;
+			tax.value = Math.round(total * 0.15 * 100) / 100;
+			totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
+		}
+		
+		heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) *
+		(parseFloat(meterPrice.value) * 0.22)* 100) / 100);
 		//  totalTaxed.value = parseFloat(totalTaxed.value) + parseFloat(heightTotalPrice.value);
-	//  if (!isNaN(discount.value)){
-	// 	 discount.value = 0;
-	//  }
-		let totalCost = 0;
-	 if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
-		 if (!isNaN(discount.value)) {
-			 totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-			 totalCost = totalCost - parseFloat(discount.value);
-			} else {
-			 totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-			 
+		//  if (!isNaN(discount.value)){
+			// 	 discount.value = 0;
+			//  }
+			let totalCost = 0;
+			if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
+				if (!isNaN(discount.value)) {
+					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+					totalCost = totalCost - parseFloat(discount.value);
+				} else {
+					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+					
+				}
 			}
-	 }
-	 if (!isNaN(totalDevNoTax.value)) {
-		totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-		totalCost = totalCost - parseFloat(discount.value);
-	   } else {
-		totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-		totalNoTax.value = totalCost;
-	   }
-		tax.value = Math.round(totalCost * 0.15 * 100) / 100;
-		totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
+			if (!isNaN(totalDevNoTax.value)) {
+				totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+				totalCost = totalCost - parseFloat(discount.value);
+			} else {
+				totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
+				totalNoTax.value = totalCost;
+			}
+			tax.value = Math.round(totalCost * 0.15 * 100) / 100;
+			totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
 			updateTotalsGT('00');
 			updateTotalsGT('01');
 			updateTotalsGT('02');
@@ -187,9 +189,9 @@ function updateTotalsGT(index){
 			updateTotalsGT('13');
 			updateTotalsGT('14');
 			updateTotalsGT('15');
- }
-
-
+		}
+		
+		
  //  //collapsing
 //  var coll = document.getElementsByClassName("collapsible");
 //  var i;
@@ -303,3 +305,43 @@ function hideEmptyInputs() {
 // 	let element = document.querySelector(".content");
 // 	element.style.display = "flex";
 //   }
+
+
+// Get all rows
+const rows = document.querySelectorAll(".row");
+
+// Function to calculate tax and total
+function devTaxing(e) {
+  // Get the current row
+  const row = e.target.closest(".row");
+  // Get the price field
+  const priceField = row.querySelector(".devPrice");
+  // Get the tax field
+  const taxField = row.querySelector(".devTax");
+  // Get the total field
+  const totalField = row.querySelector(".devTotal");
+
+    // Get the price value
+	const price = parseFloat(priceField.value);
+	// Calculate the tax (15% of price)
+	const tax = price * 0.15;
+	// Calculate the total (price + tax)
+	const total = price + tax;
+	// Round tax and total to 2 decimal places
+	const roundTax = Math.round(tax * 100) / 100;
+	const roundTotal = Math.round(total * 100) / 100;
+  
+	// Update the tax and total fields
+	taxField.value = roundTax;
+	totalField.value = roundTotal;
+
+  // Update the tax and total fields
+  taxField.value = roundTax;
+  totalField.value = roundTotal;
+}
+
+// Add an event listener to each price field
+rows.forEach(row => {
+  const priceField = row.querySelector(".devPrice");
+  if(priceField) priceField.addEventListener("input", devTaxing);
+});
