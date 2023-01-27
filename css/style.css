@@ -92,6 +92,7 @@ color:#BD2939;
     padding: 0;
     background: #fff;
     font-size: 10pt;
+    scale:unset;
   }
 
   .container,

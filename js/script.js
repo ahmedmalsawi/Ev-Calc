@@ -684,7 +684,7 @@ rows.forEach((row) => {
 // Import the jsPDF library
 // var jsPDF = require('jspdf');
 
-// Select the button and input elements
+/* // Select the button and input elements
 var button = document.querySelector('#save-button');
 var input = document.querySelector('#mainContractNo');
 
@@ -692,7 +692,7 @@ var input = document.querySelector('#mainContractNo');
 // Add an event listener to the button
 button.addEventListener('click', function() {
   // Get the value of the input
-  var contractNo = input.value;
+  // var contractNo = input.value;
 
   // // Add the input value to the page
   // var div = document.createElement('div');
@@ -704,4 +704,16 @@ button.addEventListener('click', function() {
     window.print();
     document.body.innerHTML= originalState;
   // Prompt the user to save or print the page
-});
+}); */
+
+
+//change the title with contract name
+
+function changeTitle() {
+  let title;
+  let contractNo = document.getElementById('mainContractNo').value;
+  let customer = document.getElementById('customerName').value;
+  title = `Ev-Calc-${contractNo}-${customer}`;
+  document.title = title;
+  
+}
