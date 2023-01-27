@@ -1220,26 +1220,330 @@
         <div
           class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
           <div class="container text-center fw-bold ">
-            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT07">Total</button>التكسيات (بالمتر
-            المربع )
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT07">Total</button>التكسيات و الكبائن المفتوحة و الأرفف المعلقة و إضافات الكبائن
           </div>
-
+<!-- // Row 21 -->
+<div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+  <div class="addName21 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName21" aria-label="Floating label select example"
+      onkeyup="calc('21');" onchange="calc('21');">
+      <option selected value=0>لا يوجد</option>
+      <option value="" disabled class="bg-dark text-warning text-center">التكسيات (بالمتر المربع )</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية صاج للمتر المربع</option>
+      <option value=280><span class="text-danger2">280 - </span>تكسية كالسيوم للمتر المربع</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية خشب للمتر المربع</option>
+      <option value=200><span class="text-danger2">200 - </span>تكسية 3 ملي خشب</option>
+      <option value=850><span class="text-danger2">850 - </span>تكسية رخام معرق (للمتر المربع </option>
+      <option value=590><span class="text-danger2">590 - </span>تكسية رخام للمتر المربع حسب نوع الرخام</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اجناب و كبائن مفتوحة</option>
+      <option value=720><span class="text-danger2">720 - </span>كبائن مفتوحة خشب بالمتر المربع</option>
+      <option value=850><span class="text-danger2">850 - </span>كبائن مفتوحة المنيوم بالمتر المربع</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك سفلي  من 5 الى 10 سم (براويز كلاسيك )</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك علوي من 5 الى 10 سم (برواز كلاسيك )</option>
+      <option value=1650><span class="text-danger2">1650 - </span>اجناب لون كلاسيك من 5 الى 10 سم   للدواليب الطويلة (برواز كلاسيك )</option>
+      <option value="" disabled class="bg-dark text-warning text-center">ارفف معلقة</option>
+      <option value=100><span class="text-danger2">100 - </span>ارفف معلقة</option>
+      <option value=150><span class="text-danger2">150 - </span>ارفف كلادينج دبل صوانى او زياده ارفف فى المطبخ</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اضافات وتعديلات علي الكبائن</option>
+      <option value=300><span class="text-danger2">300 - </span>شكل ديكوري للخشب (الكلاسيك)</option>
+      <option value=80><span class="text-danger2">80 - </span>تلوين القاعدة (النعلة )</option>
+      <option value=100><span class="text-danger2">100 - </span>تلوين قطاع الهيكل (تلوين الامامي )</option>
+      <option value=350><span class="text-danger2">350 - </span>قاعدة للفرن</option>
+      <option value=500><span class="text-danger2">500 - </span>عينة درفة من قطاع جوتن</option>
+      <option value=700><span class="text-danger2">700 - </span>عينة خشب مدهون</option>
+      <option value=350><span class="text-danger2">350 - </span>عينة اخرى</option>
+      <option value=150><span class="text-danger2">150 - </span>تغيير لون الكابينة الى خشابي على المتر</option>
+      <option value=100><span class="text-danger2">100 - </span>رف خشب اضافي (داخل الكبائن )</option>
+    </select>
+    <label for="addName21">بيان رقم 21</label>
+  </div>
+  <div class="addCode21 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode21" value="" placeholder="Ex: "
+      autocomplete>
+    <label for="addCode21">الكود</label>
+  </div>
+  <div class="addCount16 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount21" value="" placeholder="Ex: 20"
+      onkeyup="calc('21');" onchange="calc('21');">
+    <label for="addCount21">العدد</label>
+  </div>
+  <div class="addTotal21 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT05" id="addTotal21" value=""
+      placeholder="Ex: 20" autocomplete>
+    <label for="addTotal21">الاجمالي</label>
+  </div>
+</div>
+<!-- // Row 22 -->
+<div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+  <div class="addName22 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName22" aria-label="Floating label select example"
+      onkeyup="calc('22');" onchange="calc('22');">
+      <option selected value=0>لا يوجد</option>
+      <option value="" disabled class="bg-dark text-warning text-center">التكسيات (بالمتر المربع )</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية صاج للمتر المربع</option>
+      <option value=280><span class="text-danger2">280 - </span>تكسية كالسيوم للمتر المربع</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية خشب للمتر المربع</option>
+      <option value=200><span class="text-danger2">200 - </span>تكسية 3 ملي خشب</option>
+      <option value=850><span class="text-danger2">850 - </span>تكسية رخام معرق (للمتر المربع </option>
+      <option value=590><span class="text-danger2">590 - </span>تكسية رخام للمتر المربع حسب نوع الرخام</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اجناب و كبائن مفتوحة</option>
+      <option value=720><span class="text-danger2">720 - </span>كبائن مفتوحة خشب بالمتر المربع</option>
+      <option value=850><span class="text-danger2">850 - </span>كبائن مفتوحة المنيوم بالمتر المربع</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك سفلي  من 5 الى 10 سم (براويز كلاسيك )</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك علوي من 5 الى 10 سم (برواز كلاسيك )</option>
+      <option value=1650><span class="text-danger2">1650 - </span>اجناب لون كلاسيك من 5 الى 10 سم   للدواليب الطويلة (برواز كلاسيك )</option>
+      <option value="" disabled class="bg-dark text-warning text-center">ارفف معلقة</option>
+      <option value=100><span class="text-danger2">100 - </span>ارفف معلقة</option>
+      <option value=150><span class="text-danger2">150 - </span>ارفف كلادينج دبل صوانى او زياده ارفف فى المطبخ</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اضافات وتعديلات علي الكبائن</option>
+      <option value=300><span class="text-danger2">300 - </span>شكل ديكوري للخشب (الكلاسيك)</option>
+      <option value=80><span class="text-danger2">80 - </span>تلوين القاعدة (النعلة )</option>
+      <option value=100><span class="text-danger2">100 - </span>تلوين قطاع الهيكل (تلوين الامامي )</option>
+      <option value=350><span class="text-danger2">350 - </span>قاعدة للفرن</option>
+      <option value=500><span class="text-danger2">500 - </span>عينة درفة من قطاع جوتن</option>
+      <option value=700><span class="text-danger2">700 - </span>عينة خشب مدهون</option>
+      <option value=350><span class="text-danger2">350 - </span>عينة اخرى</option>
+      <option value=150><span class="text-danger2">150 - </span>تغيير لون الكابينة الى خشابي على المتر</option>
+      <option value=100><span class="text-danger2">100 - </span>رف خشب اضافي (داخل الكبائن )</option>
+    </select>
+    <label for="addName22">بيان رقم 22</label>
+  </div>
+  <div class="addCode22 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode22" value="" placeholder="Ex: "
+      autocomplete>
+    <label for="addCode22">الكود</label>
+  </div>
+  <div class="addCount16 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount22" value="" placeholder="Ex: 20"
+      onkeyup="calc('22');" onchange="calc('22');">
+    <label for="addCount22">العدد</label>
+  </div>
+  <div class="addTotal22 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT05" id="addTotal22" value=""
+      placeholder="Ex: 20" autocomplete>
+    <label for="addTotal22">الاجمالي</label>
+  </div>
+</div>
+<!-- // Row 23 -->
+<div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+  <div class="addName23 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName23" aria-label="Floating label select example"
+      onkeyup="calc('23');" onchange="calc('23');">
+      <option selected value=0>لا يوجد</option>
+      <option value="" disabled class="bg-dark text-warning text-center">التكسيات (بالمتر المربع )</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية صاج للمتر المربع</option>
+      <option value=280><span class="text-danger2">280 - </span>تكسية كالسيوم للمتر المربع</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية خشب للمتر المربع</option>
+      <option value=200><span class="text-danger2">200 - </span>تكسية 3 ملي خشب</option>
+      <option value=850><span class="text-danger2">850 - </span>تكسية رخام معرق (للمتر المربع </option>
+      <option value=590><span class="text-danger2">590 - </span>تكسية رخام للمتر المربع حسب نوع الرخام</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اجناب و كبائن مفتوحة</option>
+      <option value=720><span class="text-danger2">720 - </span>كبائن مفتوحة خشب بالمتر المربع</option>
+      <option value=850><span class="text-danger2">850 - </span>كبائن مفتوحة المنيوم بالمتر المربع</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك سفلي  من 5 الى 10 سم (براويز كلاسيك )</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك علوي من 5 الى 10 سم (برواز كلاسيك )</option>
+      <option value=1650><span class="text-danger2">1650 - </span>اجناب لون كلاسيك من 5 الى 10 سم   للدواليب الطويلة (برواز كلاسيك )</option>
+      <option value="" disabled class="bg-dark text-warning text-center">ارفف معلقة</option>
+      <option value=100><span class="text-danger2">100 - </span>ارفف معلقة</option>
+      <option value=150><span class="text-danger2">150 - </span>ارفف كلادينج دبل صوانى او زياده ارفف فى المطبخ</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اضافات وتعديلات علي الكبائن</option>
+      <option value=300><span class="text-danger2">300 - </span>شكل ديكوري للخشب (الكلاسيك)</option>
+      <option value=80><span class="text-danger2">80 - </span>تلوين القاعدة (النعلة )</option>
+      <option value=100><span class="text-danger2">100 - </span>تلوين قطاع الهيكل (تلوين الامامي )</option>
+      <option value=350><span class="text-danger2">350 - </span>قاعدة للفرن</option>
+      <option value=500><span class="text-danger2">500 - </span>عينة درفة من قطاع جوتن</option>
+      <option value=700><span class="text-danger2">700 - </span>عينة خشب مدهون</option>
+      <option value=350><span class="text-danger2">350 - </span>عينة اخرى</option>
+      <option value=150><span class="text-danger2">150 - </span>تغيير لون الكابينة الى خشابي على المتر</option>
+      <option value=100><span class="text-danger2">100 - </span>رف خشب اضافي (داخل الكبائن )</option>
+    </select>
+    <label for="addName23">بيان رقم 23</label>
+  </div>
+  <div class="addCode23 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode23" value="" placeholder="Ex: "
+      autocomplete>
+    <label for="addCode23">الكود</label>
+  </div>
+  <div class="addCount16 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount23" value="" placeholder="Ex: 20"
+      onkeyup="calc('23');" onchange="calc('23');">
+    <label for="addCount23">العدد</label>
+  </div>
+  <div class="addTotal23 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT05" id="addTotal23" value=""
+      placeholder="Ex: 20" autocomplete>
+    <label for="addTotal23">الاجمالي</label>
+  </div>
+</div>
+<!-- // Row 24 -->
+<div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+  <div class="addName24 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName24" aria-label="Floating label select example"
+      onkeyup="calc('24');" onchange="calc('24');">
+      <option selected value=0>لا يوجد</option>
+      <option value="" disabled class="bg-dark text-warning text-center">التكسيات (بالمتر المربع )</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية صاج للمتر المربع</option>
+      <option value=280><span class="text-danger2">280 - </span>تكسية كالسيوم للمتر المربع</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية خشب للمتر المربع</option>
+      <option value=200><span class="text-danger2">200 - </span>تكسية 3 ملي خشب</option>
+      <option value=850><span class="text-danger2">850 - </span>تكسية رخام معرق (للمتر المربع </option>
+      <option value=590><span class="text-danger2">590 - </span>تكسية رخام للمتر المربع حسب نوع الرخام</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اجناب و كبائن مفتوحة</option>
+      <option value=720><span class="text-danger2">720 - </span>كبائن مفتوحة خشب بالمتر المربع</option>
+      <option value=850><span class="text-danger2">850 - </span>كبائن مفتوحة المنيوم بالمتر المربع</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك سفلي  من 5 الى 10 سم (براويز كلاسيك )</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك علوي من 5 الى 10 سم (برواز كلاسيك )</option>
+      <option value=1650><span class="text-danger2">1650 - </span>اجناب لون كلاسيك من 5 الى 10 سم   للدواليب الطويلة (برواز كلاسيك )</option>
+      <option value="" disabled class="bg-dark text-warning text-center">ارفف معلقة</option>
+      <option value=100><span class="text-danger2">100 - </span>ارفف معلقة</option>
+      <option value=150><span class="text-danger2">150 - </span>ارفف كلادينج دبل صوانى او زياده ارفف فى المطبخ</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اضافات وتعديلات علي الكبائن</option>
+      <option value=300><span class="text-danger2">300 - </span>شكل ديكوري للخشب (الكلاسيك)</option>
+      <option value=80><span class="text-danger2">80 - </span>تلوين القاعدة (النعلة )</option>
+      <option value=100><span class="text-danger2">100 - </span>تلوين قطاع الهيكل (تلوين الامامي )</option>
+      <option value=350><span class="text-danger2">350 - </span>قاعدة للفرن</option>
+      <option value=500><span class="text-danger2">500 - </span>عينة درفة من قطاع جوتن</option>
+      <option value=700><span class="text-danger2">700 - </span>عينة خشب مدهون</option>
+      <option value=350><span class="text-danger2">350 - </span>عينة اخرى</option>
+      <option value=150><span class="text-danger2">150 - </span>تغيير لون الكابينة الى خشابي على المتر</option>
+      <option value=100><span class="text-danger2">100 - </span>رف خشب اضافي (داخل الكبائن )</option>
+    </select>
+    <label for="addName24">بيان رقم 24</label>
+  </div>
+  <div class="addCode24 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode24" value="" placeholder="Ex: "
+      autocomplete>
+    <label for="addCode24">الكود</label>
+  </div>
+  <div class="addCount16 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount24" value="" placeholder="Ex: 20"
+      onkeyup="calc('24');" onchange="calc('24');">
+    <label for="addCount24">العدد</label>
+  </div>
+  <div class="addTotal24 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT05" id="addTotal24" value=""
+      placeholder="Ex: 20" autocomplete>
+    <label for="addTotal24">الاجمالي</label>
+  </div>
+</div>
+<!-- // Row 25 -->
+<div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+  <div class="addName25 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName25" aria-label="Floating label select example"
+      onkeyup="calc('25');" onchange="calc('25');">
+      <option selected value=0>لا يوجد</option>
+      <option value="" disabled class="bg-dark text-warning text-center">التكسيات (بالمتر المربع )</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية صاج للمتر المربع</option>
+      <option value=280><span class="text-danger2">280 - </span>تكسية كالسيوم للمتر المربع</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية خشب للمتر المربع</option>
+      <option value=200><span class="text-danger2">200 - </span>تكسية 3 ملي خشب</option>
+      <option value=850><span class="text-danger2">850 - </span>تكسية رخام معرق (للمتر المربع </option>
+      <option value=590><span class="text-danger2">590 - </span>تكسية رخام للمتر المربع حسب نوع الرخام</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اجناب و كبائن مفتوحة</option>
+      <option value=720><span class="text-danger2">720 - </span>كبائن مفتوحة خشب بالمتر المربع</option>
+      <option value=850><span class="text-danger2">850 - </span>كبائن مفتوحة المنيوم بالمتر المربع</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك سفلي  من 5 الى 10 سم (براويز كلاسيك )</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك علوي من 5 الى 10 سم (برواز كلاسيك )</option>
+      <option value=1650><span class="text-danger2">1650 - </span>اجناب لون كلاسيك من 5 الى 10 سم   للدواليب الطويلة (برواز كلاسيك )</option>
+      <option value="" disabled class="bg-dark text-warning text-center">ارفف معلقة</option>
+      <option value=100><span class="text-danger2">100 - </span>ارفف معلقة</option>
+      <option value=150><span class="text-danger2">150 - </span>ارفف كلادينج دبل صوانى او زياده ارفف فى المطبخ</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اضافات وتعديلات علي الكبائن</option>
+      <option value=300><span class="text-danger2">300 - </span>شكل ديكوري للخشب (الكلاسيك)</option>
+      <option value=80><span class="text-danger2">80 - </span>تلوين القاعدة (النعلة )</option>
+      <option value=100><span class="text-danger2">100 - </span>تلوين قطاع الهيكل (تلوين الامامي )</option>
+      <option value=350><span class="text-danger2">350 - </span>قاعدة للفرن</option>
+      <option value=500><span class="text-danger2">500 - </span>عينة درفة من قطاع جوتن</option>
+      <option value=700><span class="text-danger2">700 - </span>عينة خشب مدهون</option>
+      <option value=350><span class="text-danger2">350 - </span>عينة اخرى</option>
+      <option value=150><span class="text-danger2">150 - </span>تغيير لون الكابينة الى خشابي على المتر</option>
+      <option value=100><span class="text-danger2">100 - </span>رف خشب اضافي (داخل الكبائن )</option>
+    </select>
+    <label for="addName25">بيان رقم 25</label>
+  </div>
+  <div class="addCode25 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode25" value="" placeholder="Ex: "
+      autocomplete>
+    <label for="addCode25">الكود</label>
+  </div>
+  <div class="addCount16 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount25" value="" placeholder="Ex: 20"
+      onkeyup="calc('25');" onchange="calc('25');">
+    <label for="addCount25">العدد</label>
+  </div>
+  <div class="addTotal25 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT05" id="addTotal25" value=""
+      placeholder="Ex: 20" autocomplete>
+    <label for="addTotal25">الاجمالي</label>
+  </div>
+</div>
+<!-- // Row 20 -->
+<!-- <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+  <div class="addName20 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+    <select class="form-select" id="addName20" aria-label="Floating label select example"
+      onkeyup="calc('20');" onchange="calc('20');">
+      <option selected value=0>لا يوجد</option>
+      <option value="" disabled class="bg-dark text-warning text-center">التكسيات (بالمتر المربع )</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية صاج للمتر المربع</option>
+      <option value=280><span class="text-danger2">280 - </span>تكسية كالسيوم للمتر المربع</option>
+      <option value=380><span class="text-danger2">380 - </span>تكسية خشب للمتر المربع</option>
+      <option value=200><span class="text-danger2">200 - </span>تكسية 3 ملي خشب</option>
+      <option value=850><span class="text-danger2">850 - </span>تكسية رخام معرق (للمتر المربع </option>
+      <option value=590><span class="text-danger2">590 - </span>تكسية رخام للمتر المربع حسب نوع الرخام</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اجناب و كبائن مفتوحة</option>
+      <option value=720><span class="text-danger2">720 - </span>كبائن مفتوحة خشب بالمتر المربع</option>
+      <option value=850><span class="text-danger2">850 - </span>كبائن مفتوحة المنيوم بالمتر المربع</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك سفلي  من 5 الى 10 سم (براويز كلاسيك )</option>
+      <option value=750><span class="text-danger2">750 - </span>اجناب لون كلاسيك علوي من 5 الى 10 سم (برواز كلاسيك )</option>
+      <option value=1650><span class="text-danger2">1650 - </span>اجناب لون كلاسيك من 5 الى 10 سم   للدواليب الطويلة (برواز كلاسيك )</option>
+      <option value="" disabled class="bg-dark text-warning text-center">ارفف معلقة</option>
+      <option value=100><span class="text-danger2">100 - </span>ارفف معلقة</option>
+      <option value=150><span class="text-danger2">150 - </span>ارفف كلادينج دبل صوانى او زياده ارفف فى المطبخ</option>
+      <option value="" disabled class="bg-dark text-warning text-center">اضافات وتعديلات علي الكبائن</option>
+      <option value=300><span class="text-danger2">300 - </span>شكل ديكوري للخشب (الكلاسيك)</option>
+      <option value=80><span class="text-danger2">80 - </span>تلوين القاعدة (النعلة )</option>
+      <option value=100><span class="text-danger2">100 - </span>تلوين قطاع الهيكل (تلوين الامامي )</option>
+      <option value=350><span class="text-danger2">350 - </span>قاعدة للفرن</option>
+      <option value=500><span class="text-danger2">500 - </span>عينة درفة من قطاع جوتن</option>
+      <option value=700><span class="text-danger2">700 - </span>عينة خشب مدهون</option>
+      <option value=350><span class="text-danger2">350 - </span>عينة اخرى</option>
+      <option value=150><span class="text-danger2">150 - </span>تغيير لون الكابينة الى خشابي على المتر</option>
+      <option value=100><span class="text-danger2">100 - </span>رف خشب اضافي (داخل الكبائن )</option>
+    </select>
+    <label for="addName20">بيان رقم 20</label>
+  </div>
+  <div class="addCode20 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+    <input type="text" class="form-control float-right" id="addCode20" value="" placeholder="Ex: "
+      autocomplete>
+    <label for="addCode20">الكود</label>
+  </div>
+  <div class="addCount16 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" class="form-control" id="addCount20" value="" placeholder="Ex: 20"
+      onkeyup="calc('20');" onchange="calc('20');">
+    <label for="addCount20">العدد</label>
+  </div>
+  <div class="addTotal20 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+    <input type="number" disabled class="form-control addGT addGT05" id="addTotal20" value=""
+      placeholder="Ex: 20" autocomplete>
+    <label for="addTotal20">الاجمالي</label>
+  </div>
+</div> -->
 
 
         </div>
         <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-        <div
+        <!-- <div
           class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
           <div class="container text-center fw-bold ">
             <button disabled class="btn btn-grey border-0 text-danger" id="addGTT08">Total</button>الكبائن المفتوحة
             والارفف المعلقة وزيادة الارفف الكلادينج و الاشكال الكلاسيك
           </div>
 
-
-
+          
         </div>
+      -->
         <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-        <div
+        <!-- <div
           class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
           <div class="container text-center fw-bold ">
             <button disabled class="btn btn-grey border-0 text-danger" id="addGTT09">Total</button>اضافات محددة
@@ -1247,7 +1551,7 @@
 
 
 
-        </div>
+        </div> -->
         <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
         <div
           class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
