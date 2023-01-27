@@ -570,7 +570,16 @@ rows.forEach((row) => {
       } else {
         row.style.display = "none";
       };
-      console.log(row, input);
+    }
+    //hide devices
+    for (let d = 1; d <= 8; d++) {
+      let devRow = document.querySelector(`.devRow${d < 10 ? '0' + d : d}`);
+      let devInput = document.getElementById(`devTotal${d}`);
+      if (devInput.value > 0) {
+        devRow.style.display = "flex";
+      } else {
+        devRow.style.display = "none";
+      }
     }
     
   }
