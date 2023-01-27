@@ -56,6 +56,14 @@ function calc(num) {
   total.value = totalVal;
   updateTotals();
 }
+function calcManual(num) {
+  let count = document.getElementById(`addCount${num}`).value;
+  let price = document.getElementById(`addPrice${num}`).value;
+  let total = document.getElementById(`addTotal${num}`);
+  let totalVal = Math.round(count * price * 100) / 100;
+  total.value = totalVal;
+  updateTotals();
+}
 //Done =====================================================================
 
 //Done =====================================================================
