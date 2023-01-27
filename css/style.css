@@ -176,3 +176,9 @@ color:#BD2939;
 /* .content {
     display: none;
   } */
+  @media print {
+    .hide-on-print {
+      display: none;
+    }
+  }
+  

@@ -455,23 +455,6 @@ function updateTotals() {
 
 
 
-let originalState;
-
-window.addEventListener("beforeprint", function () {
-  originalState = document.body.innerHTML;
-  hideEmptyInputs();
-});
-
-function hideEmptyInputs() {
-  let inputs = document.querySelectorAll("input");
-  inputs.forEach(function (input) {
-    if (input.value === "" || input.value === "0") {
-      if (!input.parentNode.classList.contains("exclude")) {
-        input.parentNode.parentNode.style.display = "none";
-      }
-    }
-  });
-}
 
 // Get all rows
 const rows = document.querySelectorAll(".row");
@@ -510,3 +493,164 @@ rows.forEach((row) => {
   const priceField = row.querySelector(".devPrice");
   if (priceField) priceField.addEventListener("input", devTaxing);
 });
+
+
+
+
+
+
+
+
+
+
+// function hideEmptyInputs() {
+//   let inputs = document.querySelectorAll("input");
+//   inputs.forEach(function (input) {
+//     if (input.value === "" || input.value === "0") {
+//       if (!input.parentNode.classList.contains("exclude")) {
+//         input.parentNode.parentNode.style.display = "none";
+//       }
+//     }
+//   });
+// }
+
+// let originalState;
+
+// window.addEventListener("beforeprint", function () {
+  //   // originalState = document.body.innerHTML;
+  //   hideEmptyInputs();
+  // });
+  
+  
+  
+  
+  
+  
+  
+  
+  let originalState;
+  window.addEventListener("beforeprint", function () {
+      originalState = document.body.innerHTML;
+    hideEmptyInputs();
+  });
+  window.addEventListener("afterprint", function () {
+      document.body.innerHTML= originalState;
+  });
+  
+  // let hiddenElements = [];
+  // function hideEmptyInputs() {
+  //   for (let i = 1; i <= 40; i++) {
+  //     let input = document.querySelector(`#addGT${i < 10 ? "0" + i : i}`);
+  //     let parent = input.parentNode.parentNode;
+  //     if (!input.value) {
+  //       parent.style.display = "none";
+  //       hiddenElements.push(parent);
+  //     }
+  //   }
+  // }
+  
+  // window.addEventListener("beforeprint", function () {
+  //   hideEmptyInputs();
+  // });
+  
+  // window.addEventListener("afterprint", function () {
+  //   hiddenElements.forEach(element => {
+  //     element.style.display = "block";
+  //   });
+  // });
+  
+  
+  //working to hide empty input 
+  function hideEmptyInputs() {
+    for (let i = 1; i <= 40; i++) {
+      let row = document.querySelector(`.addRow${i < 10 ? "0" + i : i}`);
+      let input = document.getElementById(`addTotal${i}`);
+      if (input.value > 0) {
+        row.style.display = "flex";
+      } else {
+        row.style.display = "none";
+      };
+      console.log(row, input);
+    }
+    
+  }
+  
+  
+
+
+
+
+
+
+// window.onbeforeprint = hideEmptyInputs;
+
+
+// function hideEmptyInputs() {
+//   const inputs = document.querySelectorAll('.addGT');
+//   for (let i = 0; i < inputs.length; i++) {
+//     inputs[i].addEventListener("input", function() {
+//       if (this.value == "" || this.value == "0") {
+//         this.parentNode.parentNode.style.display = "none !important";
+//       } else {
+//         this.parentNode.parentNode.style.display = "flex !important";
+//       }
+//     });
+//   }
+// }
+
+
+// function hideEmptyInputs() {
+//   for (let i = 1; i <= 40; i++) {
+//     let row = document.querySelector(`.addRow${i < 10 ? "0" + i : i}`);
+//     let input = document.querySelector(`#addGT${i < 10 ? "0" + i : i}`);
+//     if (input) {
+//       if (input.value > 0) {
+//         row.style.display = "none";
+//       } else {
+//         row.style.display = "flex";
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+  // let inputs = document.querySelectorAll(`addGT`);
+  // inputs.forEach(function (input) {
+    //   if (input.value !== "" || input.value !== "0" || !input.parentNode.classList.contains("exclude")) {
+      //       input.parentNode.parentNode.style.display = "flex";
+      //     } else {
+        //     input.parentNode.parentNode.style.display = "none";
+        //     }
+        // });
+      // }
+      
+      
+      function hideEmptyRows() {
+        for (let i = 1; i <= 40; i++) {
+          let row = document.querySelector(`.addRow${i < 10 ? "0" + i : i}`);
+          let input = document.querySelector(`#addTotal${i < 10 ? "0" + i : i}`);
+          input.addEventListener("input", function() {
+            if (this.value > 0) {
+              row.style.display = "none";
+            } else {
+              row.style.display = "flex";
+            }
+          });
+        }
+  for (let d = 1; d <= 10; d++) {
+    let devRow = document.querySelector(`.devRow${d < 10 ? '0' + d : d}`);
+    let devInput = document.querySelector(`#devTotal${d < 10 ? '0' + d : d}`);
+    if (devInput.value === "" || devInput.value == 0) {
+      devRow.classList.add("hide-on-print");
+    } else {
+      devInput.classList.remove("hide-on-print");
+    }
+  }
+}
+// window.onbeforeprint = hideEmptyRows;
