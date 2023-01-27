@@ -29,21 +29,21 @@
         <!-- <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p> -->
         <div class="row ">
           <div
-            class="titleButton devicesData  text-danger btn-success align-center text-center border-0 hover:text-bg-dark pb-2 pt-0 mt-0">
+            class="titleButton  section text-danger btn-success align-center text-center border-0 hover:text-bg-dark pb-2 pt-0 mt-0">
             حاسبة المطابخ</div>
           <!-- <div
             class="titleButton d-print-none fs-6 pb-2 dev-button devicesData  text-success btn-success align-center text-center border-0 hover:text-bg-danger "
             onclick="show();">(للأجهزة اضغط هنا)</div> -->
           <div 
-            class="titleButton section text-danger btn-success align-center hide text-center border-0 hover:text-bg-danger pb-2 pt-0 mt-0">
+            class="titleButton devicesData text-danger btn-success align-center hide text-center border-0 hover:text-bg-danger pb-2 pt-0 mt-0">
             حاسبة الأجهزة</div>
           <!-- <div
             class="titleButton d-print-none fs-6 section pb-2 text-success hide btn-success align-center text-center border-0 hover:text-bg-danger "
             onclick="show();">(للمطابخ اضغط هنا)</div>
         </div> -->
         <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
-          <div class=" devicesData  btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger " onclick="show();">مطابخ</div>
-          <div class=" section hide btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger " onclick="show();">أجهزة</div>
+          <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger " onclick="show('kitchen');">مطابخ</div>
+          <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger " onclick="show('devices');">أجهزة</div>
           <div disabled class="btn btn-secondary d-print-none">خزائن</div>
         </div>
       </div>
@@ -205,7 +205,7 @@
         <!-- //Row 5   -->
         <div class="container row5 row m-2">
           <div class="totalNoTax  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();" placeholder="Ex: ">
+            <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();" onchange="taxing();" placeholder="Ex: ">
             <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
           </div>
           <div class="tax col-md  exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
