@@ -66,20 +66,21 @@
           <!-- <div class=" container-lg mainData col border-black border-spacing-2 border border-success border-start-0 rounded-end bg-success bg-opacity-10"> -->
           <!-- //Row 1   -->
           <div class="container text-center fw-bold">البيانات الأساسية</div>
-          <div class="container row1 m-sm-0 p-sm-0 m-2 row m-2 exclude">
-            <div class="customerName exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating col-print-6">
+
+          <div class="container row1 row m-sm-0 p-sm-0 m-2 exclude">
+            <div class="customerName exclude col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="text" class="form-control text-primary" id="customerName" value=""
                 placeholder="Ex: محمود ابراهيم عبد الباقي" autocomplete required>
               <label for="customerName">اسم العميل</label>
             </div>
             <div
-              class="customerPhone exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="customerPhone exclude col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="customerPhone" class="form-control" id="customerPhone" value="" placeholder="Ex: "
                 autocomplete required>
               <label for="customerPhone">رقم الجوال</label>
             </div>
             <div
-              class="mainContractNo exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="mainContractNo exclude col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="text" class="form-control " id="mainContractNo" value="" placeholder="Ex: ">
               <label for="mainContractNo">رقم العقد</label>
             </div>
@@ -87,13 +88,12 @@
           <!-- // Row 2   -->
           <div class="container exclude  row2 row m-sm-0 p-sm-0 m-2">
             <div
-              class="salesman exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-              <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: عصام سلامة" autocomplete
-                required>
+              class="salesman exclude col-md-3 col-sm-3 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: " autocomplete  required>
               <label for="salesman">المصمم</label>
             </div>
             <div
-              class="showroom exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="showroom exclude col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="showroom" aria-label="Floating label select example">
                 <option selected>يرجي اختيار المعرض</option>
                 <option value="" disabled class="bg-dark text-warning text-center">المنطقة الوسطي
@@ -121,7 +121,7 @@
               <label for="showroom">المعرض</label>
             </div>
             <div
-              class="kitchenType exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="kitchenType exclude section col-md-5 col-sm-5 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="kitchenType" aria-label="Floating label select example"
                 onkeyup="getPrice();" onchange="getPrice();">
                 <option selected></option>
@@ -219,18 +219,18 @@
           <!-- //Row 5  Devices totals -->
           <div class="container row5 row m-sm-0 p-sm-0 m-2">
             <div
-              class="totalDevNoTax  exclude devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="totalDevNoTax  exclude devicesData hide col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="taxing();"
                 placeholder="Ex: " disabled>
               <label for="totalDevNoTax">قيمة الأجهزة (قبل الضريبة) </label>
             </div>
             <div
-              class="devsTax col-md  exclude devicesData hide col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="devsTax col-md  exclude devicesData hide col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control " id="devsTax" value="" placeholder="Ex: 90" disabled>
               <label for="devsTax">الضريبة</label>
             </div>
             <div
-              class="totalDevTaxed  exclude  devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="totalDevTaxed  exclude  devicesData hide col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control " id="totalDevTaxed" value="" placeholder="Ex: " disabled>
               <label for="totalDevTaxed"> القيمة شاملة الضريبة </label>
             </div>
@@ -239,29 +239,29 @@
           <!-- //Row 5   -->
           <div class="container row5 row m-sm-0 p-sm-0 m-2 ">
             <div
-              class="totalNoTax  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="totalNoTax  exclude section col-md-3 col-sm-3 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();"
                 onchange="taxing();" placeholder="Ex: ">
               <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
             </div>
             <div
-              class="tax col-md  exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="tax col-md  exclude section col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control " id="tax" value="" placeholder="Ex: 90" disabled>
               <label for="tax">الضريبة</label>
             </div>
             <div
-              class="totalTaxed  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="totalTaxed  exclude section col-md col-md-3 col-sm-3 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
               <label for="totalTaxed"> القيمة شاملة الضريبة </label>
             </div>
             <div
-              class="manualCalc  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="manualCalc  exclude section col-md col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control bg-opacity-50" id="manualCalc" value="" placeholder="Ex: " onkeyup="difference();"
               onchange="difference();">
-              <label for="manualCalc">القيمة</label>
+              <label for="manualCalc">  القيمة (حساب يدوي) </label>
             </div>
             <div
-              class="difference  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              class="difference  exclude section col-md col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="text" class="form-control bg-opacity-50" id="difference" value="" placeholder="Ex: " disabled>
               <label for="number"> العجز / الزيادة</label>
             </div>
@@ -1468,9 +1468,8 @@
   </div>
 </div>
 
-</div>
   
-</div> -->
+</div>
 <!-- // الاكسسوارات  = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
 <div
 class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
