@@ -81,6 +81,39 @@ function updateTotalsGT(index) {
 }
 //Done =====================================================================
 
+
+function difference() {
+ 
+  let totalTaxed = document.getElementById("totalTaxed");
+  let difference = document.getElementById("difference");
+  let manualCalc = document.getElementById("manualCalc");
+  if (!isNaN(manualCalc.value) && !isNaN(totalTaxed.value)) {
+    difference.value = Math.round(
+      (parseFloat(manualCalc.value) - parseFloat(totalTaxed.value))
+      * 100) / 100;
+    if (difference.value > 0) {
+      difference.classList.add("bg-success");
+      difference.classList.remove("bg-danger");
+    } else if (difference.value < 0) {
+      difference.classList.remove("bg-success");
+      difference.classList.add("bg-danger");
+    } else {
+      difference.classList.remove("bg-danger");
+      difference.classList.remove("bg-success");
+    }
+    
+  } else {
+    difference.value = 0;
+  }
+  
+
+}
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -407,6 +440,7 @@ function updateTotals() {
       updateTotalsGT(i.toString());
     }
   }
+  difference();
 }
 
 

@@ -231,7 +231,7 @@
             </div>
             <div
               class="totalDevTaxed  exclude  devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-              <input type="text" class="form-control " id="totalDevTaxed" value="" placeholder="Ex: " disabled>
+              <input type="number" class="form-control " id="totalDevTaxed" value="" placeholder="Ex: " disabled>
               <label for="totalDevTaxed"> القيمة شاملة الضريبة </label>
             </div>
           </div>
@@ -251,8 +251,19 @@
             </div>
             <div
               class="totalTaxed  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-              <input type="text" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
+              <input type="number" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
               <label for="totalTaxed"> القيمة شاملة الضريبة </label>
+            </div>
+            <div
+              class="manualCalc  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control bg-opacity-50" id="manualCalc" value="" placeholder="Ex: " onkeyup="difference();"
+              onchange="difference();">
+              <label for="manualCalc">القيمة</label>
+            </div>
+            <div
+              class="difference  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control bg-opacity-50" id="difference" value="" placeholder="Ex: " disabled>
+              <label for="number"> العجز / الزيادة</label>
             </div>
           </div>
         </div>
