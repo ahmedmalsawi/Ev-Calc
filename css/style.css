@@ -1,5 +1,5 @@
 * {
-  font-family: "Tajawal";
+  font-family: 'Tajawal';
 }
 
 a {
@@ -8,14 +8,14 @@ a {
 
 :root {
   --primary1: #354259;
-  --primary2: #CDC2AE;
-  --primary3: #ECE5C7;
-  --primary4: #C2DED1;
-  --primary5: #2D5C7F;
-  --primary6: #D5848C;
-  --primary7: #184C7A;
-  --primary8: #BD2939;
-  --primary9: #E3E8EF;
+  --primary2: #cdc2ae;
+  --primary3: #ece5c7;
+  --primary4: #c2ded1;
+  --primary5: #2d5c7f;
+  --primary6: #d5848c;
+  --primary7: #184c7a;
+  --primary8: #bd2939;
+  --primary9: #e3e8ef;
   --primary10: #2c698d;
 }
 
@@ -85,13 +85,12 @@ color:#BD2939;
 }
 
 @media print {
-
   html,
   body {
     align-items: center;
     /* margin: 0; */
     padding: 0;
-    background: #FFF;
+    background: #fff;
     font-size: 10pt;
   }
 
@@ -114,7 +113,7 @@ color:#BD2939;
     display: none;
   }
 
-  .table>:not(caption)>*>* {
+  .table > :not(caption) > * > * {
     padding: 0;
   }
   /* .content {
@@ -122,7 +121,7 @@ color:#BD2939;
   } */
 }
 
-.form-floating>label {
+.form-floating > label {
   left: unset !important;
   right: 0;
   padding-right: 2px;
@@ -130,15 +129,13 @@ color:#BD2939;
 }
 
 .sendToMonday,
-.editButton
-{
-  color: #184C7A;
+.editButton {
+  color: #184c7a;
   transition: 0.3s;
 }
 
 .sendToMonday:hover,
-.editButton:hover
- {
+.editButton:hover {
   font-size: 20px;
   cursor: pointer;
   font-weight: 600;
@@ -152,15 +149,15 @@ color:#BD2939;
 }
 
 .dev-button {
-  color: #184C7A !important;
+  color: #184c7a !important;
 }
 
 .text-danger2 {
-color: #BD2939!important;
-background-color: #2c698d!important;
+  color: #bd2939 !important;
+  background-color: #2c698d !important;
 }
 
-  /* .collapsible {
+/* .collapsible {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -176,7 +173,6 @@ background-color: #2c698d!important;
     content: "\25BC";
   } */
 
-  /* .content {
+/* .content {
     display: none;
   } */
-  
