@@ -537,29 +537,7 @@ rows.forEach((row) => {
       document.body.innerHTML= originalState;
   });
   
-  // let hiddenElements = [];
-  // function hideEmptyInputs() {
-  //   for (let i = 1; i <= 40; i++) {
-  //     let input = document.querySelector(`#addGT${i < 10 ? "0" + i : i}`);
-  //     let parent = input.parentNode.parentNode;
-  //     if (!input.value) {
-  //       parent.style.display = "none";
-  //       hiddenElements.push(parent);
-  //     }
-  //   }
-  // }
-  
-  // window.addEventListener("beforeprint", function () {
-  //   hideEmptyInputs();
-  // });
-  
-  // window.addEventListener("afterprint", function () {
-  //   hiddenElements.forEach(element => {
-  //     element.style.display = "block";
-  //   });
-  // });
-  
-  
+ 
   //working to hide empty input 
   function hideEmptyInputs() {
     for (let i = 1; i <= 40; i++) {
@@ -640,7 +618,7 @@ rows.forEach((row) => {
       // }
       
       
-      function hideEmptyRows() {
+/*       function hideEmptyRows() {
         for (let i = 1; i <= 40; i++) {
           let row = document.querySelector(`.addRow${i < 10 ? "0" + i : i}`);
           let input = document.querySelector(`#addTotal${i < 10 ? "0" + i : i}`);
@@ -661,5 +639,69 @@ rows.forEach((row) => {
       devInput.classList.remove("hide-on-print");
     }
   }
-}
+} */
 // window.onbeforeprint = hideEmptyRows;
+
+
+// function printPdf() {
+// let pageHeight = doc.internal.pageSize.height || doc.internal.pageSize.getHeight()
+// let pageWidth = doc.internal.pageSize.width || doc.internal.pageSize.getWidth()
+// let recipientBlock = document.querySelector(".div2-block")
+// let rHeight = recipientBlock.clientHeight
+// let rWidth = recipientBlock.clientWidth
+
+// doc.fromHTML(document.querySelector(".div1-block"),
+//    22, 17, { 'width': 200, 'height': 200 },
+//    function (a) {
+//       doc.fromHTML(document.querySelector(".div2-block"),
+//           pageWidth / 2 - rWidth / 4,
+//           pageHeight / 2 - rHeight / 4,
+//           { 'width': 200, 'height': 200 },
+//           function (a) {
+//               let blobPDF = new Blob([doc.output()], { type: 'application/pdf' });
+//               let blobUrl = URL.createObjectURL(blobPDF);
+//               window.open(blobUrl);
+//                 });
+//         });
+
+// }
+// let element = document.getElementById('collectAll');
+
+// var element = document.getElementById('element-to-print');
+// var opt = {
+//   margin:       1,
+//   filename:     'myfile.pdf',
+//   image:        { type: 'jpeg', quality: 0.98 },
+//   html2canvas:  { scale: 2 },
+//   jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+// };
+// function printPdf() {
+//   html2pdf(element, opt);
+// };
+
+
+
+// Import the jsPDF library
+// var jsPDF = require('jspdf');
+
+// Select the button and input elements
+var button = document.querySelector('#save-button');
+var input = document.querySelector('#mainContractNo');
+
+// Add an event listener to the button
+// Add an event listener to the button
+button.addEventListener('click', function() {
+  // Get the value of the input
+  var contractNo = input.value;
+
+  // // Add the input value to the page
+  // var div = document.createElement('div');
+  // div.innerHTML = 'Contract No: ' + contractNo;
+  // document.body.appendChild(div);
+  let originalState;
+      originalState = document.body.innerHTML;
+    hideEmptyInputs();
+    window.print();
+    document.body.innerHTML= originalState;
+  // Prompt the user to save or print the page
+});

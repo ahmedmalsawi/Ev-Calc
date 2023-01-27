@@ -1,9 +1,8 @@
 <html lang="ar" dir="rtl">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <link rel="apple-touch-icon" sizes="120x120" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
@@ -28,9 +27,9 @@
 
   <body>
 
-    <div class="container-lg ">
+    <div class="container-lg " id="collectAll">
       <div class="container  header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto bg-body mb-0 pb-0">
-        <h3 class="fs-8 text-red-600 ">فنون حواء للمطابخ</h3>
+        <h3 class="fs-8 text-red-600 " id="save-button">فنون حواء للمطابخ</h3>
         <!-- <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p> -->
         <div class="row ">
           <div
@@ -2086,12 +2085,12 @@ class="section container-lg doorsData row1  border-spacing-2 border border-dange
 </div>
 <div class="addCount38 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
   <input type="number" class="form-control" id="addCount38" value="" placeholder="Ex: 20"
-  onkeyup="calcManual('38');" onchange="calcManual('36');">
+  onkeyup="calcManual('38');" onchange="calcManual('38');">
   <label for="addCount38">العدد</label>
 </div>
 <div class="addPrice38 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
   <input type="number" class="form-control" id="addPrice38" value="" placeholder="Ex: 20"
-  onkeyup="calcManual('36');" onchange="calcManual('38');">
+  onkeyup="calcManual('38');" onchange="calcManual('38');">
   <label for="addPrice38">السعر</label>
 </div>
 <div class="addTotal38 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
@@ -2114,12 +2113,12 @@ class="section container-lg doorsData row1  border-spacing-2 border border-dange
 </div>
 <div class="addCount39 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
   <input type="number" class="form-control" id="addCount39" value="" placeholder="Ex: 20"
-  onkeyup="calcManual('39');" onchange="calcManual('36');">
+  onkeyup="calcManual('39');" onchange="calcManual('39');">
   <label for="addCount39">العدد</label>
 </div>
 <div class="addPrice39 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
   <input type="number" class="form-control" id="addPrice39" value="" placeholder="Ex: 20"
-  onkeyup="calcManual('36');" onchange="calcManual('39');">
+  onkeyup="calcManual('39');" onchange="calcManual('39');">
   <label for="addPrice39">السعر</label>
 </div>
 <div class="addTotal39 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
@@ -2141,12 +2140,12 @@ class="section container-lg doorsData row1  border-spacing-2 border border-dange
 </div>
 <div class="addCount40 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
   <input type="number" class="form-control" id="addCount40" value="" placeholder="Ex: 20"
-  onkeyup="calcManual('40');" onchange="calcManual('36');">
+  onkeyup="calcManual('40');" onchange="calcManual('40');">
   <label for="addCount40">العدد</label>
 </div>
 <div class="addPrice40 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
   <input type="number" class="form-control" id="addPrice40" value="" placeholder="Ex: 20"
-  onkeyup="calcManual('36');" onchange="calcManual('40');">
+  onkeyup="calcManual('40');" onchange="calcManual('40');">
   <label for="addPrice40">السعر</label>
 </div>
 <div class="addTotal40 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
@@ -2616,13 +2615,16 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
       <script src="js/bootstrap-multiselect.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      <script src="js/html2canvas.min.js" ></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
         integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"
         integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="js/script.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"></script>
+        <script src="js/script.js"></script>
   </body>
 
 </html>
