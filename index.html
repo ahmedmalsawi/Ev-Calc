@@ -10,12 +10,17 @@
     <link rel="apple-touch-icon" sizes="76x76" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <link rel="apple-touch-icon" sizes="152x152" href="//fononhawwa.com/wp-content/uploads/2021/10/222222.png">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"   integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="   crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"   rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+      integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 
     <title>Ev-Calculate</title>
@@ -23,7 +28,7 @@
 
   <body>
 
-    <div class="container-lg " >
+    <div class="container-lg ">
       <div class="container  header text-center w-50 pb-0 mb-0 m-0 rounded-5 mx-auto bg-body mb-0 pb-0">
         <h3 class="fs-8 text-red-600 ">فنون حواء للمطابخ</h3>
         <!-- <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p> -->
@@ -34,565 +39,898 @@
           <!-- <div
             class="titleButton d-print-none fs-6 pb-2 dev-button devicesData  text-success btn-success align-center text-center border-0 hover:text-bg-danger "
             onclick="show();">(للأجهزة اضغط هنا)</div> -->
-          <div 
+          <div
             class="titleButton devicesData text-danger btn-success align-center hide text-center border-0 hover:text-bg-danger pb-2 pt-0 mt-0">
             حاسبة الأجهزة</div>
           <!-- <div
             class="titleButton d-print-none fs-6 section pb-2 text-success hide btn-success align-center text-center border-0 hover:text-bg-danger "
             onclick="show();">(للمطابخ اضغط هنا)</div>
         </div> -->
-        <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
-          <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger " onclick="show('kitchen');">مطابخ</div>
-          <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger " onclick="show('devices');">أجهزة</div>
-          <div disabled class="btn btn-secondary d-print-none">خزائن</div>
-        </div>
-      </div>
-    </div>
-   
-    <div class=" container mb-2 p-2 border-spacing-2 border border-danger  rounded bg-blue bg-dark bg-opacity-10"
-      id="fullSite">
-      <!-- // General Data   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class=" container-lg mainData mb-2 border-spacing-2 border border-start-0 rounded-end bg-body bg-gradient bg-opacity-75 border-dark">
-        <!-- <div class=" container-lg mainData col border-black border-spacing-2 border border-success border-start-0 rounded-end bg-success bg-opacity-10"> -->
-        <!-- //Row 1   -->
-        <div class="container text-center fw-bold">البيانات الأساسية</div>
-        <div class="container row1 row m-2 exclude">
-          <div class="customerName exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating col-print-6">
-            <input type="text" class="form-control text-primary" id="customerName" value=""
-              placeholder="Ex: محمود ابراهيم عبد الباقي" autocomplete required>
-            <label for="customerName">اسم العميل</label>
-          </div>
-          <div class="customerPhone exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="customerPhone" class="form-control" id="customerPhone" value="" placeholder="Ex: " autocomplete
-              required>
-            <label for="customerPhone">رقم الجوال</label>
-          </div>
-          <div class="mainContractNo exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="text" class="form-control " id="mainContractNo" value="" placeholder="Ex: ">
-            <label for="mainContractNo">رقم العقد</label>
-          </div>
-        </div>
-        <!-- // Row 2   -->
-        <div class="container exclude  row2 row m-2">
-          <div class="salesman exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: عصام سلامة" autocomplete
-              required>
-            <label for="salesman">المصمم</label>
-          </div>
-          <div class="showroom exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="showroom" aria-label="Floating label select example">
-              <option selected>يرجي اختيار المعرض</option>
-              <option value="" disabled class="bg-dark text-warning text-center">المنطقة الوسطي
-              </option>
-              <option value="0- المصنع">0- المصنع</option>
-              <option value="1- التخصصي">1- التخصصي</option>
-              <option value="2- الإمام سعود">2- الإمام سعود</option>
-              <option value="5- السيف جاليري">5- السيف جاليري</option>
-              <option value="6- الدوادمي">6- الدوادمي</option>
-              <option value="9- المجمعة">9- المجمعة</option>
-              <option value="" disabled class="bg-dark text-warning text-center"> منطقة القصيم
-              </option>
-              <option value="3- بريدة">3- بريدة</option>
-              <option value="7- الرس">7- الرس</option>
-              <option value="" disabled class="bg-dark text-warning text-center">المنطقة الشرقية
-              </option>
-              <option value="4- الخبر">4- الخبر</option>
-              <option value="8- الأحساء">8- الأحساء</option>
-              <option value="10- الدمام">10- الدمام</option>
-              <option value="" disabled class="bg-dark text-warning text-center">المنطقة الغربية
-              </option>
-              <option value="11- المدينة">11- المدينة</option>
-              <option value="12- جدة">12- جدة</option>
-            </select>
-            <label for="showroom">المعرض</label>
-          </div>
-          <div class="kitchenType exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="kitchenType" aria-label="Floating label select example"  onkeyup="getPrice();" onchange="getPrice();">
-              <option selected></option>
-              <option value="" disabled class="bg-dark text-warning text-center">الومنيوم</option>
-              <option value=1460 selected>1460 - مطبخ المنيوم كالسيوم</option>
-              <option value=1590>1590 - مطبخ المنيوم خشب 3مم</option>
-              <option value=1800>1800 - مطبخ المنيوم اكرليك</option>
-              <option value=1850>1850 - مطبخ المنيوم صاج خشبي</option>
-              <option value=1800>1800 - مطبخ المنيوم صاج سادة </option>
-              <option value=2200>2200 - مطبخ المنيوم درفة خشب </option>
-              <option value=2400>2400 - مطبخ المنيوم درف mdf دهان </option>
-              <option value=1900>1900 - مطبخ المنيوم شرائح خشابي </option>
-              <option value="" disabled class="bg-dark text-warning text-center">خشب</option>
-              <option value=>مطبخ خشب درفة خشب دهان </option>
-              <option value=2400>2400 - مطبخ خشب درفة خشب </option>
-            </select>
-            <label for="kitchenType">نوع المطبخ</label>
-          </div>
-        </div>
-        
-        <!-- // Row 3   -->
-        <div class="container section  row3 row m-2">
-          <div class="downCount section  exclude  col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="downCount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="downCount">السفلي</label>
-          </div>
-          <div class="upCount  section exclude  col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="upCount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="upCount">العلوي</label>
-          </div>
-          <div class="island  section  exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="island" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="island">الجزيرة</label>
-          </div>
-          <div class="descDownCount  section  exclude col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="number" class="form-control float-right" id="descDownCount" value=0 placeholder="Ex:"  onkeyup="getPrice();" onchange="getPrice();">
-            <label for="descDownCount">خصم سفلي</label>
-          </div>
-          <div class="descUpCount   section exclude col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="number" class="form-control float-right" id="descUpCount" value=0 placeholder="Ex:" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="descUpCount">خصم علوي</label>
-          </div>
-          <div class="meterTotal  section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterTotal" value=0 placeholder="Ex: 20"
-            >
-            <label for="meterTotal">إجمالى الأمتار</label>
-          </div>
-        </div>
-        <!-- // Row 4   -->
-        <div class="container section exclude row4 row m-2">
-          <div class="meterPrice section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterPrice" value=1460 placeholder="Ex: 20" >
-            <label for="meterPrice">سعر المتر</label>
-          </div>
-          <div class="meterTotalPrice section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="meterTotalPrice" value=0 placeholder="Ex: 20"
-            >
-            <label for="meterTotalPrice">إجمالى سعر الأمتار</label>
-          </div>
-          <div class="height exclude  section col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="height" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="height">الارتفاع بالمتر</label>
-          </div>
-          <div class="heightCount  section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control float-right" id="heightCount" value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();">
-            <label for="heightCount">عدد أمتار الارتفاع</label>
-          </div>
-          <div class="heightTotalPrice  section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control" id="heightTotalPrice" value=0 placeholder="Ex: 20"
-            >
-            <label for="heightTotalPrice">إجمالى سعر الارتفاع</label>
-          </div>
-          <div class="discount exclude  section col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="discount" step=5 min=0 max =30 value=0 placeholder="Ex: 20" onkeyup="getPrice();" onchange="getPrice();"
-            >
-            <label for="discount">خصم</label>
-          </div>
-        </div>
-        <!-- //Row 5  Devices totals -->
-        <div class="container row5 row m-2">
-          <div class="totalDevNoTax  exclude devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="taxing();"
-            placeholder="Ex: " disabled>
-            <label for="totalDevNoTax">قيمة الأجهزة (قبل الضريبة) </label>
-          </div>
-          <div class="devsTax col-md  exclude devicesData hide col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control " id="devsTax" value="" placeholder="Ex: 90" disabled>
-            <label for="devsTax">الضريبة</label>
-          </div>
-          <div class="totalDevTaxed  exclude  devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="text" class="form-control " id="totalDevTaxed" value="" placeholder="Ex: " disabled>
-            <label for="totalDevTaxed"> القيمة شاملة الضريبة </label>
-          </div>
-        </div>
-        
-        <!-- //Row 5   -->
-        <div class="container row5 row m-2">
-          <div class="totalNoTax  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();" onchange="taxing();" placeholder="Ex: ">
-            <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
-          </div>
-          <div class="tax col-md  exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control " id="tax" value="" placeholder="Ex: 90" disabled>
-            <label for="tax">الضريبة</label>
-          </div>
-          <div class="totalTaxed  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <input type="text" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
-            <label for="totalTaxed"> القيمة شاملة الضريبة </label>
+          <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
+            <div
+              class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
+              onclick="show('kitchen');">مطابخ</div>
+            <div
+              class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
+              onclick="show('devices');">أجهزة</div>
+            <div disabled class="btn btn-secondary d-print-none">خزائن</div>
           </div>
         </div>
       </div>
-      <!-- // الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن ذات الارتفاع الاعلى من القياسي وكبائن الدور الثاني 	 < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg cabinetsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 ">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT01">Total</button>
-        الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن الاعلى من القياسي و الدور الثاني</div>
-        <!-- // Row 1 -->
-        <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName1 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName1" aria-label="Floating select" onkeyup="calc('1');"
-              onchange="calc('1');">
-              <option selected value=0>لا يوجد</option>
-              <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
-              <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-              <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-              <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
-              <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-              <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-              <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
-              <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
-            </select>
-            <label for="addName1">بيان رقم 1</label>
+
+      <div class=" container mb-2 p-2 border-spacing-2 border border-danger  rounded bg-blue bg-dark bg-opacity-10"
+        id="fullSite">
+        <!-- // General Data   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class=" container-lg mainData mb-2 border-spacing-2 border border-start-0 rounded-end bg-body bg-gradient bg-opacity-75 border-dark">
+          <!-- <div class=" container-lg mainData col border-black border-spacing-2 border border-success border-start-0 rounded-end bg-success bg-opacity-10"> -->
+          <!-- //Row 1   -->
+          <div class="container text-center fw-bold">البيانات الأساسية</div>
+          <div class="container row1 row m-2 exclude">
+            <div class="customerName exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating col-print-6">
+              <input type="text" class="form-control text-primary" id="customerName" value=""
+                placeholder="Ex: محمود ابراهيم عبد الباقي" autocomplete required>
+              <label for="customerName">اسم العميل</label>
+            </div>
+            <div
+              class="customerPhone exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="customerPhone" class="form-control" id="customerPhone" value="" placeholder="Ex: "
+                autocomplete required>
+              <label for="customerPhone">رقم الجوال</label>
+            </div>
+            <div
+              class="mainContractNo exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control " id="mainContractNo" value="" placeholder="Ex: ">
+              <label for="mainContractNo">رقم العقد</label>
+            </div>
           </div>
-          <div class="addCode1 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode1" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode1">الكود</label>
+          <!-- // Row 2   -->
+          <div class="container exclude  row2 row m-2">
+            <div
+              class="salesman exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control " id="salesman" value="" placeholder="Ex: عصام سلامة" autocomplete
+                required>
+              <label for="salesman">المصمم</label>
+            </div>
+            <div
+              class="showroom exclude col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="showroom" aria-label="Floating label select example">
+                <option selected>يرجي اختيار المعرض</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المنطقة الوسطي
+                </option>
+                <option value="0- المصنع">0- المصنع</option>
+                <option value="1- التخصصي">1- التخصصي</option>
+                <option value="2- الإمام سعود">2- الإمام سعود</option>
+                <option value="5- السيف جاليري">5- السيف جاليري</option>
+                <option value="6- الدوادمي">6- الدوادمي</option>
+                <option value="9- المجمعة">9- المجمعة</option>
+                <option value="" disabled class="bg-dark text-warning text-center"> منطقة القصيم
+                </option>
+                <option value="3- بريدة">3- بريدة</option>
+                <option value="7- الرس">7- الرس</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المنطقة الشرقية
+                </option>
+                <option value="4- الخبر">4- الخبر</option>
+                <option value="8- الأحساء">8- الأحساء</option>
+                <option value="10- الدمام">10- الدمام</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المنطقة الغربية
+                </option>
+                <option value="11- المدينة">11- المدينة</option>
+                <option value="12- جدة">12- جدة</option>
+              </select>
+              <label for="showroom">المعرض</label>
+            </div>
+            <div
+              class="kitchenType exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="kitchenType" aria-label="Floating label select example"
+                onkeyup="getPrice();" onchange="getPrice();">
+                <option selected></option>
+                <option value="" disabled class="bg-dark text-warning text-center">الومنيوم</option>
+                <option value=1460 selected>1460 - مطبخ المنيوم كالسيوم</option>
+                <option value=1590>1590 - مطبخ المنيوم خشب 3مم</option>
+                <option value=1800>1800 - مطبخ المنيوم اكرليك</option>
+                <option value=1850>1850 - مطبخ المنيوم صاج خشبي</option>
+                <option value=1800>1800 - مطبخ المنيوم صاج سادة </option>
+                <option value=2200>2200 - مطبخ المنيوم درفة خشب </option>
+                <option value=2400>2400 - مطبخ المنيوم درف mdf دهان </option>
+                <option value=1900>1900 - مطبخ المنيوم شرائح خشابي </option>
+                <option value="" disabled class="bg-dark text-warning text-center">خشب</option>
+                <option value=>مطبخ خشب درفة خشب دهان </option>
+                <option value=2400>2400 - مطبخ خشب درفة خشب </option>
+              </select>
+              <label for="kitchenType">نوع المطبخ</label>
+            </div>
           </div>
-          <div class="addCount1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount1" value="" placeholder="Ex: 20"
-              onkeyup="calc('1');" onchange="calc('1');">
-            <label for="addCount1">العدد</label>
+
+          <!-- // Row 3   -->
+          <div class="container section  row3 row m-2">
+            <div
+              class="downCount section  exclude  col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control float-right" id="downCount" value=0 placeholder="Ex: 20"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="downCount">السفلي</label>
+            </div>
+            <div
+              class="upCount  section exclude  col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control float-right" id="upCount" value=0 placeholder="Ex: 20"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="upCount">العلوي</label>
+            </div>
+            <div
+              class="island  section  exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control float-right" id="island" value=0 placeholder="Ex: 20"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="island">الجزيرة</label>
+            </div>
+            <div
+              class="descDownCount  section  exclude col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="number" class="form-control float-right" id="descDownCount" value=0 placeholder="Ex:"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="descDownCount">خصم سفلي</label>
+            </div>
+            <div
+              class="descUpCount   section exclude col-md-2 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="number" class="form-control float-right" id="descUpCount" value=0 placeholder="Ex:"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="descUpCount">خصم علوي</label>
+            </div>
+            <div
+              class="meterTotal  section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control" id="meterTotal" value=0 placeholder="Ex: 20">
+              <label for="meterTotal">إجمالى الأمتار</label>
+            </div>
           </div>
-          <div class="addTotal1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT01" id="addTotal1" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal1">الاجمالي</label>
+          <!-- // Row 4   -->
+          <div class="container section exclude row4 row m-2">
+            <div
+              class="meterPrice section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control" id="meterPrice" value=1460 placeholder="Ex: 20">
+              <label for="meterPrice">سعر المتر</label>
+            </div>
+            <div
+              class="meterTotalPrice section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control" id="meterTotalPrice" value=0 placeholder="Ex: 20">
+              <label for="meterTotalPrice">إجمالى سعر الأمتار</label>
+            </div>
+            <div
+              class="height exclude  section col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control float-right" id="height" value=0 placeholder="Ex: 20"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="height">الارتفاع بالمتر</label>
+            </div>
+            <div
+              class="heightCount  section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control float-right" id="heightCount" value=0 placeholder="Ex: 20"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="heightCount">عدد أمتار الارتفاع</label>
+            </div>
+            <div
+              class="heightTotalPrice  section exclude col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control" id="heightTotalPrice" value=0 placeholder="Ex: 20">
+              <label for="heightTotalPrice">إجمالى سعر الارتفاع</label>
+            </div>
+            <div
+              class="discount exclude  section col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="discount" step=5 min=0 max=30 value=0 placeholder="Ex: 20"
+                onkeyup="getPrice();" onchange="getPrice();">
+              <label for="discount">خصم</label>
+            </div>
           </div>
-        </div>
-        <!-- //Row 2 -->
-        <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName2 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName2" aria-label="Floating label select example" onkeyup="calc('2');"
-              onchange="calc('2');">
-              <option selected value=0>لا يوجد</option>
-              <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
-              <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-              <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-              <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
-              <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-              <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-              <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
-              <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
-            </select>
-            <label for="addName2">بيان رقم 2</label>
+          <!-- //Row 5  Devices totals -->
+          <div class="container row5 row m-2">
+            <div
+              class="totalDevNoTax  exclude devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="taxing();"
+                placeholder="Ex: " disabled>
+              <label for="totalDevNoTax">قيمة الأجهزة (قبل الضريبة) </label>
+            </div>
+            <div
+              class="devsTax col-md  exclude devicesData hide col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control " id="devsTax" value="" placeholder="Ex: 90" disabled>
+              <label for="devsTax">الضريبة</label>
+            </div>
+            <div
+              class="totalDevTaxed  exclude  devicesData hide col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control " id="totalDevTaxed" value="" placeholder="Ex: " disabled>
+              <label for="totalDevTaxed"> القيمة شاملة الضريبة </label>
+            </div>
           </div>
-          <div class="addCode2 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode2" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode2">الكود</label>
-          </div>
-          <div class="addCount2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount2" value="" placeholder="Ex: 20"
-              onkeyup="calc('2');" onchange="calc('2');">
-            <label for="addCount2">العدد</label>
-          </div>
-          <div class="addTotal2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT01" id="addTotal2" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal2">الاجمالي</label>
-          </div>
-        </div>
-        <!-- //Row3 -->
-        <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName3 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName3" aria-label="Floating label select example" onkeyup="calc('3');"
-              onchange="calc('3');">
-              <option selected value=0>لا يوجد</option>
-              <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
-              <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-              <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-              <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
-              <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-              <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-              <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
-              <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
-            </select>
-            <label for="addName3">بيان رقم 3</label>
-          </div>
-          <div class="addCode3 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode3" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode3">الكود</label>
-          </div>
-          <div class="addCount3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount3" value="" placeholder="Ex: 20"
-              onkeyup="calc('3');" onchange="calc('3');">
-            <label for="addCount3">العدد</label>
-          </div>
-          <div class="addTotal3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT01" id="addTotal3" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal3">الاجمالي</label>
-          </div>
-        </div>
-        <!-- //Row4 -->
-        <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName4 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName4" aria-label="Floating label select example" onkeyup="calc('4');"
-              onchange="calc('4');">
-              <option selected value=0>لا يوجد</option>
-              <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
-              <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-              <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-              <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
-              <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-              <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-              <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
-              <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
-            </select>
-            <label for="addName4">بيان رقم 4</label>
-          </div>
-          <div class="addCode4 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode4" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode4">الكود</label>
-          </div>
-          <div class="addCount4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount4" value="" placeholder="Ex: 20"
-              onkeyup="calc('4');" onchange="calc('4');">
-            <label for="addCount4">العدد</label>
-          </div>
-          <div class="addTotal4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT01" id="addTotal4" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal4">الاجمالي</label>
-          </div>
-        </div>
-        <!-- //Row5 -->
-        <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName5 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName5" aria-label="Floating label select example" onkeyup="calc('5');"
-              onchange="calc('5');">
-              <option selected value=0>لا يوجد</option>
-              <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
-              <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
-              <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
-              <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
-              <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
-              <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
-              <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
-              <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
-              <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
-              <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي ) </option>
-            </select>
-            <label for="addName5">بيان رقم 5</label>
-          </div>
-          <div class="addCode5 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode5" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode5">الكود</label>
-          </div>
-          <div class="addCount5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount5" value="" placeholder="Ex: 20"
-              onkeyup="calc('5');" onchange="calc('5');">
-            <label for="addCount5">العدد</label>
-          </div>
-          <div class="addTotal5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT01" id="addTotal5" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal5">الاجمالي</label>
-          </div>
-        </div>
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT02">Total</button>الدرف والاضافات عليها والكورنيش والبراويز</div>
-        <!-- // Row 6 -->
-        <div class="addRow06 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName6 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName6" aria-label="Floating label select example" onkeyup="calc('6');"
-              onchange="calc('6');">
-              <option selected value=0>لا يوجد</option>
-              <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
-              <option value=100>100 - درفة دبل جورجيان بار</option>
-              <option value=25>25 - طلاء الجورجيان بار</option>
-              <option value=70>70 - الدرف الزجاج</option>
-              <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
-              <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
-              <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
-              <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
-              <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
-            </select>
-            <label for="addName6">بيان رقم 6</label>
-          </div>
-          <div class="addCode6 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode6" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode6">الكود</label>
-          </div>
-          <div class="addCount6 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount6" value="" placeholder="Ex: 20"
-              onkeyup="calc('6');" onchange="calc('6');">
-            <label for="addCount6">العدد</label>
-          </div>
-          <div class="addTotal6 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT02" id="addTotal6" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal6">الاجمالي</label>
+
+          <!-- //Row 5   -->
+          <div class="container row5 row m-2">
+            <div
+              class="totalNoTax  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();"
+                onchange="taxing();" placeholder="Ex: ">
+              <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
+            </div>
+            <div
+              class="tax col-md  exclude section col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control " id="tax" value="" placeholder="Ex: 90" disabled>
+              <label for="tax">الضريبة</label>
+            </div>
+            <div
+              class="totalTaxed  exclude section col-md col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control " id="totalTaxed" value="" placeholder="Ex: " disabled>
+              <label for="totalTaxed"> القيمة شاملة الضريبة </label>
+            </div>
           </div>
         </div>
-        <!-- // Row 7 -->
-        <div class="addRow07 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName7 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName7" aria-label="Floating label select example" onkeyup="calc('7');"
-              onchange="calc('7');">
-              <option selected value=0>لا يوجد</option>
-              <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
-              <option value=100>100 - درفة دبل جورجيان بار</option>
-              <option value=25>25 - طلاء الجورجيان بار</option>
-              <option value=70>70 - الدرف الزجاج</option>
-              <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
-              <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
-              <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
-              <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
-              <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
-            </select>
-            <label for="addName7">بيان رقم 7</label>
+        <!-- // الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن ذات الارتفاع الاعلى من القياسي وكبائن الدور الثاني 	 < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg cabinetsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 ">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT01">Total</button>
+            الزوايا والدواليب الطولية والنازلة او المرتفعة والكبائن الاعلى من القياسي و الدور الثاني
           </div>
-          <div class="addCode7 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode7" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode7">الكود</label>
+          <!-- // Row 1 -->
+          <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName1 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName1" aria-label="Floating select" onkeyup="calc('1');"
+                onchange="calc('1');">
+                <option selected value=0>لا يوجد</option>
+                <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي )
+                </option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
+                <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
+                <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
+                <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
+                <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
+                <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
+                <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
+                <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
+                <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي )
+                </option>
+              </select>
+              <label for="addName1">بيان رقم 1</label>
+            </div>
+            <div class="addCode1 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode1" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode1">الكود</label>
+            </div>
+            <div class="addCount1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount1" value="" placeholder="Ex: 20"
+                onkeyup="calc('1');" onchange="calc('1');">
+              <label for="addCount1">العدد</label>
+            </div>
+            <div class="addTotal1 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT01" id="addTotal1" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal1">الاجمالي</label>
+            </div>
           </div>
-          <div class="addCount7 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount7" value="" placeholder="Ex: 20"
-              onkeyup="calc('7');" onchange="calc('7');">
-            <label for="addCount7">العدد</label>
+          <!-- //Row 2 -->
+          <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName2 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName2" aria-label="Floating label select example" onkeyup="calc('2');"
+                onchange="calc('2');">
+                <option selected value=0>لا يوجد</option>
+                <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي )
+                </option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
+                <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
+                <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
+                <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
+                <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
+                <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
+                <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
+                <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
+                <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي )
+                </option>
+              </select>
+              <label for="addName2">بيان رقم 2</label>
+            </div>
+            <div class="addCode2 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode2" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode2">الكود</label>
+            </div>
+            <div class="addCount2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount2" value="" placeholder="Ex: 20"
+                onkeyup="calc('2');" onchange="calc('2');">
+              <label for="addCount2">العدد</label>
+            </div>
+            <div class="addTotal2 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT01" id="addTotal2" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal2">الاجمالي</label>
+            </div>
           </div>
-          <div class="addTotal7 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT02" id="addTotal7" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal7">الاجمالي</label>
+          <!-- //Row3 -->
+          <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName3 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName3" aria-label="Floating label select example" onkeyup="calc('3');"
+                onchange="calc('3');">
+                <option selected value=0>لا يوجد</option>
+                <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي )
+                </option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
+                <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
+                <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
+                <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
+                <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
+                <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
+                <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
+                <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
+                <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي )
+                </option>
+              </select>
+              <label for="addName3">بيان رقم 3</label>
+            </div>
+            <div class="addCode3 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode3" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode3">الكود</label>
+            </div>
+            <div
+              class="addCount3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount3" value="" placeholder="Ex: 20"
+                onkeyup="calc('3');" onchange="calc('3');">
+              <label for="addCount3">العدد</label>
+            </div>
+            <div class="addTotal3 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT01" id="addTotal3" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal3">الاجمالي</label>
+            </div>
+          </div>
+          <!-- //Row4 -->
+          <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName4 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName4" aria-label="Floating label select example" onkeyup="calc('4');"
+                onchange="calc('4');">
+                <option selected value=0>لا يوجد</option>
+                <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي )
+                </option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
+                <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
+                <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
+                <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
+                <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
+                <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
+                <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
+                <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
+                <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي )
+                </option>
+              </select>
+              <label for="addName4">بيان رقم 4</label>
+            </div>
+            <div class="addCode4 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode4" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode4">الكود</label>
+            </div>
+            <div
+              class="addCount4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount4" value="" placeholder="Ex: 20"
+                onkeyup="calc('4');" onchange="calc('4');">
+              <label for="addCount4">العدد</label>
+            </div>
+            <div class="addTotal4 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT01" id="addTotal4" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal4">الاجمالي</label>
+            </div>
+          </div>
+          <!-- //Row5 -->
+          <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName5 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName5" aria-label="Floating label select example" onkeyup="calc('5');"
+                onchange="calc('5');">
+                <option selected value=0>لا يوجد</option>
+                <option value=120><span class="text-danger2">120 </span>- فرق سعر ابواب shaker (بالمتر الطولي )
+                </option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب طويل</option>
+                <option value=600><span class="text-danger">600 </span>- دولاب طويل من 30-45</option>
+                <option value=300><span class="text-danger">300 </span>- دولاب طويل 60 سم</option>
+                <option value=900><span class="text-danger">900 </span>- دولاب طويل 90 سم</option>
+                <option value="" disabled class="bg-dark text-warning text-center">دولاب زاوية</option>
+                <option value=1000><span class="text-danger">1000 </span>- دولاب زاوية خماسي 90 سم</option>
+                <option value=1100><span class="text-danger">1100 </span>- دولاب زاوية خماسي 100 سم</option>
+                <option value=650><span class="text-danger">650 </span>- دولاب زاوية نازل (خماسي ) </option>
+                <option value="" disabled class="bg-dark text-warning text-center">كبائن علوية</option>
+                <option value=150><span class="text-danger">150 </span>- كبائن علوية بعمق 60 سم (بالمتر الطولي )
+                </option>
+              </select>
+              <label for="addName5">بيان رقم 5</label>
+            </div>
+            <div class="addCode5 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode5" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode5">الكود</label>
+            </div>
+            <div
+              class="addCount5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount5" value="" placeholder="Ex: 20"
+                onkeyup="calc('5');" onchange="calc('5');">
+              <label for="addCount5">العدد</label>
+            </div>
+            <div class="addTotal5 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT01" id="addTotal5" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal5">الاجمالي</label>
+            </div>
           </div>
         </div>
-        <!-- // Row 8 -->
-        <div class="addRow08 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName8 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName8" aria-label="Floating label select example" onkeyup="calc('8');"
-              onchange="calc('8');">
-              <option selected value=0>لا يوجد</option>
-              <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
-              <option value=100>100 - درفة دبل جورجيان بار</option>
-              <option value=25>25 - طلاء الجورجيان بار</option>
-              <option value=70>70 - الدرف الزجاج</option>
-              <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
-              <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
-              <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
-              <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
-              <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
-            </select>
-            <label for="addName8">بيان رقم 8</label>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData pb-2 border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT02">Total</button>الدرف والاضافات عليها
+            والكورنيش والبراويز
           </div>
-          <div class="addCode8 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode8" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode8">الكود</label>
+          <!-- // Row 6 -->
+          <div class="addRow06 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName6 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName6" aria-label="Floating label select example" onkeyup="calc('6');"
+                onchange="calc('6');">
+                <option selected value=0>لا يوجد</option>
+                <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
+                <option value=100>100 - درفة دبل جورجيان بار</option>
+                <option value=25>25 - طلاء الجورجيان بار</option>
+                <option value=70>70 - الدرف الزجاج</option>
+                <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
+                <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
+                <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
+                <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
+                <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
+              </select>
+              <label for="addName6">بيان رقم 6</label>
+            </div>
+            <div class="addCode6 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode6" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode6">الكود</label>
+            </div>
+            <div
+              class="addCount6 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount6" value="" placeholder="Ex: 20"
+                onkeyup="calc('6');" onchange="calc('6');">
+              <label for="addCount6">العدد</label>
+            </div>
+            <div class="addTotal6 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT02" id="addTotal6" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal6">الاجمالي</label>
+            </div>
           </div>
-          <div class="addCount8 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount8" value="" placeholder="Ex: 20"
-              onkeyup="calc('8');" onchange="calc('8');">
-            <label for="addCount8">العدد</label>
+          <!-- // Row 7 -->
+          <div class="addRow07 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName7 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName7" aria-label="Floating label select example" onkeyup="calc('7');"
+                onchange="calc('7');">
+                <option selected value=0>لا يوجد</option>
+                <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
+                <option value=100>100 - درفة دبل جورجيان بار</option>
+                <option value=25>25 - طلاء الجورجيان بار</option>
+                <option value=70>70 - الدرف الزجاج</option>
+                <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
+                <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
+                <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
+                <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
+                <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
+              </select>
+              <label for="addName7">بيان رقم 7</label>
+            </div>
+            <div class="addCode7 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode7" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode7">الكود</label>
+            </div>
+            <div
+              class="addCount7 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount7" value="" placeholder="Ex: 20"
+                onkeyup="calc('7');" onchange="calc('7');">
+              <label for="addCount7">العدد</label>
+            </div>
+            <div class="addTotal7 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT02" id="addTotal7" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal7">الاجمالي</label>
+            </div>
           </div>
-          <div class="addTotal8 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT02" id="addTotal8" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal8">الاجمالي</label>
+          <!-- // Row 8 -->
+          <div class="addRow08 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName8 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName8" aria-label="Floating label select example" onkeyup="calc('8');"
+                onchange="calc('8');">
+                <option selected value=0>لا يوجد</option>
+                <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
+                <option value=100>100 - درفة دبل جورجيان بار</option>
+                <option value=25>25 - طلاء الجورجيان بار</option>
+                <option value=70>70 - الدرف الزجاج</option>
+                <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
+                <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
+                <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
+                <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
+                <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
+              </select>
+              <label for="addName8">بيان رقم 8</label>
+            </div>
+            <div class="addCode8 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode8" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode8">الكود</label>
+            </div>
+            <div
+              class="addCount8 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount8" value="" placeholder="Ex: 20"
+                onkeyup="calc('8');" onchange="calc('8');">
+              <label for="addCount8">العدد</label>
+            </div>
+            <div class="addTotal8 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT02" id="addTotal8" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal8">الاجمالي</label>
+            </div>
           </div>
-        </div>
-        <!-- // Row 9 -->
-        <div class="addRow09 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName9 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName9" aria-label="Floating label select example" onkeyup="calc('9');"
-              onchange="calc('9');">
-              <option selected value=0>لا يوجد</option>
-              <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
-              <option value=100>100 - درفة دبل جورجيان بار</option>
-              <option value=25>25 - طلاء الجورجيان بار</option>
-              <option value=70>70 - الدرف الزجاج</option>
-              <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
-              <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
-              <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
-              <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
-              <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
-            </select>
-            <label for="addName9">بيان رقم 9</label>
+          <!-- // Row 9 -->
+          <div class="addRow09 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName9 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName9" aria-label="Floating label select example" onkeyup="calc('9');"
+                onchange="calc('9');">
+                <option selected value=0>لا يوجد</option>
+                <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
+                <option value=100>100 - درفة دبل جورجيان بار</option>
+                <option value=25>25 - طلاء الجورجيان بار</option>
+                <option value=70>70 - الدرف الزجاج</option>
+                <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
+                <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
+                <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
+                <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
+                <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
+              </select>
+              <label for="addName9">بيان رقم 9</label>
+            </div>
+            <div class="addCode9 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode9" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode9">الكود</label>
+            </div>
+            <div
+              class="addCount9 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount9" value="" placeholder="Ex: 20"
+                onkeyup="calc('9');" onchange="calc('9');">
+              <label for="addCount9">العدد</label>
+            </div>
+            <div class="addTotal9 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT02" id="addTotal9" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal9">الاجمالي</label>
+            </div>
           </div>
-          <div class="addCode9 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode9" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode9">الكود</label>
+          <!-- // Row 10 -->
+          <div class="addRow10 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName10 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName10" aria-label="Floating label select example"
+                onkeyup="calc('10');" onchange="calc('10');">
+                <option selected value=0>لا يوجد</option>
+                <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
+                <option value=100>100 - درفة دبل جورجيان بار</option>
+                <option value=25>25 - طلاء الجورجيان بار</option>
+                <option value=70>70 - الدرف الزجاج</option>
+                <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
+                <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
+                <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
+                <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
+                <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
+              </select>
+              <label for="addName10">بيان رقم 10</label>
+            </div>
+            <div class="addCode10 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode10" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode10">الكود</label>
+            </div>
+            <div
+              class="addCount10 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount10" value="" placeholder="Ex: 20" autocomplete
+                onkeyup="calc('10');" onchange="calc('10');">
+              <label for="addCount10">العدد</label>
+            </div>
+            <div class="addTotal10 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT02" id="addTotal10" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal10">الاجمالي</label>
+            </div>
           </div>
-          <div class="addCount9 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount9" value="" placeholder="Ex: 20"
-              onkeyup="calc('9');" onchange="calc('9');">
-            <label for="addCount9">العدد</label>
-          </div>
-          <div class="addTotal9 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT02" id="addTotal9" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal9">الاجمالي</label>
-          </div>
-        </div>
-        <!-- // Row 10 -->
-        <div class="addRow10 container cabinets row m-sm-0 p-sm-0 m-2 content">
-          <div class="addName10 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-            <select class="form-select" id="addName10" aria-label="Floating label select example" onkeyup="calc('10');"
-              onchange="calc('10');">
-              <option selected value=0>لا يوجد</option>
-              <option value=50>50 - الجورجيان بار (غير شامل سعر الزجاج )</option>
-              <option value=100>100 - درفة دبل جورجيان بار</option>
-              <option value=25>25 - طلاء الجورجيان بار</option>
-              <option value=70>70 - الدرف الزجاج</option>
-              <option value=6>6 - دعامة مفصلات لدرفه الصينى فقط</option>
-              <option value=25>25 - زيادة انخفاض الدرفة (حتى 5 سم )</option>
-              <option value=150>150 - اجناب نهاية (براويز ) بالمتر المربع</option>
-              <option value=150>150 - كونيش علوي بالمتر الطولي ساده</option>
-              <option value=150>150 - كونيش سفلي بالمتر الطولي ساده</option>
-            </select>
-            <label for="addName10">بيان رقم 10</label>
-          </div>
-          <div class="addCode10 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-            <input type="text" class="form-control float-right" id="addCode10" value="" placeholder="Ex: " autocomplete>
-            <label for="addCode10">الكود</label>
-          </div>
-          <div class="addCount10 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-            <input type="number" class="form-control" id="addCount10" value="" placeholder="Ex: 20" autocomplete
-              onkeyup="calc('10');" onchange="calc('10');">
-            <label for="addCount10">العدد</label>
-          </div>
-          <div class="addTotal10 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-            <input type="number" disabled class="form-control addGT addGT02" id="addTotal10" value="" placeholder="Ex: 20"
-              autocomplete>
-            <label for="addTotal10">الاجمالي</label>
-          </div>
-        </div>
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT03">Total</button>المفصلات والرافعات والمسكات الغير مجانية</div>
-<!-- // Row 11 -->
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT03">Total</button>المفصلات والرافعات
+            والمسكات           </div>
+          <!-- // Row 11 -->
+          <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName11 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName11" aria-label="Floating label select example"
+                onkeyup="calc('11');" onchange="calc('11');">
+                <option selected value=0>لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
+                <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+                <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+                <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )
+                </option>
+                <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر
+                  واقل من 2 متر )</option>
+                <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+                <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة
+                </option>
+                <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+                <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
+                <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+                <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+                <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+                <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
+                <option value="" disabled class="bg-dark text-warning text-center">الأدراج</option>
+                <option value=320><span class="text-danger2">320 - </span>درج لاجار صغير </option>
+                <option value=350><span class="text-danger2">350 - </span>درج لاجار وسط </option>
+                <option value=380><span class="text-danger2">380 - </span>درج لاجار كبير </option>
+                <option value=350><span class="text-danger2">350 - </span>بوكس كلادينج </option>
+                <option value="" disabled class="bg-dark text-warning text-center">العياشات</option>
+                <option value=350><span class="text-danger2">350 - </span>عياشة دورين او دور واحد بالضغط</option>
+              </select>
+              <label for="addName11">بيان رقم 1</label>
+            </div>
+            <div class="addCode11 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode11" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode11">الكود</label>
+            </div>
+            <div class="addCount11 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount11" value="" placeholder="Ex: 20"
+                onkeyup="calc('11');" onchange="calc('11');">
+              <label for="addCount11">العدد</label>
+            </div>
+            <div class="addTotal11 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT03" id="addTotal11" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal11">الاجمالي</label>
+            </div>
+          </div>
+          <!-- //Row 12 -->
+          <div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName12 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName12" aria-label="Floating label select example"
+                onkeyup="calc('12');" onchange="calc('12');">
+                <option selected value=0>لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
+                <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+                <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+                <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )
+                </option>
+                <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر
+                  واقل من 2 متر )</option>
+                <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+                <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة
+                </option>
+                <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+                <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
+                <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+                <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+                <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+                <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
+                <option value="" disabled class="bg-dark text-warning text-center">الأدراج</option>
+                <option value=320><span class="text-danger2">320 - </span>درج لاجار صغير </option>
+                <option value=350><span class="text-danger2">350 - </span>درج لاجار وسط </option>
+                <option value=380><span class="text-danger2">380 - </span>درج لاجار كبير </option>
+                <option value=350><span class="text-danger2">350 - </span>بوكس كلادينج </option>
+                <option value="" disabled class="bg-dark text-warning text-center">العياشات</option>
+                <option value=350><span class="text-danger2">350 - </span>عياشة دورين او دور واحد بالضغط</option>
+              </select>
+              <label for="addName12">بيان رقم 2</label>
+            </div>
+            <div class="addCode12 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode12" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode12">الكود</label>
+            </div>
+            <div class="addCount12 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount12" value="" placeholder="Ex: 20"
+                onkeyup="calc('12');" onchange="calc('12');">
+              <label for="addCount12">العدد</label>
+            </div>
+            <div class="addTotal12 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT03" id="addTotal12" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal12">الاجمالي</label>
+            </div>
+          </div>
+          <!-- //Row 13 -->
+          <div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName13 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName13" aria-label="Floating label select example"
+                onkeyup="calc('13');" onchange="calc('13');">
+                <option selected value=0>لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
+                <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+                <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+                <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )
+                </option>
+                <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر
+                  واقل من 2 متر )</option>
+                <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+                <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة
+                </option>
+                <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+                <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
+                <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+                <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+                <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+                <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
+                <option value="" disabled class="bg-dark text-warning text-center">الأدراج</option>
+                <option value=320><span class="text-danger2">320 - </span>درج لاجار صغير </option>
+                <option value=350><span class="text-danger2">350 - </span>درج لاجار وسط </option>
+                <option value=380><span class="text-danger2">380 - </span>درج لاجار كبير </option>
+                <option value=350><span class="text-danger2">350 - </span>بوكس كلادينج </option>
+                <option value="" disabled class="bg-dark text-warning text-center">العياشات</option>
+                <option value=350><span class="text-danger2">350 - </span>عياشة دورين او دور واحد بالضغط</option>
+              </select>
+              <label for="addName13">بيان رقم 3</label>
+            </div>
+            <div class="addCode13 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode13" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode13">الكود</label>
+            </div>
+            <div
+              class="addCount13 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount13" value="" placeholder="Ex: 20"
+                onkeyup="calc('13');" onchange="calc('13');">
+              <label for="addCount13">العدد</label>
+            </div>
+            <div class="addTotal13 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT03" id="addTotal13" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal13">الاجمالي</label>
+            </div>
+          </div>
+          <!-- //Row14 -->
+          <div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName14 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName14" aria-label="Floating label select example"
+                onkeyup="calc('14');" onchange="calc('14');">
+                <option selected value=0>لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
+                <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+                <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+                <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )
+                </option>
+                <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر
+                  واقل من 2 متر )</option>
+                <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+                <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة
+                </option>
+                <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+                <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
+                <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+                <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+                <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+                <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
+                <option value="" disabled class="bg-dark text-warning text-center">الأدراج</option>
+                <option value=320><span class="text-danger2">320 - </span>درج لاجار صغير </option>
+                <option value=350><span class="text-danger2">350 - </span>درج لاجار وسط </option>
+                <option value=380><span class="text-danger2">380 - </span>درج لاجار كبير </option>
+                <option value=350><span class="text-danger2">350 - </span>بوكس كلادينج </option>
+                <option value="" disabled class="bg-dark text-warning text-center">العياشات</option>
+                <option value=350><span class="text-danger2">350 - </span>عياشة دورين او دور واحد بالضغط</option>
+              </select>
+              <label for="addName14">بيان رقم 4</label>
+            </div>
+            <div class="addCode14 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode14" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode14">الكود</label>
+            </div>
+            <div
+              class="addCount14 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount14" value="" placeholder="Ex: 20"
+                onkeyup="calc('14');" onchange="calc('14');">
+              <label for="addCount14">العدد</label>
+            </div>
+            <div class="addTotal14 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT03" id="addTotal14" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal14">الاجمالي</label>
+            </div>
+          </div>
+          <!-- //Row 15 -->
+          <div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
+            <div class="addName15 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="addName15" aria-label="Floating label select example"
+                onkeyup="calc('15');" onchange="calc('15');">
+                <option selected value=0>لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
+                <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
+                <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
+                <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
+                <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )
+                </option>
+                <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر
+                  واقل من 2 متر )</option>
+                <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
+                <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة
+                </option>
+                <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
+                <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
+                <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
+                <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
+                <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
+                <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
+                <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
+                <option value="" disabled class="bg-dark text-warning text-center">الأدراج</option>
+                <option value=320><span class="text-danger2">320 - </span>درج لاجار صغير </option>
+                <option value=350><span class="text-danger2">350 - </span>درج لاجار وسط </option>
+                <option value=380><span class="text-danger2">380 - </span>درج لاجار كبير </option>
+                <option value=350><span class="text-danger2">350 - </span>بوكس كلادينج </option>
+                <option value="" disabled class="bg-dark text-warning text-center">العياشات</option>
+                <option value=350><span class="text-danger2">350 - </span>عياشة دورين او دور واحد بالضغط</option>
+              </select>
+              <label for="addName15">بيان رقم 5</label>
+            </div>
+            <div class="addCode15 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
+              <input type="text" class="form-control float-right" id="addCode15" value="" placeholder="Ex: "
+                autocomplete>
+              <label for="addCode15">الكود</label>
+            </div>
+            <div
+              class="addCount15 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
+              <input type="number" class="form-control" id="addCount15" value="" placeholder="Ex: 20"
+                onkeyup="calc('15');" onchange="calc('15');">
+              <label for="addCount15">العدد</label>
+            </div>
+            <div class="addTotal15 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" disabled class="form-control addGT addGT03" id="addTotal15" value=""
+                placeholder="Ex: 20" autocomplete>
+              <label for="addTotal15">الاجمالي</label>
+            </div>
+          </div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT04">Total</button>الادراج والعياشات
+          </div>
+<!-- // Row 16 -->
 <div class="addRow01 container cabinets row m-sm-0 p-sm-0 m-2 content">
   <div class="addName11 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName11" aria-label="Floating label select example" onkeyup="calc('11');"
-      onchange="calc('11');">
+    <select class="form-select" id="addName11" aria-label="Floating label select example"
+      onkeyup="calc('11');" onchange="calc('11');">
       <option selected value=0>لا يوجد</option>
       <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
       <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
       <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
       <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
       <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
-      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
-      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
+      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )
+      </option>
+      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر
+        واقل من 2 متر )</option>
       <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
-      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
+      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة
+      </option>
       <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
       <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
       <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
@@ -604,702 +942,553 @@
     <label for="addName11">بيان رقم 1</label>
   </div>
   <div class="addCode11 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode11" value="" placeholder="Ex: " autocomplete>
+    <input type="text" class="form-control float-right" id="addCode11" value="" placeholder="Ex: "
+      autocomplete>
     <label for="addCode11">الكود</label>
   </div>
   <div class="addCount11 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount11" value="" placeholder="Ex: 20" onkeyup="calc('11');"
-      onchange="calc('11');">
+    <input type="number" class="form-control" id="addCount11" value="" placeholder="Ex: 20"
+      onkeyup="calc('11');" onchange="calc('11');">
     <label for="addCount11">العدد</label>
   </div>
   <div class="addTotal11 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT03" id="addTotal11" value="" placeholder="Ex: 20"
-      autocomplete>
+    <input type="number" disabled class="form-control addGT addGT03" id="addTotal11" value=""
+      placeholder="Ex: 20" autocomplete>
     <label for="addTotal11">الاجمالي</label>
   </div>
 </div>
-<!-- //Row 12 -->
-<div class="addRow02 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName12 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName12" aria-label="Floating label select example" onkeyup="calc('12');"
-      onchange="calc('12');">
-      <option selected value=0>لا يوجد</option>
-      <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
-      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
-      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
-      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
-      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
-      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
-      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
-      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
-      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
-      <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
-      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
-      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
-      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
-      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
-    </select>
-    <label for="addName12">بيان رقم 2</label>
-  </div>
-  <div class="addCode12 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode12" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode12">الكود</label>
-  </div>
-  <div class="addCount12 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount12" value="" placeholder="Ex: 20" onkeyup="calc('12');"
-      onchange="calc('12');">
-    <label for="addCount12">العدد</label>
-  </div>
-  <div class="addTotal12 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT03" id="addTotal12" value="" placeholder="Ex: 20"
-      autocomplete>
-    <label for="addTotal12">الاجمالي</label>
-  </div>
-</div>
-<!-- //Row 13 -->
-<div class="addRow03 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName13 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName13" aria-label="Floating label select example" onkeyup="calc('13');"
-      onchange="calc('13');">
-      <option selected value=0>لا يوجد</option>
-      <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
-      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
-      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
-      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
-      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
-      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
-      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
-      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
-      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
-      <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
-      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
-      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
-      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
-      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
-    </select>
-    <label for="addName13">بيان رقم 3</label>
-  </div>
-  <div class="addCode13 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode13" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode13">الكود</label>
-  </div>
-  <div class="addCount13 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount13" value="" placeholder="Ex: 20" onkeyup="calc('13');"
-      onchange="calc('13');">
-    <label for="addCount13">العدد</label>
-  </div>
-  <div class="addTotal13 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT03" id="addTotal13" value="" placeholder="Ex: 20"
-      autocomplete>
-    <label for="addTotal13">الاجمالي</label>
-  </div>
-</div>
-<!-- //Row14 -->
-<div class="addRow04 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName14 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName14" aria-label="Floating label select example" onkeyup="calc('14');"
-      onchange="calc('14');">
-      <option selected value=0>لا يوجد</option>
-      <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
-      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
-      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
-      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
-      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
-      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
-      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
-      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
-      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
-      <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
-      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
-      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
-      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
-      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
-    </select>
-    <label for="addName14">بيان رقم 4</label>
-  </div>
-  <div class="addCode14 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode14" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode14">الكود</label>
-  </div>
-  <div class="addCount14 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount14" value="" placeholder="Ex: 20" onkeyup="calc('14');"
-      onchange="calc('14');">
-    <label for="addCount14">العدد</label>
-  </div>
-  <div class="addTotal14 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT03" id="addTotal14" value="" placeholder="Ex: 20"
-      autocomplete>
-    <label for="addTotal14">الاجمالي</label>
-  </div>
-</div>
-<!-- //Row 15 -->
-<div class="addRow05 container cabinets row m-sm-0 p-sm-0 m-2 content">
-  <div class="addName15 col-md-5 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-    <select class="form-select" id="addName15" aria-label="Floating label select example" onkeyup="calc('15');"
-      onchange="calc('15');">
-      <option selected value=0>لا يوجد</option>
-      <option value="" disabled class="bg-dark text-warning text-center"> المفصلات و الرافعات</option>
-      <option value=15><span class="text-danger2">15 - </span>مفصلة بلوم عادي</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة 165 درجة لاجار</option>
-      <option value=25><span class="text-danger2">25 - </span>مفصلة بلوم هيدروليك</option>
-      <option value=50><span class="text-danger2">50 - </span>بستم قلاب لاجار</option>
-      <option value=990><span class="text-danger2">990 - </span>باب مفصلي باطار اسود (ارتفاع اقل من متر )</option>
-      <option value=1360><span class="text-danger2">1360 - </span>باب مفصلي باطار اسود (ارتفاع اكبر من متر واقل من 2 متر )</option>
-      <option value=950><span class="text-danger2">950 - </span>رافعات بلوم HF/HK/HL</option>
-      <option value=2500><span class="text-danger2">2500 - </span>طقم بابين هتش (تفتتح الى داخل الكابينة </option>
-      <option value=1600><span class="text-danger2">1600 - </span>طقم بابين منزلقة هتش الماني</option>
-      <option value=35><span class="text-danger2">35 - </span>فتح الدرف بالضغط (بوش تو اوبن )</option>
-      <option value="" disabled class="bg-dark text-warning text-center">المسكات</option>
-      <option value=0><span class="text-danger2">0 - </span>مسكات مجانية</option>
-      <option value=5><span class="text-danger2">5 - </span>مسكات صغيرة</option>
-      <option value=10><span class="text-danger2">10 - </span>مسكات وسط</option>
-      <option value=15><span class="text-danger2">15 - </span>مسكات كبير</option>
-    </select>
-    <label for="addName15">بيان رقم 5</label>
-  </div>
-  <div class="addCode15 col-md-3 col-sm-2 col m-sm-0 p-sm-0 m-0 p-0 form-floating  placeholder:text-center">
-    <input type="text" class="form-control float-right" id="addCode15" value="" placeholder="Ex: " autocomplete>
-    <label for="addCode15">الكود</label>
-  </div>
-  <div class="addCount15 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 col form-floating placeholder:text-center">
-    <input type="number" class="form-control" id="addCount15" value="" placeholder="Ex: 20" onkeyup="calc('15');"
-      onchange="calc('15');">
-    <label for="addCount15">العدد</label>
-  </div>
-  <div class="addTotal15 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-    <input type="number" disabled class="form-control addGT addGT03" id="addTotal15" value="" placeholder="Ex: 20"
-      autocomplete>
-    <label for="addTotal15">الاجمالي</label>
-  </div>
-</div>
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT04">Total</button>الادراج والعياشات</div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT05">Total</button>المجالي وتوابعها
+          </div>
 
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT05">Total</button>المجالي وتوابعها</div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT06">Total</button>الاضافات المتعلقة
+            بالرخام
+          </div>
 
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT06">Total</button>الاضافات المتعلقة بالرخام</div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT07">Total</button>التكسيات (بالمتر
+            المربع )
+          </div>
 
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT07">Total</button>التكسيات (بالمتر المربع )</div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT08">Total</button>الكبائن المفتوحة
+            والارفف المعلقة وزيادة الارفف الكلادينج و الاشكال الكلاسيك
+          </div>
 
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT08">Total</button>الكبائن المفتوحة والارفف المعلقة وزيادة الارفف الكلادينج و الاشكال الكلاسيك</div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT09">Total</button>اضافات محددة
+          </div>
 
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT09">Total</button>اضافات محددة</div>
+        </div>
+        <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT10">Total</button>الاكسسوارات
+          </div>
 
 
 
-      </div>
-      <!-- // تفاصيل الدرف والاضافات عليها والكورنيش والبراويز   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-      <div
-        class="section container-lg doorsData row1  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-                <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT10">Total</button>الاكسسوارات</div>
+        </div>
 
-
-
-      </div>
-
-    <!-- // Factory Extra   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-    <div
-      class="section container-lg factoryExtraData  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-      <!-- <div class="container cabinet-03 row m-2"> -->
-        <div class="factoryInstructions m-2 form-floating placeholder:text-center">
-          <textarea class="form-control" id="factoryInstructions" value="" placeholder="Ex:" autocomplete></textarea>
-          <label for="factoryInstructions">ملاحظات </label>
+        <!-- // Factory Extra   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div
+          class="section container-lg factoryExtraData  border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <!-- <div class="container cabinet-03 row m-2"> -->
+          <div class="factoryInstructions m-2 form-floating placeholder:text-center">
+            <textarea class="form-control" id="factoryInstructions" value="" placeholder="Ex:" autocomplete></textarea>
+            <label for="factoryInstructions">ملاحظات </label>
+          </div>
+          <!-- </div> -->
         </div>
-      <!-- </div> -->
-    </div>
-    <!-- // Devices  = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < <  -->
-    <div
-      class="container-lg devicesData hide border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
-              <div class="container text-center fw-bold ">
-        <button disabled class="btn btn-grey border-0 text-danger" id="addGTT00">Total</button>الأجهزة</div>
-      <div class="container devRow01 row m-2 ">
-        <div class="devType01 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType01" aria-label="Floating label select example" onchange=" getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value=""><span class="text-danger2"></span>فرن ٦٠ سم</option>
-            <option value=""><span class="text-danger2"></span>فرن ٩٠ سم</option>
-            <option value=""><span class="text-danger2"></span>فرن فري ستاند</option>
-            <option value=""><span class="text-danger2"></span>مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value=""><span class="text-danger2"></span>سطح سيراميك ٣٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح سيراميك ٦٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح سيراميك ٩٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح حجر ٣٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح حجر ٦٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح حجر ٩٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح غاز ٣٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح غاز ٦٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح غاز ٩٠ سم</option>
-            <option value=""><span class="text-danger2"></span>سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value=""><span class="text-danger2"></span>طقم ثلاجة</option>
-            <option value=""><span class="text-danger2"></span>ثلاجة سفلية</option>
-            <option value=""><span class="text-danger2"></span>غسالة صحون بلت إن</option>
-            <option value=""><span class="text-danger2"></span>غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value=""><span class="text-danger2"></span>شفاط ٦٠ سم</option>
-            <option value=""><span class="text-danger2"></span>شفاط ٩٠ سم</option>
-            <option value=""><span class="text-danger2"></span>شفاط كاسيت</option>
-          </select>
-          <label for="devType01">نوع جهاز رقم 1</label>
+        <!-- // Devices  = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < <  -->
+        <div
+          class="container-lg devicesData hide border-spacing-2 border border-danger border-start-0 rounded-end bg-secondary bg-opacity-25 mt-2 mb-2">
+          <div class="container text-center fw-bold ">
+            <button disabled class="btn btn-grey border-0 text-danger" id="addGTT00">Total</button>الأجهزة
+          </div>
+          <div class="container devRow01 row m-2 ">
+            <div class="devType01 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType01" aria-label="Floating label select example"
+                onchange=" getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value=""><span class="text-danger2"></span>فرن ٦٠ سم</option>
+                <option value=""><span class="text-danger2"></span>فرن ٩٠ سم</option>
+                <option value=""><span class="text-danger2"></span>فرن فري ستاند</option>
+                <option value=""><span class="text-danger2"></span>مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value=""><span class="text-danger2"></span>سطح سيراميك ٣٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح سيراميك ٦٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح سيراميك ٩٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح حجر ٣٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح حجر ٦٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح حجر ٩٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح غاز ٣٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح غاز ٦٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح غاز ٩٠ سم</option>
+                <option value=""><span class="text-danger2"></span>سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value=""><span class="text-danger2"></span>طقم ثلاجة</option>
+                <option value=""><span class="text-danger2"></span>ثلاجة سفلية</option>
+                <option value=""><span class="text-danger2"></span>غسالة صحون بلت إن</option>
+                <option value=""><span class="text-danger2"></span>غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value=""><span class="text-danger2"></span>شفاط ٦٠ سم</option>
+                <option value=""><span class="text-danger2"></span>شفاط ٩٠ سم</option>
+                <option value=""><span class="text-danger2"></span>شفاط كاسيت</option>
+              </select>
+              <label for="devType01">نوع جهاز رقم 1</label>
+            </div>
+            <div class="devCode01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode01" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode01">الكود</label>
+            </div>
+            <div class="devPrice01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice01" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice01">السعر</label>
+            </div>
+            <div class="devTax01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax01" value="" placeholder="Ex: " disabled>
+              <label for="devTax01"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal01" value="" placeholder="Ex: " disabled>
+              <label for="devTotal01"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow02 row m-2 ">
+            <div class="devType02 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType02" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType02">نوع جهاز رقم 2</label>
+            </div>
+            <div class="devCode02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode02" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode02">الكود</label>
+            </div>
+            <div class="devPrice02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control  dev-price devPrice addGT00" id="devPrice02" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice02">السعر</label>
+            </div>
+            <div class="devTax02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax02" value="" placeholder="Ex: " disabled>
+              <label for="devTax02"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal02" value="" placeholder="Ex: " disabled>
+              <label for="devTotal02"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow03 row m-2 ">
+            <div class="devType03 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType03" aria-label="Floating label select example"
+                onchange=" getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType03">نوع جهاز رقم 3</label>
+            </div>
+            <div class="devCode03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode03" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode03">الكود</label>
+            </div>
+            <div class="devPrice03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control  dev-price devPrice addGT00" id="devPrice03" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice03">السعر</label>
+            </div>
+            <div class="devTax03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax03" value="" placeholder="Ex: " disabled>
+              <label for="devTax03"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal03" value="" placeholder="Ex: " disabled>
+              <label for="devTotal03"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow04 row m-2 ">
+            <div class="devType04 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType04" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType04">نوع جهاز رقم 4</label>
+            </div>
+            <div class="devCode04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode04" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode04">الكود</label>
+            </div>
+            <div class="devPrice04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice04" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice04">السعر</label>
+            </div>
+            <div class="devTax04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax04" value="" placeholder="Ex: " disabled>
+              <label for="devTax04"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal04" value="" placeholder="Ex: " disabled>
+              <label for="devTotal04"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow05 row m-2 ">
+            <div class="devType05 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType05" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType05">نوع جهاز رقم 5</label>
+            </div>
+            <div class="devCode05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode05" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode05">الكود</label>
+            </div>
+            <div class="devPrice05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice05" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice05">السعر</label>
+            </div>
+            <div class="devTax05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax05" value="" placeholder="Ex: " disabled>
+              <label for="devTax05"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal05" value="" placeholder="Ex: " disabled>
+              <label for="devTotal05"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow06 row m-2 ">
+            <div class="devType06 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType06" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType06">نوع جهاز رقم 6</label>
+            </div>
+            <div class="devCode06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode06" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode06">الكود</label>
+            </div>
+            <div class="devPrice06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice06" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice06">السعر</label>
+            </div>
+            <div class="devTax06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax06" value="" placeholder="Ex: " disabled>
+              <label for="devTax06"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal06" value="" placeholder="Ex: " disabled>
+              <label for="devTotal06"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow07 row m-2 ">
+            <div class="devType07 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType07" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType07">نوع جهاز رقم 7</label>
+            </div>
+            <div class="devCode07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode07" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode07">الكود</label>
+            </div>
+            <div class="devPrice07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice07" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice07">السعر</label>
+            </div>
+            <div class="devTax07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax07" value="" placeholder="Ex: " disabled>
+              <label for="devTax07"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal07" value="" placeholder="Ex: " disabled>
+              <label for="devTotal07"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <div class="container devRow08 row m-2 ">
+            <div class="devType08 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devType08" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();">
+                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
+                <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
+                <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
+                <option value="فرن فري ستاند">فرن فري ستاند</option>
+                <option value="مايكرويف">مايكرويف</option>
+                <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
+                <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
+                <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
+                <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
+                <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
+                <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
+                <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
+                <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
+                <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
+                <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
+                <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
+                <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
+                <option value="طقم ثلاجة">طقم ثلاجة</option>
+                <option value="ثلاجة سفلية">ثلاجة سفلية</option>
+                <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
+                <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
+                <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
+                <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
+                <option value="شفاط كاسيت">شفاط كاسيت</option>
+              </select>
+              <label for="devType08">نوع جهاز رقم 8</label>
+            </div>
+            <div class="devCode08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devCode08" value="" placeholder="Ex: " autocomplete
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devCode08">الكود</label>
+            </div>
+            <div class="devPrice08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice08" value=""
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devPrice08">السعر</label>
+            </div>
+            <div class="devTax08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devTax08" value="" placeholder="Ex: " disabled>
+              <label for="devTax08"> الضريبة</label>
+            </div>
+            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devTotal08" value="" placeholder="Ex: " disabled>
+              <label for="devTotal08"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
         </div>
-        <div class="devCode01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode01" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode01">الكود</label>
-        </div>
-        <div class="devPrice01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice01" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice01">السعر</label>
-        </div>
-        <div class="devTax01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax01" value="" placeholder="Ex: " disabled>
-          <label for="devTax01"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal01" value="" placeholder="Ex: " disabled>
-          <label for="devTotal01"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow02 row m-2 ">
-        <div class="devType02 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType02" aria-label="Floating label select example" onchange="getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType02">نوع جهاز رقم 2</label>
-        </div>
-        <div class="devCode02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode02" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode02">الكود</label>
-        </div>
-        <div class="devPrice02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control  dev-price devPrice addGT00" id="devPrice02" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice02">السعر</label>
-        </div>
-        <div class="devTax02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax02" value="" placeholder="Ex: " disabled>
-          <label for="devTax02"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal02" value="" placeholder="Ex: " disabled>
-          <label for="devTotal02"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow03 row m-2 ">
-        <div class="devType03 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType03" aria-label="Floating label select example" onchange=" getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType03">نوع جهاز رقم 3</label>
-        </div>
-        <div class="devCode03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode03" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode03">الكود</label>
-        </div>
-        <div class="devPrice03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control  dev-price devPrice addGT00" id="devPrice03" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice03">السعر</label>
-        </div>
-        <div class="devTax03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax03" value="" placeholder="Ex: " disabled>
-          <label for="devTax03"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal03" value="" placeholder="Ex: " disabled>
-          <label for="devTotal03"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow04 row m-2 ">
-        <div class="devType04 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType04" aria-label="Floating label select example" onchange="getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType04">نوع جهاز رقم 4</label>
-        </div>
-        <div class="devCode04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode04" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode04">الكود</label>
-        </div>
-        <div class="devPrice04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice04" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice04">السعر</label>
-        </div>
-        <div class="devTax04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax04" value="" placeholder="Ex: " disabled>
-          <label for="devTax04"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal04" value="" placeholder="Ex: " disabled>
-          <label for="devTotal04"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow05 row m-2 ">
-        <div class="devType05 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType05" aria-label="Floating label select example" onchange="getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType05">نوع جهاز رقم 5</label>
-        </div>
-        <div class="devCode05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode05" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode05">الكود</label>
-        </div>
-        <div class="devPrice05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price devPrice addGT00" id="devPrice05" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice05">السعر</label>
-        </div>
-        <div class="devTax05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax05" value="" placeholder="Ex: " disabled>
-          <label for="devTax05"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal05" value="" placeholder="Ex: " disabled>
-          <label for="devTotal05"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow06 row m-2 ">
-        <div class="devType06 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType06" aria-label="Floating label select example" onchange="getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType06">نوع جهاز رقم 6</label>
-        </div>
-        <div class="devCode06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode06" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode06">الكود</label>
-        </div>
-        <div class="devPrice06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice06" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice06">السعر</label>
-        </div>
-        <div class="devTax06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax06" value="" placeholder="Ex: " disabled>
-          <label for="devTax06"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal06" value="" placeholder="Ex: " disabled>
-          <label for="devTotal06"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow07 row m-2 ">
-        <div class="devType07 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType07" aria-label="Floating label select example" onchange="getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType07">نوع جهاز رقم 7</label>
-        </div>
-        <div class="devCode07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode07" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode07">الكود</label>
-        </div>
-        <div class="devPrice07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice07" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice07">السعر</label>
-        </div>
-        <div class="devTax07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax07" value="" placeholder="Ex: " disabled>
-          <label for="devTax07"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal07" value="" placeholder="Ex: " disabled>
-          <label for="devTotal07"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-      <div class="container devRow08 row m-2 ">
-        <div class="devType08 col-md-4 col-sm-6 sm-row m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
-          <select class="form-select" id="devType08" aria-label="Floating label select example" onchange="getPrice();"
-            onkeyup="getPrice();">
-            <option selected disabled>يرجي اختيار الجهاز</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
-            <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
-            <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
-            <option value="فرن فري ستاند">فرن فري ستاند</option>
-            <option value="مايكرويف">مايكرويف</option>
-            <option value="" disabled class="bg-dark text-warning text-center">أسطح</option>
-            <option value="سطح سيراميك ٣٠ سم">سطح سيراميك ٣٠ سم</option>
-            <option value="سطح سيراميك ٦٠ سم">سطح سيراميك ٦٠ سم</option>
-            <option value="سطح سيراميك ٩٠ سم">سطح سيراميك ٩٠ سم</option>
-            <option value="سطح حجر ٣٠ سم">سطح حجر ٣٠ سم</option>
-            <option value="سطح حجر ٦٠ سم">سطح حجر ٦٠ سم</option>
-            <option value="سطح حجر ٩٠ سم">سطح حجر ٩٠ سم</option>
-            <option value="سطح غاز ٣٠ سم">سطح غاز ٣٠ سم</option>
-            <option value="سطح غاز  ٦٠ سم">سطح غاز ٦٠ سم</option>
-            <option value="سطح غاز ٩٠ سم">سطح غاز ٩٠ سم</option>
-            <option value="سطح ٩٠ سم منوع">سطح ٩٠ سم منوع</option>
-            <option value="" disabled class="bg-dark text-warning text-center">ثلاجة و غسالة</option>
-            <option value="طقم ثلاجة">طقم ثلاجة</option>
-            <option value="ثلاجة سفلية">ثلاجة سفلية</option>
-            <option value="غسالة صحون بلت إن">غسالة صحون بلت إن</option>
-            <option value="غسالة صحون فريستاند">غسالة صحون فريستاند</option>
-            <option value="" disabled class="bg-dark text-warning text-center">شفاطات</option>
-            <option value="شفاط ٦٠ سم">شفاط ٦٠ سم</option>
-            <option value="شفاط ٩٠ سم">شفاط ٩٠ سم</option>
-            <option value="شفاط كاسيت">شفاط كاسيت</option>
-          </select>
-          <label for="devType08">نوع جهاز رقم 8</label>
-        </div>
-        <div class="devCode08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="text" class="form-control" id="devCode08" value="" placeholder="Ex: " autocomplete
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devCode08">الكود</label>
-        </div>
-        <div class="devPrice08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control dev-price devPrice  addGT00" id="devPrice08" value="" placeholder="Ex: "
-            onchange="getPrice();" onkeyup="getPrice();">
-          <label for="devPrice08">السعر</label>
-        </div>
-        <div class="devTax08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTax " id="devTax08" value="" placeholder="Ex: " disabled>
-          <label for="devTax08"> الضريبة</label>
-        </div>
-        <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-          <input type="number" class="form-control devTotal " id="devTotal08" value="" placeholder="Ex: " disabled>
-          <label for="devTotal08"> الاجمالي شامل الضريبة</label>
-        </div>
-      </div>
-    </div>
-    <!-- // Submit   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
-    <div class="row ">
-      <div id="showAllButton" class="editButton p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger hide"
-      >فتح التعديل</div>
-      <div
-        class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none hide"
-        onclick="printPdf();">طباعة</div>
-      <!-- <div class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none"
+        <!-- // Submit   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+        <div class="row ">
+          <div id="showAllButton"
+            class="editButton p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger hide">
+            فتح التعديل</div>
+          <div
+            class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none hide"
+            onclick="printPdf();">طباعة</div>
+          <!-- <div class="sendToMonday p-2 text-danger btn-succsess align-center text-center border-0 hover:text-bg-danger d-print-none"
           onclick="start();">طباعة</div> -->
-    </div>
-    </div>
+        </div>
+      </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"  crossorigin="anonymous"></script>
-    <script src="js/bootstrap-multiselect.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"   integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"  integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/script.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+      <script src="js/bootstrap-multiselect.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"
+        integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="js/script.js"></script>
   </body>
 
 </html>
