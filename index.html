@@ -46,6 +46,15 @@
             onclick="show();">(للمطابخ اضغط هنا)</div>
         </div> -->
         <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
+          <div
+          class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
+            onclick="clearForm();" id="clear-btn" >جديد</div>
+          <div
+            class=" btn btn-success d-print-none fs-6 pb-2  text-dark fw-bold text-white bg-success align-center text-center border-0 hover:text-bg-danger "
+            onclick="saveForm(mainContractNo);" id="save-btn">حفظ</div>
+          <div
+            class=" btn btn-success d-print-none fs-6 pb-2 text-dark fw-bold bg-warning bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
+            onclick="restoreForm();" id="restore-btn">استرجاع</div>
             <div
               class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
               onclick="window.print();" 
@@ -62,7 +71,7 @@
           </div>
         </div>
       </div>
-
+<form action="" name="allDataForm">
       <div class=" container fs- mb-2 p-2 border-spacing-2 border border-danger  rounded bg-blue bg-dark bg-opacity-10"
         id="fullSite">
         <!-- // General Data   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
@@ -2608,7 +2617,8 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
           onclick="start();">طباعة</div> -->
         </div>
       </div>
-
+      <button type="submit" onslick="saveForm();">submit</button>
+    </form>
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.js"></script>
       <script src="js/bootstrap.min.js"></script>

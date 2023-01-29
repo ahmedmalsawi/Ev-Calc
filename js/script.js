@@ -717,3 +717,66 @@ function changeTitle() {
   document.title = title;
   
 }
+
+
+// const inputs = document.querySelectorAll("input, textarea, select");
+///////////////////////////////////////////////////////////////////////////
+//Save and resore Working
+///////////////////////////////////////////////////////////////////////////
+// function saveForm() {
+//     const inputs = document.querySelectorAll("input, textarea, select");
+//     for (const input of inputs) {
+//         sessionStorage.setItem(input.id, input.value);
+//       }
+//     }
+    
+//     function restoreForm() {
+//   for (const input of inputs) {
+//     if (sessionStorage.hasOwnProperty(input.id)) {
+//         input.value = sessionStorage.getItem(input.id);
+//       }
+//     }
+//   }
+  
+//   function clearForm() {
+//       sessionStorage.clear();
+//       for (const input of inputs) {
+//           input.value = "";
+//         }
+//       }
+      
+      
+function saveForm() {
+  const mainContractNo = document.getElementById("mainContractNo").value;
+  const inputs = document.querySelectorAll("input, textarea, select");
+  const data = {};
+  for (const input of inputs) {
+    data[input.id] = input.value;
+  }
+  sessionStorage.setItem(mainContractNo, JSON.stringify(data));
+}
+
+function restoreForm() {
+  const mainContractNo = prompt("ادخل رقم العقد");
+  const storedData = sessionStorage.getItem(mainContractNo);
+  if (storedData) {
+    const data = JSON.parse(storedData);
+    const inputs = document.querySelectorAll("input, textarea, select");
+    for (const input of inputs) {
+      if (data.hasOwnProperty(input.id)) {
+        input.value = data[input.id];
+      }
+    }
+  } else {
+    alert("لا يوجد عقد مسجل بهذا الرقم");
+  }
+}
+
+function clearForm() {
+  const mainContractNo = prompt("ادخل رقم العق المراد استرجاعه");
+  sessionStorage.removeItem(mainContractNo);
+  const inputs = document.querySelectorAll("input, textarea, select");
+  for (const input of inputs) {
+    input.value = "";
+  }
+}
