@@ -773,7 +773,7 @@ function restoreForm() {
 }
 
 function clearForm() {
-  const mainContractNo = prompt("ادخل رقم العق المراد استرجاعه");
+  // const mainContractNo = prompt("ادخل رقم العق المراد استرجاعه");
   sessionStorage.removeItem(mainContractNo);
   const inputs = document.querySelectorAll("input, textarea, select");
   for (const input of inputs) {
