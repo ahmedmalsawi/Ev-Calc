@@ -82,7 +82,7 @@ function updateTotalsGT(index) {
 //Done =====================================================================
 
 
-function difference() {
+function differenceCheck() {
  
   let totalTaxed = document.getElementById("totalTaxed");
   let difference = document.getElementById("difference");
@@ -440,7 +440,7 @@ function updateTotals() {
       updateTotalsGT(i.toString());
     }
   }
-  difference();
+  differenceCheck();
 }
 
 
