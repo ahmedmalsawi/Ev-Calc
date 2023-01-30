@@ -398,6 +398,8 @@ function saveForm() {
     data[input.id] = input.value;
   }
   sessionStorage.setItem(mainContractNo, JSON.stringify(data));
+  alert("تم الحفظ بنجاح");
+  
 }
 
 function restoreForm() {
@@ -411,6 +413,7 @@ function restoreForm() {
         input.value = data[input.id];
       }
     }
+    alert("لقد وجدت بيانات مخزنة لهذا العقد ، تمت استعادة البيانات بنجاح");
   } else {
     alert("لا يوجد عقد مسجل بهذا الرقم");
   }

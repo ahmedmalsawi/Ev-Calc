@@ -42,7 +42,7 @@
             <div class="siteTree header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
               <div class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
                 onclick="clearForm();" id="clear-btn">جديد</div>
-              <div class=" btn btn-success d-print-none fs-6 pb-2  text-dark fw-bold text-white bg-success align-center text-center border-0 hover:text-bg-danger "
+              <div class=" btn btn-success d-print-none fs-6 pb-2  text-dark fw-bold text-black bg-success bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
                 onclick="saveForm(mainContractNo);" id="save-btn">حفظ</div>
               <div  class=" btn btn-success d-print-none fs-6 pb-2 text-dark fw-bold bg-warning bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
                 onclick="restoreForm();" id="restore-btn">
@@ -2187,7 +2187,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType01 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType01" aria-label="Floating label select example"
                 onchange=" getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value=""><span class="text-danger2"></span>فرن ٦٠ سم</option>
                 <option value=""><span class="text-danger2"></span>فرن ٩٠ سم</option>
@@ -2239,7 +2239,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType02 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType02" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2291,7 +2291,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType03 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType03" aria-label="Floating label select example"
                 onchange=" getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2343,7 +2343,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType04 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType04" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2395,7 +2395,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType05 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType05" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2447,7 +2447,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType06 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType06" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2499,7 +2499,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType07 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType07" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2551,7 +2551,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType08 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType08" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2604,7 +2604,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType01 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType01" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -2678,7 +2678,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType02 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType02" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -2751,7 +2751,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType03 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType03" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -2824,7 +2824,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType04 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType04" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -2897,7 +2897,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType05 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType05" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -2970,7 +2970,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType06 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType06" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -3043,7 +3043,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType07 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType07" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
@@ -3116,7 +3116,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devSGType08 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devSGType08" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
-                <option selected >لا يوجد</option>
+                <option value=0 selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
                 <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
                 <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
