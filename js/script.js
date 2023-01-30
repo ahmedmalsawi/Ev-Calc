@@ -11,21 +11,22 @@
 
 //Done =====================================================================
 // Variables
-// let totalNoTax = document.getElementById("totalNoTax");
-// let tax = document.getElementById("tax");
-// let totalTaxed = document.getElementById("totalTaxed");
-// let totalDevTaxed = document.getElementById("totalDevTaxed");
-// let devsTax = document.getElementById("devsTax");
-// let meterPrice = document.getElementById("meterPrice");
-// let kitchenType = document.getElementById("kitchenType");
-// let totalDevNoTax = document.getElementById("totalDevNoTax");
-// let meterTotalPrice = document.getElementById("meterTotalPrice");
-// let descUpCount = document.getElementById("descUpCount");
-// let descDownCount = document.getElementById("descDownCount");
-// let meterTotal = document.getElementById("meterTotal");
-// let upCount = document.getElementById("upCount");
-// let downCount = document.getElementById("downCount");
-// let island = document.getElementById("island");
+let totalNoTax = document.getElementById("totalNoTax");
+let tax = document.getElementById("tax");
+let totalTaxed = document.getElementById("totalTaxed");
+let totalDevTaxed = document.getElementById("totalDevTaxed");
+let devsTax = document.getElementById("devsTax");
+let meterPrice = document.getElementById("meterPrice");
+let kitchenType = document.getElementById("kitchenType");
+let totalDevNoTax = document.getElementById("totalDevNoTax");
+let meterTotalPrice = document.getElementById("meterTotalPrice");
+let descUpCount = document.getElementById("descUpCount");
+let descDownCount = document.getElementById("descDownCount");
+let meterTotal = document.getElementById("meterTotal");
+let upCount = document.getElementById("upCount");
+let downCount = document.getElementById("downCount");
+let island = document.getElementById("island");
+let DevSupergasTotal, DevOtherTotal;
 
 //Done =====================================================================
 // show section
@@ -54,7 +55,7 @@ function calc(num) {
   let total = document.getElementById(`addTotal${num}`);
   let totalVal = Math.round(count * price * 100) / 100;
   total.value = totalVal;
-  updateTotals();
+  getPrice();
 }
 function calcManual(num) {
   let count = document.getElementById(`addCount${num}`).value;
@@ -62,12 +63,12 @@ function calcManual(num) {
   let total = document.getElementById(`addTotal${num}`);
   let totalVal = Math.round(count * price * 100) / 100;
   total.value = totalVal;
-  updateTotals();
+  getPrice();
 }
 //Done =====================================================================
 
 //Done =====================================================================
-//Get kitchen sum of rows Totals
+//Get kitchen sum of rows Totals (span after title)
 function updateTotalsGT(index) {
   var arr = document.querySelectorAll(`.addGT${index}`);
   var gTotal = 0;
@@ -87,7 +88,10 @@ function differenceCheck() {
   let totalTaxed = document.getElementById("totalTaxed");
   let difference = document.getElementById("difference");
   let manualCalc = document.getElementById("manualCalc");
-  if (!isNaN(manualCalc.value) && !isNaN(totalTaxed.value)) {
+  if (!manualCalc.value > 0) {
+    manualCalc.value = 0;
+  }
+  if (!isNaN(manualCalc.value) && !isNaN(totalTaxed.value) && !isNaN(difference.value)) {
     difference.value = Math.round(
       (parseFloat(manualCalc.value) - parseFloat(totalTaxed.value))
       * 100) / 100;
@@ -110,234 +114,27 @@ function differenceCheck() {
 }
 
 
-
-
-
-
-////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-// let totalNoTax = document.getElementById("totalNoTax");
-// let tax = document.getElementById("tax");
-// let totalTaxed = document.getElementById("totalTaxed");
-// let totalDevTaxed = document.getElementById("totalDevTaxed");
-// let devsTax = document.getElementById("devsTax");
-// let meterPrice = document.getElementById("meterPrice");
-// let kitchenType = document.getElementById("kitchenType");
-// let totalDevNoTax = document.getElementById("totalDevNoTax");
-// let meterTotalPrice = document.getElementById("meterTotalPrice");
-// let descUpCount = document.getElementById("descUpCount");
-// let descDownCount = document.getElementById("descDownCount");
-// let meterTotal = document.getElementById("meterTotal");
-// let upCount = document.getElementById("upCount");
-// let downCount = document.getElementById("downCount");
-// let island = document.getElementById("island");
-
-// function taxing() {
-// 	getPrice();
-// 	tax.value = Math.round(totalNoTax.value * 0.15 * 100) / 100;
-// 	totalTaxed.value = Math.round(totalNoTax.value * 1.15 * 100) / 100;
-// }
-
-// function getPrice() {
-// 	let totalNoTax = document.getElementById("totalNoTax");
-// 	let tax = document.getElementById("tax");
-// 	let totalTaxed = document.getElementById("totalTaxed");
-// 	var arr = document.querySelectorAll(".dev-price");
-// 	var total = 0;
-// 	for (var i = 0; i < arr.length; i++) {
-//     if (parseFloat(arr[i].value)) {
-//       total += parseFloat(arr[i].value);
-// 		}
-// 		total = Math.round(total * 100) / 100;
-// 		totalDevNoTax.value = total;
-// 		tax.value = Math.round(total * 0.15 * 100) / 100;
-// 		totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
-// 	}
-// 	meterPrice.value = kitchenType.value;
-// 	updateTotals();
-// 	getMeters();
-// }
-
-// function getMeters() {
-//   meterTotal.value =
-// 	Math.round(
-// 	  (
-// 		(parseFloat(upCount.value)*0.34) +
-// 		 (parseFloat(downCount.value)*0.66)+
-// 		 (parseFloat(island.value)*0.7)-
-// 		 (parseFloat(descDownCount.value)*0.64)-
-// 		 (parseFloat(descUpCount.value)*0.34)
-// 		 )
-// 	* 100) / 100;
-// 	meterTotalPrice.value = Math.round(
-// 		(
-// 			(
-// 			(parseFloat(upCount.value)*0.34) +
-// 			(parseFloat(downCount.value)*0.66)+
-// 			(parseFloat(island.value)*0.7)-
-// 			(parseFloat(descDownCount.value)*0.64)-
-// 			(parseFloat(descUpCount.value)*0.34)
-// 			)
-// 			*
-// 			(parseFloat(meterPrice.value))
-
-// 		)* 100) / 100;
-// };
-
-//  function updateTotals() {
-// 	 let tax = document.getElementById("tax");
-// 	 let totalTaxed = document.getElementById("totalTaxed");
-// 	 let height = document.getElementById("height");
-// 	 let heightCount = document.getElementById("heightCount");
-// 	 let heightTotalPrice = document.getElementById("heightTotalPrice");
-// 	 let discount = document.getElementById("discount");
-// 	 var arr = document.querySelectorAll(".addGT");
-// 	 var total = 0;
-// 	 for (var i = 0; i < arr.length; i++) {
-// 		 if (parseFloat(arr[i].value)) {
-// 			 total += parseFloat(arr[i].value);
-// 			}
-// 			total = Math.round(total * 100) / 100;
-// 			totalNoTax.value = total;
-// 			tax.value = Math.round(total * 0.15 * 100) / 100;
-// 			totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
-// 		}
-
-// 		heightTotalPrice.value = Math.round(((parseFloat(height.value) * parseFloat(heightCount.value) * 2) * 	(parseFloat(meterPrice.value) * 0.22)* 100) / 100);
-// 			let totalCost = 0;
-// 			if (!isNaN(totalNoTax.value) && !isNaN(meterTotalPrice.value) && !isNaN(heightTotalPrice.value)) {
-// 				if (!isNaN(discount.value)) {
-// 					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-// 					totalCost = totalCost - parseFloat(discount.value);
-// 				} else {
-// 					totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) + parseFloat(heightTotalPrice.value);
-// 				}
-// 			}
-// 			totalNoTax.value = totalCost;
-// 			devsTax.value = Math.round(totalDevNoTax.value * 0.15 * 100) / 100;
-// 	 		totalDevTaxed.value = Math.round(totalDevNoTax.value * 1.15 * 100) / 100;
-
-// 			tax.value = Math.round(totalCost * 0.15 * 100) / 100;
-// 			totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
-// 	 for (var i = 0; i <= 15; i++) {
-// 		if (i < 10) {
-// 			updateTotalsGT("0" + i);
-// 		} else {
-// 			updateTotalsGT(i.toString());
-// 		}
-// 	}
-// 		}
-
-////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-//  //collapsing
-//  var coll = document.getElementsByClassName("collapsible");
-//  var i;
-//  for (i = 0; i < coll.length; i++) {
-// 		coll[i].addEventListener("click", function () {
-// 			this.classList.toggle("active");
-// 			var content = this.parentElement.getElementsByClassName("content");
-// 			// content[i].style.display = "flex";
-// 			for (i = 0; i < content.length; i++) {
-// 				if (content[i].style.display === "flex") {
-// 					content[i].style.display = "none";
-// 				} else {
-// 					content[i].style.display = "flex";
-// 				}
-// 			}
-// 		});
-//  }
-
-// function printPdf()
-// {
-//   var fileName = document.getElementById("mainContractNo").value;
-//   // window.print({
-//   // 	zoom: 0.3, // scale factor of 75%
-//   // });
-//   // }
-
-//   // Source HTMLElement or a string containing HTML.
-//   // var elementHTML = document.querySelector("#fullSite");
-
-//   // window.jsPDF = window.jspdf.jsPDF;
-//   var pdf = new jsPDF({
-//     unit: "mm",
-//     format: "a4",
-//   });
-
-//   // Convert_HTML_To_PDF();
-//   // Convert HTML content to PDF
-//   // function Convert_HTML_To_PDF()
-//   // {
-//     // var doc = new jsPDF();
-
-//     // Source HTMLElement or a string containing HTML.
-//     // var elementHTML = document.querySelector("#fullSite");
-
-//     // doc.html(elementHTML, {
-//     // doc.html(document.body, {
-//     //   callback: function (doc)
-//     //   {
-//     //     // Save the PDF
-//     //     doc.save("document-html.pdf");
-//     //   },
-//     //   margin: [10, 10, 10, 10],
-//     //   autoPaging: "text",
-//     //   x: 0,
-//     //   y: 0,
-//     //   width: 190, //target width in the PDF document
-//     //   windowWidth: 675, //window width in CSS pixels
-//     // });
-
-//     html2canvas(document.body, {
-//       zoom: 0.75,
-//       width: 800,
-//       height: 1200,
-//       orientation: "portrait",
-//       textDirection: "rtl",
-//     }).then(function (canvas)
-//     {
-//       // add the canvas element to the PDF as a JPEG image
-//       pdf.addImage(canvas, "JPEG", 0, 0);
-//       // save the PDF
-//       pdf.save(fileName + ".pdf");
-//     });
-
-//   }
-
-// }
-
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// new short code///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-let totalNoTax = document.getElementById("totalNoTax");
-let tax = document.getElementById("tax");
-let totalTaxed = document.getElementById("totalTaxed");
-let totalDevTaxed = document.getElementById("totalDevTaxed");
-let devsTax = document.getElementById("devsTax");
-let meterPrice = document.getElementById("meterPrice");
-let kitchenType = document.getElementById("kitchenType");
-let totalDevNoTax = document.getElementById("totalDevNoTax");
-let meterTotalPrice = document.getElementById("meterTotalPrice");
-let descUpCount = document.getElementById("descUpCount");
-let descDownCount = document.getElementById("descDownCount");
-let meterTotal = document.getElementById("meterTotal");
-let upCount = document.getElementById("upCount");
-let downCount = document.getElementById("downCount");
-let island = document.getElementById("island");
-
-function taxing() {
-  getPrice();
+function getPrice() {
+  meterPrice.value = kitchenType.value;
+  totalNoTax.value = 0;
+  
+  getMeters();
+  calcKit();
+  updateTotals();
+  devicesTotals();
 }
 
-function getPrice() {
+
+
+function devicesTotals() {
+  calcDevSG();
+  calcDev();
   var arr = document.querySelectorAll(".dev-price");
   var total = 0;
   for (var i = 0; i < arr.length; i++) {
@@ -347,116 +144,37 @@ function getPrice() {
   }
   total = Math.round(total * 100) / 100;
   totalDevNoTax.value = total;
-  tax.value = Math.round(total * 0.15 * 100) / 100;
-  totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
-  meterPrice.value = kitchenType.value;
-  getMeters();
-  updateTotals();
+  devsTax.value = Math.round(total * 0.15 * 100) / 100;
+  totalDevTaxed.value = Math.round(total * 1.15 * 100) / 100;
 }
 
-function getMeters() {
-  var up2 = parseFloat(upCount.value);
-  var down2 = parseFloat(downCount.value);
-  var island2 = parseFloat(island.value);
-  var descDown2 = parseFloat(descDownCount.value);
-  var descUp2 = parseFloat(descUpCount.value);
-  var price2 = parseFloat(meterPrice.value);
-
-  var total =
-    Math.round(
-      (up2 * 0.34 +
-        down2 * 0.66 +
-        island2 * 0.7 -
-        descDown2 * 0.64 -
-        descUp2 * 0.34) *
-        100
-    ) / 100;
-  meterTotal.value = total;
-  meterTotalPrice.value = Math.round(total * price2 * 100) / 100;
+//calcing supergas devices
+function calcDevSG() {
+  let devSGType, devSGCode, devSGPrice, devSGTax, devSGTotal;
+  let devSGTotalNoTax = 0;
+  let devSGTotalTax = 0;
+  let devSGTotalTaxed = 0;
+  let i = 1;
+  while (true) {
+    devSGType = document.getElementById("devSGType0" + i);
+    if (!devSGType) break;
+    devSGCode = document.getElementById("devSGCode0" + i);
+    devSGPrice = document.getElementById("devSGPrice0" + i);
+    devSGTax = document.getElementById("devSGTax0" + i);
+    devSGTotal = document.getElementById("devSGTotal0" + i);
+    devSGCode.value = devSGType.selectedOptions[0].getAttribute("data-code");
+    devSGPrice.value = devSGType.selectedOptions[0].getAttribute("data-price");
+    devSGTax.value = Math.round(devSGPrice.value * 0.15 * 100) / 100;
+    devSGTotal.value = Math.round(devSGPrice.value * 1.15 * 100) / 100;
+    devSGTotalNoTax += parseFloat(devSGPrice.value);
+    devSGTotalTax += parseFloat(devSGTax.value);
+    devSGTotalTaxed += parseFloat(devSGTotal.value);
+    i++;
+  }
 }
 
-function updateTotals() {
-  // let tax = document.getElementById("tax");
-  // let totalTaxed = document.getElementById("totalTaxed");
-  // let height = document.getElementById("height");
-  // let heightCount = document.getElementById("heightCount");
-  // let heightTotalPrice = document.getElementById("heightTotalPrice");
-  // let discount = document.getElementById("discount");
-  // let totalNoTax = document.getElementById("totalNoTax");
-  // let meterTotalPrice = document.getElementById("meterTotalPrice");
-  // let meterPrice = document.getElementById("meterPrice");
-  // let totalDevNoTax = document.getElementById("totalDevNoTax");
-  // let devsTax = document.getElementById("devsTax");
-  // let totalDevTaxed = document.getElementById("totalDevTaxed");
-	var arr = document.querySelectorAll(".addGT");
-  var total = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (parseFloat(arr[i].value)) {
-      total += parseFloat(arr[i].value);
-    }
-    total = Math.round(total * 100) / 100;
-    totalNoTax.value = total;
-    tax.value = Math.round(total * 0.15 * 100) / 100;
-    totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
-  }
-  heightTotalPrice.value = Math.round(
-    (parseFloat(height.value) *
-      parseFloat(heightCount.value) *
-      2 *
-      (parseFloat(meterPrice.value) * 0.22) *
-      100) /
-      100
-  );
-	let totalCost = 0;
-	let discountValue = 0;
-  if (
-    !isNaN(totalNoTax.value) &&
-    !isNaN(meterTotalPrice.value) &&
-    !isNaN(heightTotalPrice.value)
-  ) {
-    if (!isNaN(discount.value) && discount.value > 0) {
-			discountValue= (parseFloat(meterTotalPrice.value) * parseFloat(discount.value))/100;
-      totalCost =
-        parseFloat(totalNoTax.value) +
-        parseFloat(meterTotalPrice.value) +
-				parseFloat(heightTotalPrice.value);
-      totalCost = totalCost - discountValue;
-    } else {
-      totalCost =
-        parseFloat(totalNoTax.value) +
-        parseFloat(meterTotalPrice.value) +
-        parseFloat(heightTotalPrice.value);
-    }
-  }
-  totalNoTax.value = totalCost;
-  devsTax.value = Math.round(totalDevNoTax.value * 0.15 * 100) / 100;
-  totalDevTaxed.value = Math.round(totalDevNoTax.value * 1.15 * 100) / 100;
-  tax.value = Math.round(totalCost * 0.15 * 100) / 100;
-  totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
-  for (var i = 0; i <= 15; i++) {
-    if (i < 10) {
-      updateTotalsGT("0" + i);
-    } else {
-      updateTotalsGT(i.toString());
-    }
-  }
-  differenceCheck();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Get all rows
+function calcDev() {
+  // Get all rows
 const rows = document.querySelectorAll(".row");
 // Function to calculate tax and total
 function devTaxing(e) {
@@ -486,13 +204,82 @@ function devTaxing(e) {
   // Update the tax and total fields
   taxField.value = roundTax;
   totalField.value = roundTotal;
-}
-
-// Add an event listener to each price field
+  }
+  // Add an event listener to each price field
 rows.forEach((row) => {
   const priceField = row.querySelector(".devPrice");
   if (priceField) priceField.addEventListener("input", devTaxing);
 });
+}
+
+
+function getMeters() {
+  var up2 = parseFloat(upCount.value);
+  var down2 = parseFloat(downCount.value);
+  var island2 = parseFloat(island.value);
+  var descDown2 = parseFloat(descDownCount.value);
+  var descUp2 = parseFloat(descUpCount.value);
+  var price2 = parseFloat(meterPrice.value);
+
+  var total =
+    Math.round(
+      (up2 * 0.34 +   down2 * 0.66 +  island2 * 0.7 -   descDown2 * 0.64 -   descUp2 * 0.34) *    100 ) / 100;
+  meterTotal.value = total;
+  meterTotalPrice.value = Math.round(total * price2 * 100) / 100;
+}
+
+function calcKit() {
+    //getting total of every totato with class addGt
+	var arr = document.querySelectorAll(".addGT");
+  var total = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (parseFloat(arr[i].value)) {
+      total += parseFloat(arr[i].value);
+    }
+    total = Math.round(total * 100) / 100;
+    totalNoTax.value = total;
+    tax.value = Math.round(total * 0.15 * 100) / 100;
+    totalTaxed.value = Math.round(total * 1.15 * 100) / 100;
+  }
+}
+
+function updateTotals() {
+
+
+  //getting total of main data section (meters and so )
+  heightTotalPrice.value = Math.round(
+    (parseFloat(height.value) *
+      parseFloat(heightCount.value) *
+      2 *
+      (parseFloat(meterPrice.value) * 0.22) *
+      100) /
+      100
+  );
+	let totalCost = 0;
+	let discountValue = 0;
+  if (   !isNaN(totalNoTax.value) &&   !isNaN(meterTotalPrice.value) &&  !isNaN(heightTotalPrice.value)  ) {
+    if (!isNaN(discount.value) && discount.value > 0) {
+      discountValue = (parseFloat(meterTotalPrice.value) * parseFloat(discount.value)) / 100;
+      totalCost = parseFloat(totalNoTax.value) + parseFloat(meterTotalPrice.value) +	parseFloat(heightTotalPrice.value);
+      totalCost = totalCost - discountValue;
+    } else {
+      totalCost = parseFloat(totalNoTax.value) +  parseFloat(meterTotalPrice.value) +   parseFloat(heightTotalPrice.value);
+    }
+  }
+  totalNoTax.value = 0;
+  totalNoTax.value = totalCost;
+  tax.value = Math.round(totalCost * 0.15 * 100) / 100;
+  totalTaxed.value = Math.round(totalCost * 1.15 * 100) / 100;
+
+  for (var i = 0; i <= 15; i++) {
+    if (i < 10) {
+      updateTotalsGT("0" + i);
+    } else {
+      updateTotalsGT(i.toString());
+    }
+  }
+  differenceCheck();
+}
 
 
 
@@ -503,29 +290,51 @@ rows.forEach((row) => {
 
 
 
-// function hideEmptyInputs() {
-//   let inputs = document.querySelectorAll("input");
-//   inputs.forEach(function (input) {
-//     if (input.value === "" || input.value === "0") {
-//       if (!input.parentNode.classList.contains("exclude")) {
-//         input.parentNode.parentNode.style.display = "none";
-//       }
-//     }
-//   });
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+////////////////// get tax and total for each device row //////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+// // Get all rows
+// const rows = document.querySelectorAll(".row");
+// // Function to calculate tax and total
+// function devTaxing(e) {
+//   // Get the current row
+//   const row = e.target.closest(".row");
+//   // Get the price field
+//   const priceField = row.querySelector(".devPrice");
+//   // Get the tax field
+//   const taxField = row.querySelector(".devTax");
+//   // Get the total field
+//   const totalField = row.querySelector(".devTotal");
+
+//   // Get the price value
+//   const price = parseFloat(priceField.value);
+//   // Calculate the tax (15% of price)
+//   const tax = price * 0.15;
+//   // Calculate the total (price + tax)
+//   const total = price + tax;
+//   // Round tax and total to 2 decimal places
+//   const roundTax = Math.round(tax * 100) / 100;
+//   const roundTotal = Math.round(total * 100) / 100;
+
+//   // Update the tax and total fields
+//   taxField.value = roundTax;
+//   totalField.value = roundTotal;
+
+//   // Update the tax and total fields
+//   taxField.value = roundTax;
+//   totalField.value = roundTotal;
 // }
 
-// let originalState;
+// // Add an event listener to each price field
+// rows.forEach((row) => {
+//   const priceField = row.querySelector(".devPrice");
+//   if (priceField) priceField.addEventListener("input", devTaxing);
+// });
 
-// window.addEventListener("beforeprint", function () {
-  //   // originalState = document.body.innerHTML;
-  //   hideEmptyInputs();
-  // });
-  
-  
-  
-  
-  
-  
   
   
   let originalState;
@@ -564,149 +373,6 @@ rows.forEach((row) => {
   
   
 
-
-
-
-
-
-// window.onbeforeprint = hideEmptyInputs;
-
-
-// function hideEmptyInputs() {
-//   const inputs = document.querySelectorAll('.addGT');
-//   for (let i = 0; i < inputs.length; i++) {
-//     inputs[i].addEventListener("input", function() {
-//       if (this.value == "" || this.value == "0") {
-//         this.parentNode.parentNode.style.display = "none !important";
-//       } else {
-//         this.parentNode.parentNode.style.display = "flex !important";
-//       }
-//     });
-//   }
-// }
-
-
-// function hideEmptyInputs() {
-//   for (let i = 1; i <= 40; i++) {
-//     let row = document.querySelector(`.addRow${i < 10 ? "0" + i : i}`);
-//     let input = document.querySelector(`#addGT${i < 10 ? "0" + i : i}`);
-//     if (input) {
-//       if (input.value > 0) {
-//         row.style.display = "none";
-//       } else {
-//         row.style.display = "flex";
-//       }
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
-  // let inputs = document.querySelectorAll(`addGT`);
-  // inputs.forEach(function (input) {
-    //   if (input.value !== "" || input.value !== "0" || !input.parentNode.classList.contains("exclude")) {
-      //       input.parentNode.parentNode.style.display = "flex";
-      //     } else {
-        //     input.parentNode.parentNode.style.display = "none";
-        //     }
-        // });
-      // }
-      
-      
-/*       function hideEmptyRows() {
-        for (let i = 1; i <= 40; i++) {
-          let row = document.querySelector(`.addRow${i < 10 ? "0" + i : i}`);
-          let input = document.querySelector(`#addTotal${i < 10 ? "0" + i : i}`);
-          input.addEventListener("input", function() {
-            if (this.value > 0) {
-              row.style.display = "none";
-            } else {
-              row.style.display = "flex";
-            }
-          });
-        }
-  for (let d = 1; d <= 10; d++) {
-    let devRow = document.querySelector(`.devRow${d < 10 ? '0' + d : d}`);
-    let devInput = document.querySelector(`#devTotal${d < 10 ? '0' + d : d}`);
-    if (devInput.value === "" || devInput.value == 0) {
-      devRow.classList.add("hide-on-print");
-    } else {
-      devInput.classList.remove("hide-on-print");
-    }
-  }
-} */
-// window.onbeforeprint = hideEmptyRows;
-
-
-// function printPdf() {
-// let pageHeight = doc.internal.pageSize.height || doc.internal.pageSize.getHeight()
-// let pageWidth = doc.internal.pageSize.width || doc.internal.pageSize.getWidth()
-// let recipientBlock = document.querySelector(".div2-block")
-// let rHeight = recipientBlock.clientHeight
-// let rWidth = recipientBlock.clientWidth
-
-// doc.fromHTML(document.querySelector(".div1-block"),
-//    22, 17, { 'width': 200, 'height': 200 },
-//    function (a) {
-//       doc.fromHTML(document.querySelector(".div2-block"),
-//           pageWidth / 2 - rWidth / 4,
-//           pageHeight / 2 - rHeight / 4,
-//           { 'width': 200, 'height': 200 },
-//           function (a) {
-//               let blobPDF = new Blob([doc.output()], { type: 'application/pdf' });
-//               let blobUrl = URL.createObjectURL(blobPDF);
-//               window.open(blobUrl);
-//                 });
-//         });
-
-// }
-// let element = document.getElementById('collectAll');
-
-// var element = document.getElementById('element-to-print');
-// var opt = {
-//   margin:       1,
-//   filename:     'myfile.pdf',
-//   image:        { type: 'jpeg', quality: 0.98 },
-//   html2canvas:  { scale: 2 },
-//   jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
-// };
-// function printPdf() {
-//   html2pdf(element, opt);
-// };
-
-
-
-// Import the jsPDF library
-// var jsPDF = require('jspdf');
-
-/* // Select the button and input elements
-var button = document.querySelector('#save-button');
-var input = document.querySelector('#mainContractNo');
-
-// Add an event listener to the button
-// Add an event listener to the button
-button.addEventListener('click', function() {
-  // Get the value of the input
-  // var contractNo = input.value;
-
-  // // Add the input value to the page
-  // var div = document.createElement('div');
-  // div.innerHTML = 'Contract No: ' + contractNo;
-  // document.body.appendChild(div);
-  let originalState;
-      originalState = document.body.innerHTML;
-    hideEmptyInputs();
-    window.print();
-    document.body.innerHTML= originalState;
-  // Prompt the user to save or print the page
-}); */
-
-
 //change the title with contract name
 
 function changeTitle() {
@@ -719,31 +385,9 @@ function changeTitle() {
 }
 
 
-// const inputs = document.querySelectorAll("input, textarea, select");
 ///////////////////////////////////////////////////////////////////////////
 //Save and resore Working
 ///////////////////////////////////////////////////////////////////////////
-// function saveForm() {
-//     const inputs = document.querySelectorAll("input, textarea, select");
-//     for (const input of inputs) {
-//         sessionStorage.setItem(input.id, input.value);
-//       }
-//     }
-    
-//     function restoreForm() {
-//   for (const input of inputs) {
-//     if (sessionStorage.hasOwnProperty(input.id)) {
-//         input.value = sessionStorage.getItem(input.id);
-//       }
-//     }
-//   }
-  
-//   function clearForm() {
-//       sessionStorage.clear();
-//       for (const input of inputs) {
-//           input.value = "";
-//         }
-//       }
       
       
 function saveForm() {
@@ -773,7 +417,6 @@ function restoreForm() {
 }
 
 function clearForm() {
-  // const mainContractNo = prompt("ادخل رقم العق المراد استرجاعه");
   sessionStorage.removeItem(mainContractNo);
   const inputs = document.querySelectorAll("input, textarea, select");
   for (const input of inputs) {

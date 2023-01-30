@@ -32,46 +32,42 @@
         <a class="fs-2 text-red-600 " href="../index.html">فنون حواء للمطابخ</a>
         <!-- <p id="head" class="head fs-7 w-100 m-0 p-0 text-center font-bold"> حاسبة الأسعار (V 1.0)</p> -->
         <div class="row ">
-          <div
-            class="titleButton  section text-danger btn-success align-center text-center border-0 hover:text-bg-dark pb-2 pt-0 mt-0">
-            حاسبة المطابخ</div>
-          <!-- <div
-            class="titleButton d-print-none fs-6 pb-2 dev-button devicesData  text-success btn-success align-center text-center border-0 hover:text-bg-danger "
-            onclick="show();">(للأجهزة اضغط هنا)</div> -->
-          <div
-            class="titleButton devicesData text-danger btn-success align-center hide text-center border-0 hover:text-bg-danger pb-2 pt-0 mt-0">
-            حاسبة الأجهزة</div>
-          <!-- <div
-            class="titleButton d-print-none fs-6 section pb-2 text-success hide btn-success align-center text-center border-0 hover:text-bg-danger "
-            onclick="show();">(للمطابخ اضغط هنا)</div>
-        </div> -->
-        <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
-          <div
-          class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
-            onclick="clearForm();" id="clear-btn" >جديد</div>
-          <div
-            class=" btn btn-success d-print-none fs-6 pb-2  text-dark fw-bold text-white bg-success align-center text-center border-0 hover:text-bg-danger "
-            onclick="saveForm(mainContractNo);" id="save-btn">حفظ</div>
-          <div
-            class=" btn btn-success d-print-none fs-6 pb-2 text-dark fw-bold bg-warning bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
-            onclick="restoreForm();" id="restore-btn">استرجاع</div>
-            <div
-              class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
-              onclick="window.print();" 
-              id="save-button2">
-              <i class="fa fa-print text-white"></i>
-              طبـــاعة</div>
-            <div
-              class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
-              onclick="show('kitchen');">مطابخ</div>
-            <div
-              class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
-              onclick="show('devices');">أجهزة</div>
-            <div disabled class="btn btn-secondary d-print-none">خزائن</div>
+          <div class="titleButton  section text-danger btn-success align-center text-center border-0 hover:text-bg-dark pb-2 pt-0 mt-0">
+            حاسبة المطابخ
+          </div>
+          <div class="titleButton devicesData text-danger btn-success align-center hide text-center border-0 hover:text-bg-danger pb-2 pt-0 mt-0">
+            حاسبة الأجهزة
+          </div>
+          <div class="text-center container w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body d-lg-flex flex-space-between">
+            <div class="siteTree header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
+              <div class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
+                onclick="clearForm();" id="clear-btn">جديد</div>
+              <div class=" btn btn-success d-print-none fs-6 pb-2  text-dark fw-bold text-white bg-success align-center text-center border-0 hover:text-bg-danger "
+                onclick="saveForm(mainContractNo);" id="save-btn">حفظ</div>
+              <div  class=" btn btn-success d-print-none fs-6 pb-2 text-dark fw-bold bg-warning bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
+                onclick="restoreForm();" id="restore-btn">
+                استرجاع
+              </div>
+              <div class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
+                onclick="window.print();" id="save-button2">
+                <i class="fa fa-print text-white"></i> طبـــاعة
+              </div>
+            </div>
+            <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
+              <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
+                onclick="show('kitchen');">
+                مطابخ
+              </div>
+              <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
+                onclick="show('devices');">
+                أجهزة
+              </div>
+              <div disabled class="btn btn-secondary d-print-none">خزائن</div>
+            </div>
           </div>
         </div>
       </div>
-<form action="" name="allDataForm">
+<!-- <form action="" name="allDataForm"> -->
       <div class=" container fs- mb-2 p-2 border-spacing-2 border border-danger  rounded bg-blue bg-dark bg-opacity-10"
         id="fullSite">
         <!-- // General Data   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
@@ -234,7 +230,7 @@
           <div class="container row5 row m-sm-0 p-sm-0 m-2">
             <div
               class="totalDevNoTax  exclude devicesData hide col-md-4 col-sm-4 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-              <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="taxing();"
+              <input type="number" class="form-control " id="totalDevNoTax" value="" onkeyup="getPrice();" onchange="getPrice();"
                 placeholder="Ex: " disabled>
               <label for="totalDevNoTax">قيمة الأجهزة (قبل الضريبة) </label>
             </div>
@@ -254,8 +250,7 @@
           <div class="container row5 row m-sm-0 p-sm-0 m-2 ">
             <div
               class="totalNoTax  exclude section col-md-3 col-sm-3 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
-              <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="taxing();"
-                onchange="taxing();" placeholder="Ex: ">
+              <input type="number" disabled class="form-control " id="totalNoTax" value="" onkeyup="getPrice();" onchange="getPrice();" placeholder="Ex: ">
               <label for="totalNoTax">قيمة العقد (قبل الضريبة) </label>
             </div>
             <div
@@ -2192,7 +2187,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType01 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType01" aria-label="Floating label select example"
                 onchange=" getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value=""><span class="text-danger2"></span>فرن ٦٠ سم</option>
                 <option value=""><span class="text-danger2"></span>فرن ٩٠ سم</option>
@@ -2244,7 +2239,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType02 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType02" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2287,7 +2282,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax02" value="" placeholder="Ex: " disabled>
               <label for="devTax02"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal2" value="" placeholder="Ex: " disabled>
               <label for="devTotal02"> الاجمالي شامل الضريبة</label>
             </div>
@@ -2296,7 +2291,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType03 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType03" aria-label="Floating label select example"
                 onchange=" getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2339,7 +2334,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax03" value="" placeholder="Ex: " disabled>
               <label for="devTax03"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal3" value="" placeholder="Ex: " disabled>
               <label for="devTotal03"> الاجمالي شامل الضريبة</label>
             </div>
@@ -2348,7 +2343,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType04 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType04" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2391,7 +2386,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax04" value="" placeholder="Ex: " disabled>
               <label for="devTax04"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal4" value="" placeholder="Ex: " disabled>
               <label for="devTotal04"> الاجمالي شامل الضريبة</label>
             </div>
@@ -2400,7 +2395,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType05 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType05" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2443,7 +2438,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax05" value="" placeholder="Ex: " disabled>
               <label for="devTax05"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal5" value="" placeholder="Ex: " disabled>
               <label for="devTotal05"> الاجمالي شامل الضريبة</label>
             </div>
@@ -2452,7 +2447,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType06 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType06" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2495,7 +2490,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax06" value="" placeholder="Ex: " disabled>
               <label for="devTax06"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal6" value="" placeholder="Ex: " disabled>
               <label for="devTotal06"> الاجمالي شامل الضريبة</label>
             </div>
@@ -2504,7 +2499,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType07 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType07" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2547,7 +2542,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax07" value="" placeholder="Ex: " disabled>
               <label for="devTax07"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal7" value="" placeholder="Ex: " disabled>
               <label for="devTotal07"> الاجمالي شامل الضريبة</label>
             </div>
@@ -2556,7 +2551,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
             <div class="devType08 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
               <select class="form-select" id="devType08" aria-label="Floating label select example"
                 onchange="getPrice();" onkeyup="getPrice();">
-                <option selected disabled>يرجي اختيار الجهاز</option>
+                <option selected >لا يوجد</option>
                 <option value="" disabled class="bg-dark text-warning text-center">أفران</option>
                 <option value="فرن ٦٠ سم">فرن ٦٠ سم</option>
                 <option value="فرن ٩٠ سم">فرن ٩٠ سم</option>
@@ -2599,9 +2594,83 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <input type="number" class="form-control devTax " id="devTax08" value="" placeholder="Ex: " disabled>
               <label for="devTax08"> الضريبة</label>
             </div>
-            <div class="devTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+            <div class="devTotal08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
               <input type="number" class="form-control devTotal " id="devTotal8" value="" placeholder="Ex: " disabled>
               <label for="devTotal08"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 01 -->
+          <div class="container devSGRow01 row m-2 ">
+            <div class="devSGType01 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType01" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType01">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode01" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode01">الكود</label>
+            </div>
+            <div class="devSGPrice01 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice01" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice01">السعر</label>
+            </div>
+            <div class="devSGTax01 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax01" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax01"> الضريبة</label>
+            </div>
+            <!-- remember the id here is different -->
+            <div class="devSGTotal01 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal01" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal01"> الاجمالي شامل الضريبة</label>
             </div>
           </div>
         </div>
@@ -2618,7 +2687,7 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
         </div>
       </div>
       <!-- <button type="submit" onslick="saveForm();">submit</button> -->
-    </form>
+    <!-- </form> -->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.js"></script>
       <script src="js/bootstrap.min.js"></script>
