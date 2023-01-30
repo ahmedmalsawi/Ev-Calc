@@ -2673,7 +2673,518 @@ class="section container-lg factoryExtraData  border-spacing-2 border border-dan
               <label for="devSGTotal01"> الاجمالي شامل الضريبة</label>
             </div>
           </div>
-        </div>
+          <!-- Super gas Row 02 -->
+          <div class="container devSGRow02 row m-2 ">
+            <div class="devSGType02 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType02" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType02">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode02" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode02">الكود</label>
+            </div>
+            <div class="devSGPrice02 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice02" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice02">السعر</label>
+            </div>
+            <div class="devSGTax02 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax02" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax02"> الضريبة</label>
+            </div>
+            <div class="devSGTotal02 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal02" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal02"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 03 -->
+          <div class="container devSGRow03 row m-2 ">
+            <div class="devSGType03 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType03" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType03">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode03" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode03">الكود</label>
+            </div>
+            <div class="devSGPrice03 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice03" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice03">السعر</label>
+            </div>
+            <div class="devSGTax03 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax03" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax03"> الضريبة</label>
+            </div>
+            <div class="devSGTotal03 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal03" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal03"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 04 -->
+          <div class="container devSGRow04 row m-2 ">
+            <div class="devSGType04 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType04" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType04">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode04" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode04">الكود</label>
+            </div>
+            <div class="devSGPrice04 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice04" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice04">السعر</label>
+            </div>
+            <div class="devSGTax04 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax04" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax04"> الضريبة</label>
+            </div>
+            <div class="devSGTotal04 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal04" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal04"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 05 -->
+          <div class="container devSGRow05 row m-2 ">
+            <div class="devSGType05 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType05" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType05">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode05" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode05">الكود</label>
+            </div>
+            <div class="devSGPrice05 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice05" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice05">السعر</label>
+            </div>
+            <div class="devSGTax05 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax05" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax05"> الضريبة</label>
+            </div>
+            <div class="devSGTotal05 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal05" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal05"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 06 -->
+          <div class="container devSGRow01 row m-2 ">
+            <div class="devSGType06 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType06" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType06">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode06" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode06">الكود</label>
+            </div>
+            <div class="devSGPrice06 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice06" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice06">السعر</label>
+            </div>
+            <div class="devSGTax06 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax06" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax06"> الضريبة</label>
+            </div>
+            <div class="devSGTotal06 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal06" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal06"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 07 -->
+          <div class="container devSGRow01 row m-2 ">
+            <div class="devSGType07 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType07" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType07">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode07" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode07">الكود</label>
+            </div>
+            <div class="devSGPrice07 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice07" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice07">السعر</label>
+            </div>
+            <div class="devSGTax07 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax07" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax07"> الضريبة</label>
+            </div>
+            <div class="devSGTotal07 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal07" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal07"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+          <!-- Super gas Row 08 -->
+          <div class="container devSGRow08 row m-2 ">
+            <div class="devSGType08 col-md-4 col-sm-6 col m-sm-0 p-sm-0 m-0 p-0 form-floating placeholder:text-center">
+              <select class="form-select" id="devSGType08" aria-label="Floating label select example"
+                onchange="getPrice();" onkeyup="getPrice();" onselect="getPrice();">
+                <option selected >لا يوجد</option>
+                <option value="" disabled class="bg-dark text-warning text-center">شفاطـات</option>
+                <option value=1200 data-code="SG6001/IT" data-price=1200>شفاط 60سم قوة 1000ايطالي ماتور معدني</option>
+                <option value=1300 data-code="SG9001/IT" data-price=1300>شفاط 90سم قوة 1000ماتور معدني</option>
+                <option value=1850 data-code="SG9002/IT" data-price=1850>شفاط 90سم حرف Tاستيل قوة 1000إيطالي ماتور معدني</option>
+                <option value=2200 data-code="SG1200/CH " data-price=2200>صيني1500 قوةT سم حرف90 شفا</option>
+                <option value=1850 data-code="SG9003/IT" data-price=1850>شفاط 90سم زجاج مقوس قوة 1000ايطالي</option>
+                <option value=3100 data-code="SG9004/IT" data-price=3100>شفاط جزيرة قوة 1000ايطالي</option>
+                <option value=1300 data-code="SG9005/CH " data-price=1300>شفاط 90 سم مخف</option>
+                <option value=3100 data-code="SG1005/IT" data-price=3100>شفاط زاوية 100سم *100سم قوة 1000ايطالي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 30</option>
+                <option value=718 data-code="SG301IT/H " data-price=718>سطح 2عين غاز ثقيل</option>
+                <option value=1354 data-code="SG304IT/H " data-price=1354>سطح 2عين سيراميك لمس</option>
+                <option value=1270 data-code="SG303IT/H " data-price=1270>سطح 2عين سيراميك مفتاح</option>
+                <option value=508 data-code="SG302IT/H " data-price=508>سطح 2عين كهرباء حجر (بنقطتين حمراء سريعة)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 60</option>
+                <option value=1862 code="SG603IT/H " data-price=1862>سطح سيراميك 4عين مفاتيح</option>
+                <option value=2031 data-code="SG602IT/H " data-price=2031>سطح 4عين سيراميك لمس</option>
+                <option value=1354 data-code="SG601IT/H " data-price=1354>سطح 4عين غاز ثقيل</option>
+                <option value="" disabled class="bg-dark text-warning text-center">سطح 90</option>
+                <option value=1777 data-code="SG902IT/H " data-price=1777>سطح 4عين غاز +2عين كهرباء حجر حديد ثقيل</option>
+                <option value=1862 data-code="SG901IT/H " data-price=1862>سطح 5عيون غاز هيفي ديوتي حديد ثقيل</option>
+                <option value=2200 data-code="SG903IT/H " data-price=2200>سطح 4عين غاز +2عين كهرباء سراميك حديد ثقيل</option>
+                <option value=3215 data-code="SG904IT/H " data-price=3215>سطح 90سم سيراميك لمس</option>
+                <option value=2962 data-code="SG905IT/H " data-price=2962>سطح 90سم 5عين سيراميك مفتاح</option>
+                <option value=2454 data-code="SG906IT/H " data-price=2454>سطح 90سم 5عين غاز زجاجي سيراميك ملكي</option>
+                <option value=1800 data-code="SG907IT/H " data-price=1800>سطح 5عين غاز حديد خفيف</option>
+                <option value=2000 data-code="SG908IT/H " data-price=2000>سطح 5عين غاز حديد ثقيل مفتاح أمامي</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 60</option>
+                <option value=2285 data-code="SG609EL/E" data-price=2285>فرن 60سم كهرباء ديجيتال 9وظائف مع مروحة</option>
+                <option value=1777 data-code="SG604EL/E" data-price=1777>فرن 60سم كهرباء 4وظائف</option>
+                <option value=2000 data-code="SG607EL/E" data-price=2000>فرن 60سم كهرباء 7وظائف</option>
+                <option value=2100 data-code="SG660GA/E " data-price=2100>سم غاز60 فر</option>
+                <option value="" disabled class="bg-dark text-warning text-center">افـــران بلت-ان 90</option>
+                <option value=4146 data-code="SG960EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*60مع مروحة</option>
+                <option value=4146 data-code="SG950EL/E" data-price=4146>فرن كهرباء 90سم ديجيتال 9وظائف 90*48مع مروحة</option>
+                <option value=4400 data-code="SG960GA/E " data-price=4400>مع مروحة90*60 سم90 فرن غا</option>
+                <option value=3900 data-code="SG906EL/E" data-price=3900>فرن كهرباء 90سم 6وظائف</option>
+                <option value=5200 data-code="SG990GA/E" data-price=5200>فرن غاز 90سم (شعلة علوية وشعلة سفلية في وقت واحد)</option>
+                <option value="" disabled class="bg-dark text-warning text-center">مكرويف بلت-ان 60</option>
+                <option value=1185 data-code="SG25MW/CH " data-price=1185>مكرويف بلت-ان -6</option>
+                <option value=1270 data-code="SG34MX/CH " data-price=1270>مكرويف بلت-ان -6</option>
+                <option value="" disabled class="bg-dark text-warning text-center">غسالات صحون</option>
+                <option value=2538 data-code="SG6006/CH" data-price=2538>غسالة صحون 60سم ستيل</option>
+                <option value=2538 data-code="SG6008/CH" data-price=2538>غسالة صحون 60سم بلت-ان</option>
+
+              </select>
+              <label for="devSGType08">تحربة أجهزة سوبر غاز</label>
+            </div>
+            <div class="devSGCode08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="text" class="form-control" id="devSGCode08" value="" placeholder="Ex: " disabled
+                onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGCode01">الكود</label>
+            </div>
+            <div class="devSGPrice08 col-md-2 col-sm-2 m-sm-0 p-sm-0 col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control dev-price devPrice  addGT00" id="devSGPrice08" value="" disabled
+                placeholder="Ex: " onchange="getPrice();" onkeyup="getPrice();">
+              <label for="devSGPrice0">السعر</label>
+            </div>
+            <div class="devSGTax08 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTax col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTax " id="devSGTax08" value="" placeholder="Ex: " disabled>
+              <label for="devSGTax08"> الضريبة</label>
+            </div>
+            <div class="devSGTotal08 col-md-2 col-sm-2 m-sm-0 p-sm-0 devTotal col m-0 p-0 form-floating placeholder:text-center">
+              <input type="number" class="form-control devTotal " id="devSGTotal08" value="" placeholder="Ex: " disabled>
+              <label for="devSGTotal08"> الاجمالي شامل الضريبة</label>
+            </div>
+          </div>
+                 </div>
         <!-- // Submit   = < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
         <div class="row ">
           <div id="showAllButton"
