@@ -391,20 +391,20 @@ function changeTitle() {
       
       
 function saveForm() {
-  const mainContractNo = document.getElementById("mainContractNo").value;
+  const customerPhone = document.getElementById("customerPhone").value;
   const inputs = document.querySelectorAll("input, textarea, select");
   const data = {};
   for (const input of inputs) {
     data[input.id] = input.value;
   }
-  sessionStorage.setItem(mainContractNo, JSON.stringify(data));
+  sessionStorage.setItem(customerPhone, JSON.stringify(data));
   alert("تم الحفظ بنجاح");
   
 }
 
 function restoreForm() {
-  const mainContractNo = prompt("ادخل رقم العقد");
-  const storedData = sessionStorage.getItem(mainContractNo);
+  const customerPhone = prompt("ادخل رقم الجوال");
+  const storedData = sessionStorage.getItem(customerPhone);
   if (storedData) {
     const data = JSON.parse(storedData);
     const inputs = document.querySelectorAll("input, textarea, select");
@@ -413,14 +413,14 @@ function restoreForm() {
         input.value = data[input.id];
       }
     }
-    alert("لقد وجدت بيانات مخزنة لهذا العقد ، تمت استعادة البيانات بنجاح");
+    alert("لقد وجدت بيانات مخزنة لهذا الرقم ، تمت استعادة البيانات بنجاح");
   } else {
-    alert("لا يوجد عقد مسجل بهذا الرقم");
+    alert("لا يوجد بيانات مسجله بهذا الرقم");
   }
 }
 
 function clearForm() {
-  sessionStorage.removeItem(mainContractNo);
+  sessionStorage.removeItem(customerPhone);
   const inputs = document.querySelectorAll("input, textarea, select");
   for (const input of inputs) {
     input.value = "";
