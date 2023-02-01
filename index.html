@@ -40,19 +40,27 @@
           </div>
           <div class="text-center container w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body d-lg-flex flex-space-between">
             <div class="siteTree header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
-              <div class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
-                onclick="clearForm();" id="clear-btn">جديد</div>
+              <!-- <div class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
+                onclick="clearForm();" id="clear-btn">جديد</div> -->
               <div class=" btn btn-success d-print-none fs-6 pb-2  text-dark fw-bold text-black bg-success bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
                 onclick="saveForm(mainContractNo);" id="save-btn">حفظ</div>
-              <div  class=" btn btn-success d-print-none fs-6 pb-2 text-dark fw-bold bg-warning bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
+              <!-- <div  class=" btn btn-success d-print-none fs-6 pb-2 text-dark fw-bold bg-warning bg-opacity-50 align-center text-center border-0 hover:text-bg-danger "
                 onclick="restoreForm();" id="restore-btn">
                 استرجاع
-              </div>
+              </div> -->
               <div class=" btn btn-success d-print-none fs-6 pb-2 text-warning bg-dark align-center text-center border-0 hover:text-bg-danger "
-                onclick="window.print();" id="save-button2">
-                <i class="fa fa-print text-white"></i> طبـــاعة
-              </div>
+              onclick="window.print();" id="save-button2">
+              <i class="fa fa-print text-white"></i> طبـــاعة
             </div>
+          </div>
+          <div class="siteTree  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
+          <div
+          class="d-print-none   placeholder:text-center">
+          <select class="form-select" id="storedDataKeys" aria-label=" select example" control-id="ControlID-199" onclick="restoreForm();">
+            <option disabled selected value="">اختر من القائمة</option>
+          </select>
+          </div>
+          </div>
             <div class="siteTree container  header text-center w-100 pb-2 mb-0 m-0 rounded-5 mx-auto bg-body">
               <div class=" btn btn-success d-print-none fs-6 pb-2 text-white bg-dark align-center text-center border-0 hover:text-bg-danger "
                 onclick="show('kitchen');">
@@ -62,7 +70,7 @@
                 onclick="show('devices');">
                 أجهزة
               </div>
-              <div disabled class="btn btn-secondary d-print-none">خزائن</div>
+              <!-- <div disabled class="btn btn-secondary d-print-none">خزائن</div> -->
             </div>
           </div>
         </div>

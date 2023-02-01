@@ -402,25 +402,99 @@ function saveForm() {
   
 }
 
+// function restoreForm() {
+//   const customerPhone = prompt("ادخل رقم الجوال");
+//   const storedData = sessionStorage.getItem(customerPhone);
+//   if (storedData) {
+//     const data = JSON.parse(storedData);
+//     const inputs = document.querySelectorAll("input, textarea, select");
+//     for (const input of inputs) {
+//       if (data.hasOwnProperty(input.id)) {
+//         input.value = data[input.id];
+//       }
+//     }
+//     alert("لقد وجدت بيانات مخزنة لهذا الرقم ، تمت استعادة البيانات بنجاح");
+//   } else {
+//     alert("لا يوجد بيانات مسجله بهذا الرقم");
+//   }
+// }
+
+
+
+
+window.onload = function() {
+  restoreForm();
+};
+
+// function restoreForm() {
+//   const selectDiv = document.getElementById("storedDataKeys");
+//   while (selectDiv.firstChild) {
+//     selectDiv.removeChild(selectDiv.firstChild);
+//   }
+//   for (let i = 0; i < sessionStorage.length; i++) {
+//     const key = sessionStorage.key(i);
+//     const option = document.createElement("option");
+//     option.value = key;
+//     option.text = key;
+//     selectDiv.appendChild(option);
+//   }
+//   selectDiv.addEventListener("change", function() {
+//     const customerPhone = this.value;
+//     const storedData = sessionStorage.getItem(customerPhone);
+//     if (storedData) {
+//       const data = JSON.parse(storedData);
+//       const inputs = document.querySelectorAll("input, textarea, select");
+//       for (const input of inputs) {
+//         if (data.hasOwnProperty(input.id)) {
+//           input.value = data[input.id];
+//         }
+//       }
+//       // alert("لقد وجدت بيانات مخزنة لهذا الرقم ، تمت استعادة البيانات بنجاح");
+//     } else {
+//       alert("لا يوجد بيانات مسجله بهذا الرقم");
+//     }
+//   });
+// }
+
 function restoreForm() {
-  const customerPhone = prompt("ادخل رقم الجوال");
-  const storedData = sessionStorage.getItem(customerPhone);
-  if (storedData) {
-    const data = JSON.parse(storedData);
-    const inputs = document.querySelectorAll("input, textarea, select");
-    for (const input of inputs) {
-      if (data.hasOwnProperty(input.id)) {
-        input.value = data[input.id];
-      }
+  const selectDiv = document.getElementById("storedDataKeys");
+  selectDiv.innerHTML =
+    '<option disabled selected value="">اختر من القائمة</option>';
+  for (let i = 0; i < sessionStorage.length; i++) {
+    const key = sessionStorage.key(i);
+    if (/^\d+$/.test(key)) {
+      // check if the key is a string consisting of only numbers
+      const option = document.createElement("option");
+      option.value = key;
+      option.text = key;
+      selectDiv.appendChild(option);
     }
-    alert("لقد وجدت بيانات مخزنة لهذا الرقم ، تمت استعادة البيانات بنجاح");
-  } else {
-    alert("لا يوجد بيانات مسجله بهذا الرقم");
   }
+  selectDiv.addEventListener("change", function () {
+    const customerPhone = this.value;
+    const storedData = sessionStorage.getItem(customerPhone);
+    if (storedData) {
+      const data = JSON.parse(storedData);
+      const inputs = document.querySelectorAll("input, textarea, select");
+      for (const input of inputs) {
+        if (data.hasOwnProperty(input.id)) {
+          input.value = data[input.id];
+        }
+      }
+      // alert("لقد وجدت بيانات مخزنة لهذا الرقم ، تمت استعادة البيانات بنجاح");
+    }
+    // else {
+      // alert("لا يوجد بيانات مسجله بهذا الرقم");
+    // }
+  });
 }
 
+
+
+
+
 function clearForm() {
-  sessionStorage.removeItem(customerPhone);
+  // sessionStorage.removeItem(customerPhone);
   const inputs = document.querySelectorAll("input, textarea, select");
   for (const input of inputs) {
     input.value = "";
