@@ -455,7 +455,8 @@ window.onload = function() {
 //     }
 //   });
 // }
-
+////////////////////////////////////////////
+//////////////working///////////////////////////////////////////////////////
 function restoreForm() {
   const selectDiv = document.getElementById("storedDataKeys");
   selectDiv.innerHTML =
@@ -488,9 +489,34 @@ function restoreForm() {
     // }
   });
 }
+////////////////////////////////////////////
+//////////////working///////////////////////////////////////////////////////
 
+// function readTextFile(file) {
+//   const rawFile = new XMLHttpRequest();
+//   rawFile.open("GET", file, false);
+//   rawFile.onreadystatechange = function() {
+//     if (rawFile.readyState === 4) {
+//       if (rawFile.status === 200 || rawFile.status === 0) {
+//         const allText = rawFile.responseText;
+//         const inputs = document.querySelectorAll("input, select, textarea");
+//         const values = allText.split(",");
+//         let index = 0;
+//         for (const input of inputs) {
+//           input.value = values[index];
+//           index++;
+//         }
+//       }
+//     }
+//   };
+//   rawFile.send(null);
+// }
 
-
+// function restoreFormPDF() {
+//   const fileInput = document.getElementById("fileInput");
+//   const file = fileInput.files[0];
+//   readTextFile(file);
+// }
 
 
 function clearForm() {

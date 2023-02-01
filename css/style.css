@@ -181,5 +181,9 @@ color:#BD2939;
     .hide-on-print {
       display: none;
     }
+    *{
+      font-size: 10px !important;
+    }
+
   }
   
